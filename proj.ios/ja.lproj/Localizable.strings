@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  Yakitori
+
+  Created by Akio Yamazaki on 2014/03/23.
+
+*/
+"Sale" = "売上";
+"SaleSuffix" = "%5d";

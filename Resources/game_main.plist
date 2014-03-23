@@ -30,10 +30,49 @@
                 <key>sourceSize</key>
                 <string>{400,200}</string>
             </dict>
+            <key>gauge_base.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,680},{280,48}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{280,48}}</string>
+                <key>sourceSize</key>
+                <string>{280,48}</string>
+            </dict>
+            <key>gauge_base2.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{52,680},{276,44}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{2,2},{276,44}}</string>
+                <key>sourceSize</key>
+                <string>{280,48}</string>
+            </dict>
+            <key>gauge_life.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{98,680},{274,42}}</string>
+                <key>offset</key>
+                <string>{-1,1}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{2,2},{274,42}}</string>
+                <key>sourceSize</key>
+                <string>{280,48}</string>
+            </dict>
             <key>human.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,680},{100,148}}</string>
+                <string>{{227,680},{100,148}}</string>
                 <key>offset</key>
                 <string>{0,-1}</string>
                 <key>rotated</key>
@@ -82,6 +121,19 @@
                 <key>sourceSize</key>
                 <string>{400,200}</string>
             </dict>
+            <key>sale_waku.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{142,680},{250,83}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{250,83}}</string>
+                <key>sourceSize</key>
+                <string>{250,83}</string>
+            </dict>
             <key>thanks.png</key>
             <dict>
                 <key>frame</key>
@@ -111,11 +163,11 @@
             <key>yakitori1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{246,976},{44,120}}</string>
+                <string>{{546,480},{44,120}}</string>
                 <key>offset</key>
                 <string>{-2,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{1,0},{44,120}}</string>
                 <key>sourceSize</key>
@@ -124,11 +176,11 @@
             <key>yakitori1_2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{384,802},{48,120}}</string>
+                <string>{{512,602},{48,120}}</string>
                 <key>offset</key>
                 <string>{1,0}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{2,0},{48,120}}</string>
                 <key>sourceSize</key>
@@ -137,7 +189,7 @@
             <key>yakitori1_3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{124,976},{46,120}}</string>
+                <string>{{368,976},{46,120}}</string>
                 <key>offset</key>
                 <string>{-1,0}</string>
                 <key>rotated</key>
@@ -150,11 +202,11 @@
             <key>yakitori2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{368,924},{50,120}}</string>
+                <string>{{485,654},{50,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,0},{50,120}}</string>
                 <key>sourceSize</key>
@@ -163,7 +215,7 @@
             <key>yakitori2_2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{364,680},{50,120}}</string>
+                <string>{{453,776},{50,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -176,7 +228,7 @@
             <key>yakitori2_3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{332,802},{50,120}}</string>
+                <string>{{433,654},{50,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -189,7 +241,7 @@
             <key>yakitori3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{312,680},{50,120}}</string>
+                <string>{{494,480},{50,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -202,7 +254,7 @@
             <key>yakitori3_2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{280,802},{50,120}}</string>
+                <string>{{442,480},{50,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -215,7 +267,7 @@
             <key>yakitori3_3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{246,924},{50,120}}</string>
+                <string>{{390,602},{50,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -228,7 +280,7 @@
             <key>yakitori4.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{260,680},{50,120}}</string>
+                <string>{{390,480},{50,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -241,7 +293,7 @@
             <key>yakitori4_2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{228,802},{50,120}}</string>
+                <string>{{401,802},{50,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -254,11 +306,11 @@
             <key>yakitori4_3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{208,680},{50,120}}</string>
+                <string>{{368,924},{50,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{0,0},{50,120}}</string>
                 <key>sourceSize</key>
@@ -267,7 +319,7 @@
             <key>yakitori5.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{176,802},{50,120}}</string>
+                <string>{{381,680},{50,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -280,11 +332,11 @@
             <key>yakitori5_2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{124,924},{50,120}}</string>
+                <string>{{349,802},{50,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,0},{50,120}}</string>
                 <key>sourceSize</key>
@@ -293,7 +345,7 @@
             <key>yakitori5_3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{156,680},{50,120}}</string>
+                <string>{{329,680},{50,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -306,11 +358,11 @@
             <key>yakitori6.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{124,802},{50,120}}</string>
+                <string>{{246,952},{50,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{0,0},{50,120}}</string>
                 <key>sourceSize</key>
@@ -319,11 +371,11 @@
             <key>yakitori6_2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{104,680},{50,120}}</string>
+                <string>{{124,956},{50,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{0,0},{50,120}}</string>
                 <key>sourceSize</key>
@@ -332,7 +384,7 @@
             <key>yakitori6_3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,952},{50,120}}</string>
+                <string>{{2,962},{50,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -345,7 +397,7 @@
             <key>yakitori_pack.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,830},{120,120}}</string>
+                <string>{{227,830},{120,120}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -365,7 +417,7 @@
             <key>size</key>
             <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:1145042d2cd1c668b86a64208736a15f:5370257f07584525945da4ca65396738:194d3e7c97a4587c99947ddce79afb3e$</string>
+            <string>$TexturePacker:SmartUpdate:5062feeb896a743508236d4f6e5ca71e:871fdf190320590777d28b26f828a825:194d3e7c97a4587c99947ddce79afb3e$</string>
             <key>textureFileName</key>
             <string>game_main.png</string>
         </dict>

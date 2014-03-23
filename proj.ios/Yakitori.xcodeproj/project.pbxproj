@@ -237,8 +237,18 @@
 		379BB9D417F03F3700829B88 /* SceneReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 379BB99317F03F3700829B88 /* SceneReader.cpp */; };
 		46513EB1187BFBA200B5ABE1 /* UITouchGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46513EAF187BFBA200B5ABE1 /* UITouchGroup.cpp */; };
 		7855E0E1153FEF240059DD9A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7855E0DF153FEF240059DD9A /* Default.png */; };
+		7B3C673F18DEB1CD008F3129 /* YakitoriFont.fnt in Resources */ = {isa = PBXBuildFile; fileRef = 7B3C673D18DEB1CD008F3129 /* YakitoriFont.fnt */; };
+		7B3C674018DEB1CD008F3129 /* YakitoriFont.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B3C673E18DEB1CD008F3129 /* YakitoriFont.png */; };
+		7B3C674318DEB46C008F3129 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B3C674518DEB46C008F3129 /* Localizable.strings */; };
+		7B3C674918DEB519008F3129 /* NativeBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C674818DEB519008F3129 /* NativeBridge.mm */; };
+		7B3C674A18DEB5BD008F3129 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B3C674C18DEB5BD008F3129 /* InfoPlist.strings */; };
+		7B3C674F18DEEF89008F3129 /* close_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B3C674E18DEEF89008F3129 /* close_background.png */; };
+		7B3C675218DEEFA2008F3129 /* GameOverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C675018DEEFA2008F3129 /* GameOverScene.cpp */; };
+		7B3C675718DEF0C0008F3129 /* for_title_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B3C675318DEF0C0008F3129 /* for_title_off.png */; };
+		7B3C675818DEF0C0008F3129 /* for_title_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B3C675418DEF0C0008F3129 /* for_title_on.png */; };
+		7B3C675918DEF0C0008F3129 /* retry_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B3C675518DEF0C0008F3129 /* retry_off.png */; };
+		7B3C675A18DEF0C0008F3129 /* retry_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B3C675618DEF0C0008F3129 /* retry_on.png */; };
 		7B4F367E18D57D5000E887E2 /* TitleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F367C18D57D5000E887E2 /* TitleScene.cpp */; };
-		7B4F368018D57E7100E887E2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B4F367F18D57E7100E887E2 /* InfoPlist.strings */; };
 		7B5BF64418D5879E00051414 /* start_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B5BF64118D5879E00051414 /* start_off.png */; };
 		7B5BF64518D5879E00051414 /* start_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B5BF64218D5879E00051414 /* start_on.png */; };
 		7B5BF64618D5879E00051414 /* title_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B5BF64318D5879E00051414 /* title_background.png */; };
@@ -766,9 +776,23 @@
 		46513EAF187BFBA200B5ABE1 /* UITouchGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UITouchGroup.cpp; sourceTree = "<group>"; };
 		46513EB0187BFBA200B5ABE1 /* UITouchGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITouchGroup.h; sourceTree = "<group>"; };
 		7855E0DF153FEF240059DD9A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
+		7B3C673D18DEB1CD008F3129 /* YakitoriFont.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = YakitoriFont.fnt; path = fonts/YakitoriFont.fnt; sourceTree = "<group>"; };
+		7B3C673E18DEB1CD008F3129 /* YakitoriFont.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = YakitoriFont.png; path = fonts/YakitoriFont.png; sourceTree = "<group>"; };
+		7B3C674418DEB46C008F3129 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7B3C674618DEB46F008F3129 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7B3C674718DEB519008F3129 /* NativeBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeBridge.h; sourceTree = SOURCE_ROOT; };
+		7B3C674818DEB519008F3129 /* NativeBridge.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NativeBridge.mm; sourceTree = SOURCE_ROOT; };
+		7B3C674B18DEB5BD008F3129 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7B3C674D18DEB5C0008F3129 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7B3C674E18DEEF89008F3129 /* close_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close_background.png; sourceTree = "<group>"; };
+		7B3C675018DEEFA2008F3129 /* GameOverScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameOverScene.cpp; path = ../Classes/GameOverScene.cpp; sourceTree = "<group>"; };
+		7B3C675118DEEFA2008F3129 /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameOverScene.h; path = ../Classes/GameOverScene.h; sourceTree = "<group>"; };
+		7B3C675318DEF0C0008F3129 /* for_title_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = for_title_off.png; sourceTree = "<group>"; };
+		7B3C675418DEF0C0008F3129 /* for_title_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = for_title_on.png; sourceTree = "<group>"; };
+		7B3C675518DEF0C0008F3129 /* retry_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = retry_off.png; sourceTree = "<group>"; };
+		7B3C675618DEF0C0008F3129 /* retry_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = retry_on.png; sourceTree = "<group>"; };
 		7B4F367C18D57D5000E887E2 /* TitleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TitleScene.cpp; path = ../Classes/TitleScene.cpp; sourceTree = "<group>"; };
 		7B4F367D18D57D5000E887E2 /* TitleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TitleScene.h; path = ../Classes/TitleScene.h; sourceTree = "<group>"; };
-		7B4F367F18D57E7100E887E2 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		7B5BF64118D5879E00051414 /* start_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start_off.png; sourceTree = "<group>"; };
 		7B5BF64218D5879E00051414 /* start_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start_on.png; sourceTree = "<group>"; };
 		7B5BF64318D5879E00051414 /* title_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title_background.png; sourceTree = "<group>"; };
@@ -827,6 +851,8 @@
 		080E96DDFE201D6D7F000001 /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				7B3C674718DEB519008F3129 /* NativeBridge.h */,
+				7B3C674818DEB519008F3129 /* NativeBridge.mm */,
 				1AC3624216D4A1E8000847F2 /* AppController.h */,
 				1AC3624316D4A1E8000847F2 /* AppController.mm */,
 				D4F9F37B12E54555005CA6D2 /* Info.plist */,
@@ -834,7 +860,8 @@
 				1AC3624616D4A1E8000847F2 /* Prefix.pch */,
 				1AFCDA8016D4A25900906EA6 /* RootViewController.h */,
 				1AFCDA8116D4A25900906EA6 /* RootViewController.mm */,
-				7B4F367F18D57E7100E887E2 /* InfoPlist.strings */,
+				7B3C674C18DEB5BD008F3129 /* InfoPlist.strings */,
+				7B3C674518DEB46C008F3129 /* Localizable.strings */,
 			);
 			name = ios;
 			path = Classes;
@@ -1323,6 +1350,8 @@
 				7B4F367D18D57D5000E887E2 /* TitleScene.h */,
 				7B5BF64718D58B1D00051414 /* GameScene.cpp */,
 				7B5BF64818D58B1D00051414 /* GameScene.h */,
+				7B3C675018DEEFA2008F3129 /* GameOverScene.cpp */,
+				7B3C675118DEEFA2008F3129 /* GameOverScene.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -1918,6 +1947,13 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7B3C675318DEF0C0008F3129 /* for_title_off.png */,
+				7B3C675418DEF0C0008F3129 /* for_title_on.png */,
+				7B3C675518DEF0C0008F3129 /* retry_off.png */,
+				7B3C675618DEF0C0008F3129 /* retry_on.png */,
+				7B3C674E18DEEF89008F3129 /* close_background.png */,
+				7B3C673D18DEB1CD008F3129 /* YakitoriFont.fnt */,
+				7B3C673E18DEB1CD008F3129 /* YakitoriFont.png */,
 				7B5BF65D18D6651D00051414 /* home.png */,
 				7B5BF65A18D597DD00051414 /* yakitori_button6.png */,
 				7B5BF65018D597D700051414 /* yakitori_button1.png */,
@@ -1981,6 +2017,8 @@
 				Japanese,
 				French,
 				German,
+				en,
+				ja,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
@@ -2013,14 +2051,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				7855E0E1153FEF240059DD9A /* Default.png in Resources */,
-				7B4F368018D57E7100E887E2 /* InfoPlist.strings in Resources */,
+				7B3C674A18DEB5BD008F3129 /* InfoPlist.strings in Resources */,
 				7B5BF65E18D6651D00051414 /* home.png in Resources */,
 				D4EF949A15BD2D8B00D803EB /* Icon-57.png in Resources */,
 				7B5BF65718D597D700051414 /* yakitori_button3.png in Resources */,
+				7B3C675A18DEF0C0008F3129 /* retry_on.png in Resources */,
+				7B3C673F18DEB1CD008F3129 /* YakitoriFont.fnt in Resources */,
+				7B3C674F18DEEF89008F3129 /* close_background.png in Resources */,
+				7B3C675918DEF0C0008F3129 /* retry_off.png in Resources */,
+				7B3C675818DEF0C0008F3129 /* for_title_on.png in Resources */,
 				D4EF949C15BD2D8E00D803EB /* Icon-114.png in Resources */,
 				7B5BF64418D5879E00051414 /* start_off.png in Resources */,
 				7B5BF65818D597D700051414 /* yakitori_button4.png in Resources */,
 				D4EF949E15BD2D9600D803EB /* Icon-72.png in Resources */,
+				7B3C674318DEB46C008F3129 /* Localizable.strings in Resources */,
 				7B5BF64F18D5975A00051414 /* game_main.png in Resources */,
 				D4EF94A015BD2D9800D803EB /* Icon-144.png in Resources */,
 				7B5BF64E18D5975A00051414 /* game_main.plist in Resources */,
@@ -2033,7 +2077,9 @@
 				7B5BF64B18D58F8D00051414 /* game_background.png in Resources */,
 				7B5BF65B18D597DD00051414 /* yakitori_button6.png in Resources */,
 				15A3D9961682F7F9002FB0C5 /* CMakeLists.txt in Resources */,
+				7B3C674018DEB1CD008F3129 /* YakitoriFont.png in Resources */,
 				7B5BF65518D597D700051414 /* yakitori_button1.png in Resources */,
+				7B3C675718DEF0C0008F3129 /* for_title_off.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2098,6 +2144,7 @@
 				15A3D9391682F7D5002FB0C5 /* b2Rope.cpp in Sources */,
 				15A3D9951682F7F9002FB0C5 /* chipmunk.c in Sources */,
 				15A3D9971682F7F9002FB0C5 /* cpConstraint.c in Sources */,
+				7B3C675218DEEFA2008F3129 /* GameOverScene.cpp in Sources */,
 				15A3D9981682F7F9002FB0C5 /* cpDampedRotarySpring.c in Sources */,
 				15A3D9991682F7F9002FB0C5 /* cpDampedSpring.c in Sources */,
 				15A3D99A1682F7F9002FB0C5 /* cpGearJoint.c in Sources */,
@@ -2115,6 +2162,7 @@
 				15A3D9A61682F7F9002FB0C5 /* cpBody.c in Sources */,
 				15A3D9A71682F7F9002FB0C5 /* cpCollision.c in Sources */,
 				15A3D9A81682F7F9002FB0C5 /* cpHashSet.c in Sources */,
+				7B3C674918DEB519008F3129 /* NativeBridge.mm in Sources */,
 				15A3D9A91682F7F9002FB0C5 /* cpPolyShape.c in Sources */,
 				15A3D9AA1682F7F9002FB0C5 /* cpShape.c in Sources */,
 				15A3D9AB1682F7F9002FB0C5 /* cpSpace.c in Sources */,
@@ -2280,6 +2328,27 @@
 			targetProxy = 15A3DA681682F881002FB0C5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7B3C674518DEB46C008F3129 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B3C674418DEB46C008F3129 /* ja */,
+				7B3C674618DEB46F008F3129 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = SOURCE_ROOT;
+		};
+		7B3C674C18DEB5BD008F3129 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B3C674B18DEB5BD008F3129 /* en */,
+				7B3C674D18DEB5C0008F3129 /* ja */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {

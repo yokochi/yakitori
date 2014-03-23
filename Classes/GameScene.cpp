@@ -8,6 +8,8 @@
 
 #include "GameScene.h"
 #include "TitleScene.h"
+#include "NativeBridge.h"
+#include "GameOverScene.h"
 
 GameScene::GameScene()
 {
@@ -36,6 +38,8 @@ GameScene::GameScene()
     isPackCatch = false;
     sales = 0;
     lossCost = 0;
+    life = 0;
+    isGameOver = false;
 }
 
 CCScene* GameScene::scene()
@@ -65,6 +69,7 @@ bool GameScene::init()
     this->initCompornent();
     
     countDown = 3;
+    life = USER_MAX_LIFE;
     this->beforeAction();
     return true;
 }
@@ -143,6 +148,34 @@ void GameScene::initCompornent()
     CCSprite* packDummy = CCSprite::createWithSpriteFrameName(TEXTURE_IMG_YAKITORI_PACK);
     packDummy->setPosition(packPosition);
     batchNode->addChild(packDummy, ORDER_GAME_SCENE_YAKITORI_PACK_DUMMY);
+    
+    // score
+    CCSprite* saleWaku = CCSprite::createWithSpriteFrameName("sale_waku.png");
+    saleWaku->setPosition(ccp(size.width * 0.8, size.height * 0.95));
+    batchNode->addChild(saleWaku, ORDER_GAME_SCENE_SCORE_WAKU);
+    
+    CCString* sale = CCString::createWithFormat(NativeBridge::getLocalizeString("SaleSuffix"), 0);
+    CCLabelBMFont* saleLabel = CCLabelBMFont::create(sale->getCString(), "YakitoriFont.fnt");
+    saleLabel->setColor(ccc3(0, 0, 0));
+    saleLabel->setScale(0.75f);
+    saleLabel->setPosition(CCPointMake(size.width * 0.85, size.height * 0.95));
+    this->addChild(saleLabel, ORDER_GAME_SCENE_SCORE, TAG_GAME_SCENE_YAKITORI_SALE);
+    
+    // gauge
+    CCSprite* gaugeBase = CCSprite::createWithSpriteFrameName("gauge_base.png");
+    gaugeBase->setPosition(ccp(size.width * 0.2, size.height * 0.95));
+    gaugeBase->setAnchorPoint(ccp(0, 0.5));
+    batchNode->addChild(gaugeBase, ORDER_GAME_SCENE_GAUGE_1);
+    
+    CCSprite* gaugeBase2 = CCSprite::createWithSpriteFrameName("gauge_base2.png");
+    gaugeBase2->setPosition(ccp(size.width * 0.2, size.height * 0.95));
+    gaugeBase2->setAnchorPoint(ccp(0, 0.5));
+    batchNode->addChild(gaugeBase2, ORDER_GAME_SCENE_GAUGE_2);
+    
+    CCSprite* gaugeLife = CCSprite::createWithSpriteFrameName("gauge_life.png");
+    gaugeLife->setPosition(ccp(size.width * 0.2, size.height * 0.95));
+    gaugeLife->setAnchorPoint(ccp(0, 0.5));
+    batchNode->addChild(gaugeLife, ORDER_GAME_SCENE_GAUGE_LIFE, TAG_GAME_SCENE_GAUGE_LIFE);
 }
 
 void GameScene::beforeAction()
@@ -177,7 +210,14 @@ void GameScene::afterAction()
 
 void GameScene::update(float delta)
 {
-    this->updateBakeYakitori();
+    if (!isGameOver) {
+        this->updateBakeYakitori();
+        this->updateScore();
+        this->updateLife();
+        if (isGameOver) {
+            this->gameOverAction();
+        }
+    }
 }
 
 bool GameScene::ccTouchBegan(CCTouch *pTouch, CCEvent *pEvent)
@@ -222,8 +262,10 @@ void GameScene::ccTouchEnded(CCTouch *pTouch, CCEvent *pEvent)
             bool isOrder = this->checkOrder();
             if (isOrder) {
                 human->setDisplayFrame(cache->spriteFrameByName(TEXTURE_IMG_HUMAN_3));
+                this->life += USER_UP_LIFE;
             } else {
                 human->setDisplayFrame(cache->spriteFrameByName(TEXTURE_IMG_HUMAN_2));
+                this->life -= USER_DOWN_LIFE;
             }
             CCSize size = CCDirector::sharedDirector()->getWinSize();
             CCDelayTime* delayTime = CCDelayTime::create(0.75f);
@@ -233,6 +275,7 @@ void GameScene::ccTouchEnded(CCTouch *pTouch, CCEvent *pEvent)
                                                       CCRemoveSelf::create(), NULL);
             human->runAction(sequence);
             
+            // fukidashi
             CCSprite* fukidashi = (CCSprite*)batchNode->getChildByTag(TAG_GAME_SCENE_ORDER_FUKIDASHI);
             fukidashi->removeAllChildren();
             batchNode->removeChildByTag(TAG_GAME_SCENE_ORDER_FUKIDASHI);
@@ -260,8 +303,9 @@ void GameScene::touchYakitoriAction(YakitoriStatus status, Yakitori &yakitori, i
         yakitori = none;
     } else if (status == welldone) {
         this->showAlert(well_donw_yakitori);
-        this->removeWellDoneYakitori(tag);
-        this->lossCost += this->getYakitoriCost(yakitori);
+        this->removeWellDoneYakitori(tag, yakitori);
+        this->lossCost += (this->getYakitoriCost(yakitori) * YAKITORI_LOSS_COST);
+        this->life -= USER_SMALL_DOWN_LIFE;
         yakitori = none;
     }
 }
@@ -485,6 +529,7 @@ void GameScene::order()
         order3 = choiceYakitori();
         order4 = choiceYakitori();
         order5 = choiceYakitori();
+        
     }
     
     CCSize size = CCDirector::sharedDirector()->getWinSize();
@@ -567,13 +612,15 @@ void GameScene::showAlert(GameScene::YakitoriAlert alertType)
     sprite->runAction(sequence);
 }
 
-void GameScene::removeWellDoneYakitori(int tag)
+void GameScene::removeWellDoneYakitori(int tag, Yakitori yakitori)
 {
     CCSize size = CCDirector::sharedDirector()->getWinSize();
     CCSpriteBatchNode* batchNode = (CCSpriteBatchNode*)this->getChildByTag(TAG_GAME_SCENE_BATCH_NODE);
     CCSprite* sprite = (CCSprite*)batchNode->getChildByTag(tag);
     CCMoveBy* move = CCMoveBy::create(0.5f, ccp(size.width, 0));
     CCSequence* sequence = CCSequence::create(move, CCRemoveSelf::create(), NULL);
+    
+    this->showSaleScore(-(this->getYakitoriCost(yakitori) * YAKITORI_LOSS_COST), sprite->getPositionX(), sprite->getPositionY());
     sprite->runAction(sequence);
 }
 
@@ -606,9 +653,10 @@ bool GameScene::checkOrder()
     bool order3Check = (order3 == none);
     bool order4Check = (order4 == none);
     bool order5Check = (order5 == none);
+    bool ngOrder = false;
 
     int tmpSaleCost = 0;
-    bool result = true;
+    
     list<Yakitori>::iterator it = yakitoriList.begin();
 	while(it != yakitoriList.end())	{
 		if (!order1Check && order1 == *it) {
@@ -622,15 +670,26 @@ bool GameScene::checkOrder()
         } else if (!order5Check && order5 == *it) {
             order5Check = true;
         } else {
-            result = false;
+            ngOrder = true;
         }
         tmpSaleCost += this->getYakitoriCost(*it);
 		++it;
 	}
+    bool result = false;
+    if (order1Check && order2Check && order3Check && order4Check && order5Check && !ngOrder) {
+        result = true;
+    }
+    
+    CCSize size = CCDirector::sharedDirector()->getWinSize();
+    short x = size.width * 0.7;
+    short y = size.height * 0.7;
     if (result) {
         this->sales += tmpSaleCost;
+        this->showSaleScore(tmpSaleCost, x, y);
     } else {
-        this->lossCost += (tmpSaleCost * 0.5);
+        tmpSaleCost *= YAKITORI_LOSS_COST;
+        this->lossCost += tmpSaleCost;
+        this->showSaleScore(-tmpSaleCost, x, y);
     }
     return result;
 }
@@ -651,4 +710,59 @@ int GameScene::getYakitoriCost(GameScene::Yakitori yakitori)
         return YAKITORI_COST_KAWA;
     }
     return 0;
+}
+
+void GameScene::updateScore()
+{
+    int saleScore = this->sales - this->lossCost;
+    CCString* sale = CCString::createWithFormat(NativeBridge::getLocalizeString("SaleSuffix"), saleScore);
+    CCLabelBMFont* fontScore = (CCLabelBMFont*)this->getChildByTag(TAG_GAME_SCENE_YAKITORI_SALE);
+    fontScore->setCString(sale->getCString());
+}
+
+void GameScene::showSaleScore(int saleScore, short positionX, short positionY)
+{
+    // score
+    CCString* sale;
+    if (saleScore < 0) {
+        sale = CCString::createWithFormat("%d", saleScore);
+    } else {
+        sale = CCString::createWithFormat("+%d", saleScore);
+    }
+    CCLabelBMFont* saleLabel = CCLabelBMFont::create(sale->getCString(), "YakitoriFont.fnt");
+    if (saleScore <= 0) {
+        saleLabel->setColor(ccc3(100, 0, 0));
+    } else {
+        saleLabel->setColor(ccc3(0, 0, 100));
+    }
+    saleLabel->setScale(0.5f);
+    saleLabel->setPosition(CCPointMake(positionX, positionY));
+    
+    CCMoveBy* move = CCMoveBy::create(0.75f, ccp(0, 100));
+    CCActionInterval* fadeOut = CCFadeOut::create(0.75f);
+    CCSpawn* spawn = CCSpawn::create(move, fadeOut, NULL);
+    saleLabel->runAction(spawn);
+    
+    this->addChild(saleLabel, ORDER_GAME_SCENE_SCORE);
+}
+
+void GameScene::updateLife()
+{
+    CCSpriteBatchNode* batchNode = (CCSpriteBatchNode*)this->getChildByTag(TAG_GAME_SCENE_BATCH_NODE);
+    CCSprite* lifeGauge = (CCSprite*)batchNode->getChildByTag(TAG_GAME_SCENE_GAUGE_LIFE);
+    if (USER_MAX_LIFE < --this->life) {
+        this->life = USER_MAX_LIFE;
+    }
+    float ratio = this->life / USER_MAX_LIFE;
+    lifeGauge->setScaleX(ratio);
+    if (this->life <= 0) {
+        isGameOver = true;
+    }
+}
+
+void GameScene::gameOverAction()
+{
+    CCScene* scene = (CCScene*)GameOverScene::create();
+    CCTransitionMoveInT* move = CCTransitionMoveInT::create(1.5f, scene);
+    CCDirector::sharedDirector()->replaceScene(move);
 }

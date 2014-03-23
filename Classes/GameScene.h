@@ -15,6 +15,11 @@
 
 #define BAKE_YAKITORI_MEDIUM_TIME 180
 #define BAKE_YAKITORI_WELL_DONE_TIME BAKE_YAKITORI_MEDIUM_TIME + 360
+#define YAKITORI_LOSS_COST 0.5f
+#define USER_MAX_LIFE 24.0
+#define USER_UP_LIFE 300.0
+#define USER_DOWN_LIFE 60.0
+#define USER_SMALL_DOWN_LIFE 30.0
 
 #define ORDER_GAME_SCENE_BACKGROUND 10
 #define ORDER_GAME_SCENE_MENU 20
@@ -22,6 +27,11 @@
 #define ORDER_GAME_SCENE_BATCH_NODE 30
 #define ORDER_GAME_SCENE_HUMAN 40
 #define ORDER_GAME_SCENE_ORDER_YAKITORI 45
+#define ORDER_GAME_SCENE_SCORE_WAKU 50
+#define ORDER_GAME_SCENE_SCORE 51
+#define ORDER_GAME_SCENE_GAUGE_1 62
+#define ORDER_GAME_SCENE_GAUGE_2 60
+#define ORDER_GAME_SCENE_GAUGE_LIFE 61
 #define ORDER_GAME_SCENE_FUKIDASHI 80
 #define ORDER_GAME_SCENE_YAKITORI_PACK_DUMMY 89
 #define ORDER_GAME_SCENE_YAKITORI_PACK 90
@@ -42,6 +52,8 @@
 #define TAG_GAME_SCENE_ORDER_YAKITORI4 17
 #define TAG_GAME_SCENE_ORDER_YAKITORI5 18
 #define TAG_GAME_SCENE_YAKITORI_PACK 30
+#define TAG_GAME_SCENE_YAKITORI_SALE 31
+#define TAG_GAME_SCENE_GAUGE_LIFE 40
 
 #define TEXTURE_IMG_YAKITORI1_1 "yakitori1.png"
 #define TEXTURE_IMG_YAKITORI1_2 "yakitori1_2.png"
@@ -148,10 +160,13 @@ private:
     bool isPackCatch;
     int sales;// 売り上げ
     int lossCost;
+    float life;
+    bool isGameOver;
     
     void initCompornent();
     void beforeAction();
     void afterAction();
+    void gameOverAction();
     void yakitori1MenuCallback();
     void yakitori2MenuCallback();
     void yakitori3MenuCallback();
@@ -167,11 +182,14 @@ private:
     void updateBakeYakitori(Yakitori yakitori, int count, int tag, YakitoriStatus &status);
     bool isTouchSprite(CCTouch *pTouch, int tag);
     void showAlert(YakitoriAlert alertType);
-    void removeWellDoneYakitori(int tag);
+    void removeWellDoneYakitori(int tag, Yakitori yaitori);
     void touchYakitoriAction(YakitoriStatus status, Yakitori &yakitori, int tag);
     void addPack(int tag, Yakitori yakitori);
     bool checkOrder();
     int getYakitoriCost(Yakitori yakitori);
+    void updateScore();
+    void showSaleScore(int saleScore, short positionX, short positionY);
+    void updateLife();
 };
 
 #endif /* defined(__Yakitori__GameScene__) */
