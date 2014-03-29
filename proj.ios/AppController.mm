@@ -49,6 +49,9 @@ static AppDelegate s_sharedApplication;
     
     [[UIApplication sharedApplication] setStatusBarHidden:true];
     
+    // AdMob
+    [self setAdMobSetting];
+    
     cocos2d::CCApplication::sharedApplication()->run();
 
     return YES;
@@ -102,9 +105,27 @@ static AppDelegate s_sharedApplication;
      */
 }
 
+- (void)setAdMobSetting {
+    
+    bannerView_ = [GADBannerView alloc];
+    CGPoint origin = CGPointMake( 0.0, viewController.view.frame.size.height - GAD_SIZE_320x50.height);
+    //もし上のコードで広告が表示されないときは、下で表示されます。 2014/2/15確認
+    //CGPoint origin = CGPointMake( 0.0, self.viewController.view.frame.size.height);
+    bannerView_ = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner origin:origin];
+    
+    bannerView_.adUnitID = MY_BANNER_UNIT_ID;
+    [viewController.view addSubview: bannerView_];
+    [bannerView_ setRootViewController:viewController];
+    
+    GADRequest *request = [GADRequest request];
+//    request.testing = YES;
+    [bannerView_ loadRequest:request];
+}
+
 
 - (void)dealloc {
     [window release];
+    [bannerView_ release];
     [super dealloc];
 }
 

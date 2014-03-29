@@ -160,7 +160,6 @@
 		1AB8703C175E0A92005D39BF /* libwebsockets.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB8703B175E0A92005D39BF /* libwebsockets.a */; };
 		1AC3624916D4A1E8000847F2 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1AC3624316D4A1E8000847F2 /* AppController.mm */; };
 		1AC3624B16D4A1E8000847F2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC3624516D4A1E8000847F2 /* main.m */; };
-		1ACB3244164770DE00914215 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ACB3243164770DE00914215 /* libcurl.a */; };
 		1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */; };
 		1AFCDA8216D4A25900906EA6 /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1AFCDA8116D4A25900906EA6 /* RootViewController.mm */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -260,6 +259,14 @@
 		7B3C677F18E65EDF008F3129 /* twitter_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B3C677D18E65EDF008F3129 /* twitter_on.png */; };
 		7B3C678118E6605A008F3129 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3C678018E6605A008F3129 /* Twitter.framework */; };
 		7B3C678318E66B37008F3129 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3C678218E66B37008F3129 /* Social.framework */; };
+		7B3C679018E67C95008F3129 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3C678E18E67C95008F3129 /* libGoogleAdMobAds.a */; };
+		7B3C679118E67C96008F3129 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7B3C678F18E67C95008F3129 /* README.txt */; };
+		7B3C679318E67CB5008F3129 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3C679218E67CB5008F3129 /* AdSupport.framework */; };
+		7B3C679518E67CDF008F3129 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3C679418E67CDF008F3129 /* MessageUI.framework */; };
+		7B3C679718E67CE9008F3129 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3C679618E67CE9008F3129 /* StoreKit.framework */; };
+		7B3C679918E67CF1008F3129 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3C679818E67CF1008F3129 /* SystemConfiguration.framework */; };
+		7B3C679B18E68FB9008F3129 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3C679A18E68FB9008F3129 /* libcurl.a */; };
+		7B3C679D18E691F2008F3129 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3C679C18E691F2008F3129 /* CoreTelephony.framework */; };
 		7B4F367E18D57D5000E887E2 /* TitleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F367C18D57D5000E887E2 /* TitleScene.cpp */; };
 		7B5BF64418D5879E00051414 /* start_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B5BF64118D5879E00051414 /* start_off.png */; };
 		7B5BF64518D5879E00051414 /* start_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B5BF64218D5879E00051414 /* start_on.png */; };
@@ -815,6 +822,23 @@
 		7B3C677D18E65EDF008F3129 /* twitter_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter_on.png; sourceTree = "<group>"; };
 		7B3C678018E6605A008F3129 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		7B3C678218E66B37008F3129 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		7B3C678518E67C95008F3129 /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdMobExtras.h; sourceTree = "<group>"; };
+		7B3C678618E67C95008F3129 /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdNetworkExtras.h; sourceTree = "<group>"; };
+		7B3C678718E67C95008F3129 /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdSize.h; sourceTree = "<group>"; };
+		7B3C678818E67C95008F3129 /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerView.h; sourceTree = "<group>"; };
+		7B3C678918E67C95008F3129 /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerViewDelegate.h; sourceTree = "<group>"; };
+		7B3C678A18E67C95008F3129 /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitial.h; sourceTree = "<group>"; };
+		7B3C678B18E67C95008F3129 /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitialDelegate.h; sourceTree = "<group>"; };
+		7B3C678C18E67C95008F3129 /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
+		7B3C678D18E67C95008F3129 /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
+		7B3C678E18E67C95008F3129 /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
+		7B3C678F18E67C95008F3129 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		7B3C679218E67CB5008F3129 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		7B3C679418E67CDF008F3129 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		7B3C679618E67CE9008F3129 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		7B3C679818E67CF1008F3129 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		7B3C679A18E68FB9008F3129 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
+		7B3C679C18E691F2008F3129 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		7B4F367C18D57D5000E887E2 /* TitleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TitleScene.cpp; path = ../Classes/TitleScene.cpp; sourceTree = "<group>"; };
 		7B4F367D18D57D5000E887E2 /* TitleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TitleScene.h; path = ../Classes/TitleScene.h; sourceTree = "<group>"; };
 		7B5BF64118D5879E00051414 /* start_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start_off.png; sourceTree = "<group>"; };
@@ -852,20 +876,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B3C679D18E691F2008F3129 /* CoreTelephony.framework in Frameworks */,
+				7B3C679B18E68FB9008F3129 /* libcurl.a in Frameworks */,
+				7B3C679918E67CF1008F3129 /* SystemConfiguration.framework in Frameworks */,
+				7B3C679718E67CE9008F3129 /* StoreKit.framework in Frameworks */,
+				7B3C679518E67CDF008F3129 /* MessageUI.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */,
+				D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */,
+				7B3C679318E67CB5008F3129 /* AdSupport.framework in Frameworks */,
 				7B3C678318E66B37008F3129 /* Social.framework in Frameworks */,
+				7B3C679018E67C95008F3129 /* libGoogleAdMobAds.a in Frameworks */,
 				7B3C678118E6605A008F3129 /* Twitter.framework in Frameworks */,
 				15A3DA6A1682F886002FB0C5 /* libcocos2dx.a in Frameworks */,
-				1ACB3244164770DE00914215 /* libcurl.a in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
-				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
 				BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */,
 				BF1712461292920000B8313A /* libxml2.dylib in Frameworks */,
 				BF1712471292920000B8313A /* libz.dylib in Frameworks */,
 				BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */,
 				D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */,
-				D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */,
-				D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */,
 				1AB8703C175E0A92005D39BF /* libwebsockets.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -876,6 +906,7 @@
 		080E96DDFE201D6D7F000001 /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				7B3C678418E67C95008F3129 /* AdMob */,
 				7B3C674718DEB519008F3129 /* NativeBridge.h */,
 				7B3C674818DEB519008F3129 /* NativeBridge.mm */,
 				1AC3624216D4A1E8000847F2 /* AppController.h */,
@@ -1645,6 +1676,12 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7B3C679C18E691F2008F3129 /* CoreTelephony.framework */,
+				7B3C679A18E68FB9008F3129 /* libcurl.a */,
+				7B3C679818E67CF1008F3129 /* SystemConfiguration.framework */,
+				7B3C679618E67CE9008F3129 /* StoreKit.framework */,
+				7B3C679418E67CDF008F3129 /* MessageUI.framework */,
+				7B3C679218E67CB5008F3129 /* AdSupport.framework */,
 				7B3C678218E66B37008F3129 /* Social.framework */,
 				7B3C678018E6605A008F3129 /* Twitter.framework */,
 				1ACB3243164770DE00914215 /* libcurl.a */,
@@ -2024,6 +2061,24 @@
 			name = util;
 			sourceTree = "<group>";
 		};
+		7B3C678418E67C95008F3129 /* AdMob */ = {
+			isa = PBXGroup;
+			children = (
+				7B3C678518E67C95008F3129 /* GADAdMobExtras.h */,
+				7B3C678618E67C95008F3129 /* GADAdNetworkExtras.h */,
+				7B3C678718E67C95008F3129 /* GADAdSize.h */,
+				7B3C678818E67C95008F3129 /* GADBannerView.h */,
+				7B3C678918E67C95008F3129 /* GADBannerViewDelegate.h */,
+				7B3C678A18E67C95008F3129 /* GADInterstitial.h */,
+				7B3C678B18E67C95008F3129 /* GADInterstitialDelegate.h */,
+				7B3C678C18E67C95008F3129 /* GADRequest.h */,
+				7B3C678D18E67C95008F3129 /* GADRequestError.h */,
+				7B3C678E18E67C95008F3129 /* libGoogleAdMobAds.a */,
+				7B3C678F18E67C95008F3129 /* README.txt */,
+			);
+			path = AdMob;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2111,6 +2166,7 @@
 				7B5BF64418D5879E00051414 /* start_off.png in Resources */,
 				7B5BF65818D597D700051414 /* yakitori_button4.png in Resources */,
 				D4EF949E15BD2D9600D803EB /* Icon-72.png in Resources */,
+				7B3C679118E67C96008F3129 /* README.txt in Resources */,
 				7B3C674318DEB46C008F3129 /* Localizable.strings in Resources */,
 				7B5BF64F18D5975A00051414 /* game_main.png in Resources */,
 				D4EF94A015BD2D9800D803EB /* Icon-144.png in Resources */,
@@ -2443,8 +2499,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(SRCROOT)/../../../cocos2dx/platform/third_party/ios/libraries\"",
 					"\"$(SRCROOT)/../../../external/libwebsockets/ios/lib\"",
+					"$(PROJECT_DIR)/AdMob",
 				);
 				OTHER_CFLAGS = "-O2";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = Yakitori;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -2491,7 +2549,9 @@
 				LIBRARY_SEARCH_PATHS = (
 					"\"$(SRCROOT)/../../../cocos2dx/platform/third_party/ios/libraries\"",
 					"\"$(SRCROOT)/../../../external/libwebsockets/ios/lib\"",
+					"$(PROJECT_DIR)/AdMob",
 				);
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = Yakitori;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
