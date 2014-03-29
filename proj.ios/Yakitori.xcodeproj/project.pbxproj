@@ -267,6 +267,8 @@
 		7B3C679918E67CF1008F3129 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3C679818E67CF1008F3129 /* SystemConfiguration.framework */; };
 		7B3C679B18E68FB9008F3129 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3C679A18E68FB9008F3129 /* libcurl.a */; };
 		7B3C679D18E691F2008F3129 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3C679C18E691F2008F3129 /* CoreTelephony.framework */; };
+		7B3C67A418E6B736008F3129 /* ZYWebView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C67A118E6B736008F3129 /* ZYWebView.mm */; };
+		7B3C67A518E6B736008F3129 /* ZYWebView_iOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C67A318E6B736008F3129 /* ZYWebView_iOS.mm */; };
 		7B4F367E18D57D5000E887E2 /* TitleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F367C18D57D5000E887E2 /* TitleScene.cpp */; };
 		7B5BF64418D5879E00051414 /* start_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B5BF64118D5879E00051414 /* start_off.png */; };
 		7B5BF64518D5879E00051414 /* start_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B5BF64218D5879E00051414 /* start_on.png */; };
@@ -839,6 +841,10 @@
 		7B3C679818E67CF1008F3129 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		7B3C679A18E68FB9008F3129 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
 		7B3C679C18E691F2008F3129 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		7B3C679F18E6B6EA008F3129 /* ZYWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYWebView.h; sourceTree = "<group>"; };
+		7B3C67A118E6B736008F3129 /* ZYWebView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZYWebView.mm; sourceTree = "<group>"; };
+		7B3C67A218E6B736008F3129 /* ZYWebView_iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYWebView_iOS.h; sourceTree = "<group>"; };
+		7B3C67A318E6B736008F3129 /* ZYWebView_iOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZYWebView_iOS.mm; sourceTree = "<group>"; };
 		7B4F367C18D57D5000E887E2 /* TitleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TitleScene.cpp; path = ../Classes/TitleScene.cpp; sourceTree = "<group>"; };
 		7B4F367D18D57D5000E887E2 /* TitleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TitleScene.h; path = ../Classes/TitleScene.h; sourceTree = "<group>"; };
 		7B5BF64118D5879E00051414 /* start_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start_off.png; sourceTree = "<group>"; };
@@ -906,6 +912,7 @@
 		080E96DDFE201D6D7F000001 /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				7B3C67A018E6B736008F3129 /* webview */,
 				7B3C678418E67C95008F3129 /* AdMob */,
 				7B3C674718DEB519008F3129 /* NativeBridge.h */,
 				7B3C674818DEB519008F3129 /* NativeBridge.mm */,
@@ -1400,6 +1407,7 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				7B3C679E18E6B6EA008F3129 /* webview */,
 				7B3C675F18E44A10008F3129 /* util */,
 				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
@@ -2079,6 +2087,25 @@
 			path = AdMob;
 			sourceTree = SOURCE_ROOT;
 		};
+		7B3C679E18E6B6EA008F3129 /* webview */ = {
+			isa = PBXGroup;
+			children = (
+				7B3C679F18E6B6EA008F3129 /* ZYWebView.h */,
+			);
+			name = webview;
+			path = ../Classes/webview;
+			sourceTree = "<group>";
+		};
+		7B3C67A018E6B736008F3129 /* webview */ = {
+			isa = PBXGroup;
+			children = (
+				7B3C67A118E6B736008F3129 /* ZYWebView.mm */,
+				7B3C67A218E6B736008F3129 /* ZYWebView_iOS.h */,
+				7B3C67A318E6B736008F3129 /* ZYWebView_iOS.mm */,
+			);
+			path = webview;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2283,6 +2310,7 @@
 				15A3D9B01682F7F9002FB0C5 /* cpSpatialIndex.c in Sources */,
 				15A3D9B11682F7F9002FB0C5 /* cpSweep1D.c in Sources */,
 				15A3D9B21682F7F9002FB0C5 /* cpVect.c in Sources */,
+				7B3C67A418E6B736008F3129 /* ZYWebView.mm in Sources */,
 				15A3DA311682F826002FB0C5 /* CCBAnimationManager.cpp in Sources */,
 				15A3DA321682F826002FB0C5 /* CCBFileLoader.cpp in Sources */,
 				15A3DA331682F826002FB0C5 /* CCBKeyframe.cpp in Sources */,
@@ -2349,6 +2377,7 @@
 				1A27573F1697CF2B00504026 /* CCEditBoxImplAndroid.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				1AC3624916D4A1E8000847F2 /* AppController.mm in Sources */,
+				7B3C67A518E6B736008F3129 /* ZYWebView_iOS.mm in Sources */,
 				1AC3624B16D4A1E8000847F2 /* main.m in Sources */,
 				1AFCDA8216D4A25900906EA6 /* RootViewController.mm in Sources */,
 				1A8F3B6E175E05DA00049216 /* Animation.cpp in Sources */,

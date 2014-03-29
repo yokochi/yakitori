@@ -20,6 +20,11 @@ GameOverScene::GameOverScene()
     m_score = 0;
 }
 
+GameOverScene::~GameOverScene()
+{
+    m_webView->removeWebView();
+}
+
 CCScene* GameOverScene::scene()
 {
     // 'scene' is an autorelease object
@@ -155,6 +160,11 @@ void GameOverScene::initCompornent()
     pAllScoreLabel->setScale(0.75f);
     pAllScoreLabel->setPosition(CCPointMake(wakuSize.width * 0.5, wakuSize.height * 0.15));
     waku->addChild(pAllScoreLabel, ORDER_GAME_OVER_SCENE_LABEL);
+    
+    // webview
+    m_webView = new ZYWebView();
+    m_webView->init();
+    m_webView->showWebView("http://www.shinobigames.jp/ad.html", 0, 0, size.width, AD_WEBVIEW_HEIGHT);
 }
 
 void GameOverScene::showViewAfter()

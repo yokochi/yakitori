@@ -50,7 +50,7 @@ static AppDelegate s_sharedApplication;
     [[UIApplication sharedApplication] setStatusBarHidden:true];
     
     // AdMob
-    [self setAdMobSetting];
+//    [self setAdMobSetting];
     
     cocos2d::CCApplication::sharedApplication()->run();
 
