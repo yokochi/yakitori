@@ -9,8 +9,16 @@
 #include "GameOverScene.h"
 #include "GameScene.h"
 #include "TitleScene.h"
+#include "NativeBridge.h"
+#include "GameManager.h"
+
 
 USING_NS_CC;
+
+GameOverScene::GameOverScene()
+{
+    m_score = 0;
+}
 
 CCScene* GameOverScene::scene()
 {
@@ -48,7 +56,7 @@ void GameOverScene::onEnter()
 void GameOverScene::initCompornent()
 {
     CCSize size = CCDirector::sharedDirector()->getWinSize();
-    CCSprite* back = CCSprite::create("close_background.png");
+    CCSprite* back = CCSprite::create("close_background.jpg");
     back->setPosition(ccp(size.width * 0.5, size.height * 0.5));
     this->addChild(back);
     
@@ -65,19 +73,88 @@ void GameOverScene::initCompornent()
                                                          "for_title_off.png",
                                                          this,
                                                          menu_selector(GameOverScene::menuTitleCallback));
-    titleItem->setPosition(ccp(size.width * 0.3, size.height * 0.3));
+    titleItem->setPosition(ccp(size.width * 0.25, size.height * 0.2));
     
     CCMenuItemImage *retryItem = CCMenuItemImage::create(
                                                          "retry_on.png",
                                                          "retry_off.png",
                                                          this,
                                                          menu_selector(GameOverScene::menuRetryCallback));
-    retryItem->setPosition(ccp(size.width * 0.7, size.height * 0.3));
+    retryItem->setPosition(ccp(size.width * 0.75, size.height * 0.2));
+    
+    CCMenuItemImage *twitterItem = CCMenuItemImage::create(
+                                                         "twitter_on.png",
+                                                         "twitter_on.png",
+                                                         this,
+                                                         menu_selector(GameOverScene::menuTwitterCallback));
+    twitterItem->setPosition(ccp(size.width * 0.1, size.height * 0.55));
+    
+    CCMenuItemImage *facebookItem = CCMenuItemImage::create(
+                                                           "facebook_on.png",
+                                                           "facebook_on.png",
+                                                           this,
+                                                           menu_selector(GameOverScene::menuFaceBookCallback));
+    facebookItem->setPosition(ccp(size.width * 0.1, size.height * 0.45));
     
     // create menu, it's an autorelease object
-    CCMenu* pMenu = CCMenu::create(titleItem, retryItem, NULL);
+    CCMenu* pMenu = CCMenu::create(titleItem, retryItem, twitterItem, facebookItem, NULL);
     pMenu->setPosition(CCPointZero);
     baseLayer->addChild(pMenu);
+    
+    GameManager* pGameManager = GameManager::sharedGameManager();
+    m_score = pGameManager->getPoint();
+    bool pIsNewRecord = pGameManager->putScore(m_score);
+    
+    // label
+    CCSprite* waku = CCSprite::create("game_over_sale_waku.png");
+    waku->setPosition(ccp(size.width * 0.5, size.height * 0.5));
+    baseLayer->addChild(waku, ORDER_GAME_OVER_SCENE_LABEL_WAKU);
+    CCSize wakuSize = waku->getContentSize();
+    
+    if (pIsNewRecord) {
+        CCSprite* pNewSprite = CCSprite::create("new.png");
+        pNewSprite->setPosition(ccp(size.width * 0.65, size.height * 0.7));
+        baseLayer->addChild(pNewSprite, ORDER_GAME_OVER_SCENE_LABEL);
+    }
+    
+    CCLabelBMFont* saleLabel = CCLabelBMFont::create(NativeBridge::getLocalizeString("Sale"), "YakitoriFont.fnt");
+    saleLabel->setColor(ccc3(0, 0, 0));
+    saleLabel->setScale(0.75f);
+    saleLabel->setPosition(CCPointMake(wakuSize.width * 0.5, wakuSize.height * 0.85));
+    waku->addChild(saleLabel, ORDER_GAME_OVER_SCENE_LABEL);
+    
+    CCString* pScoreFormat = CCString::createWithFormat(NativeBridge::getLocalizeString("SaleFormat"), m_score);
+    CCLabelBMFont* pScoreLabel = CCLabelBMFont::create(pScoreFormat->getCString(), "YakitoriFont.fnt");
+    pScoreLabel->setColor(ccc3(0, 0, 0));
+    pScoreLabel->setScale(0.75f);
+    pScoreLabel->setPosition(CCPointMake(wakuSize.width * 0.5, wakuSize.height * 0.75));
+    waku->addChild(pScoreLabel, ORDER_GAME_OVER_SCENE_LABEL);
+    
+    CCLabelBMFont* bestLabel = CCLabelBMFont::create(NativeBridge::getLocalizeString("BestSale"), "YakitoriFont.fnt");
+    bestLabel->setColor(ccc3(0, 0, 0));
+    bestLabel->setScale(0.75f);
+    bestLabel->setPosition(CCPointMake(wakuSize.width * 0.5, wakuSize.height * 0.55));
+    waku->addChild(bestLabel, ORDER_GAME_OVER_SCENE_LABEL);
+    
+    CCString* pBestScoreFormat = CCString::createWithFormat(NativeBridge::getLocalizeString("SaleFormat"), pGameManager->getHighScore());
+    CCLabelBMFont* pBestScoreLabel = CCLabelBMFont::create(pBestScoreFormat->getCString(), "YakitoriFont.fnt");
+    pBestScoreLabel->setColor(ccc3(0, 0, 0));
+    pBestScoreLabel->setScale(0.75f);
+    pBestScoreLabel->setPosition(CCPointMake(wakuSize.width * 0.5, wakuSize.height * 0.45));
+    waku->addChild(pBestScoreLabel, ORDER_GAME_OVER_SCENE_LABEL);
+    
+    CCLabelBMFont* accumulationLabel = CCLabelBMFont::create(NativeBridge::getLocalizeString("AccumulationSales"), "YakitoriFont.fnt");
+    accumulationLabel->setColor(ccc3(0, 0, 0));
+    accumulationLabel->setScale(0.75f);
+    accumulationLabel->setPosition(CCPointMake(wakuSize.width * 0.5, wakuSize.height * 0.25));
+    waku->addChild(accumulationLabel, ORDER_GAME_OVER_SCENE_LABEL);
+    
+    CCString* pAllScoreFormat = CCString::createWithFormat(NativeBridge::getLocalizeString("SaleFormat"), pGameManager->getAllScore());
+    CCLabelBMFont* pAllScoreLabel = CCLabelBMFont::create(pAllScoreFormat->getCString(), "YakitoriFont.fnt");
+    pAllScoreLabel->setColor(ccc3(0, 0, 0));
+    pAllScoreLabel->setScale(0.75f);
+    pAllScoreLabel->setPosition(CCPointMake(wakuSize.width * 0.5, wakuSize.height * 0.15));
+    waku->addChild(pAllScoreLabel, ORDER_GAME_OVER_SCENE_LABEL);
 }
 
 void GameOverScene::showViewAfter()
@@ -96,4 +173,14 @@ void GameOverScene::menuRetryCallback(cocos2d::CCObject *pSender)
 {
     CCScene* scene = (CCScene*)GameScene::create();
     CCDirector::sharedDirector()->replaceScene(scene);
+}
+
+void GameOverScene::menuTwitterCallback(cocos2d::CCObject *pSender)
+{
+    NativeBridge::openTweetDialog(m_score);
+}
+
+void GameOverScene::menuFaceBookCallback(cocos2d::CCObject *pSender)
+{
+    NativeBridge::openFacebookDialog(m_score);
 }

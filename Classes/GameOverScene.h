@@ -14,6 +14,8 @@
 #include "cocos2d.h"
 
 #define ORDER_GAME_OVER_SCENE_BASE_LAYER 10
+#define ORDER_GAME_OVER_SCENE_LABEL_WAKU 15
+#define ORDER_GAME_OVER_SCENE_LABEL 20
 
 #define TAG_GAME_OVER_SCENE_BASE_LAYER 1
 
@@ -21,6 +23,7 @@ class GameOverScene : public cocos2d::CCLayer
 {
 public:
     // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
+    GameOverScene();
     virtual bool init();
     virtual void onEnter();
     
@@ -31,9 +34,13 @@ public:
     CREATE_FUNC(GameOverScene);
     
 private:
+    int m_score;
+    
     void initCompornent();
     void menuTitleCallback(CCObject* pSender);
     void menuRetryCallback(CCObject* pSender);
+    void menuTwitterCallback(CCObject* pSender);
+    void menuFaceBookCallback(CCObject* pSender);
     void showViewAfter();
     
 };

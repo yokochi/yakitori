@@ -10,6 +10,7 @@
 #include "TitleScene.h"
 #include "NativeBridge.h"
 #include "GameOverScene.h"
+#include "GameManager.h"
 
 GameScene::GameScene()
 {
@@ -77,14 +78,24 @@ bool GameScene::init()
 void GameScene::initCompornent()
 {
     CCSize size = CCDirector::sharedDirector()->getWinSize();
-    CCSprite* back = CCSprite::create("game_background.png");
+    CCSprite* back = CCSprite::create("game_background.jpg");
     back->setPosition(ccp(size.width * 0.5, size.height * 0.5));
     this->addChild(back, ORDER_GAME_SCENE_BACKGROUND);
+    
+    CCSprite* back2 = CCSprite::create("game_background2.png");
+    back2->setPosition(ccp(size.width * 0.5, size.height * 0.5));
+    this->addChild(back2, ORDER_GAME_SCENE_BACKGROUND_2);
     
     CCSpriteFrameCache* cache = CCSpriteFrameCache::sharedSpriteFrameCache();
     cache->addSpriteFramesWithFile("game_main.plist");
     CCSpriteBatchNode* batchNode = CCSpriteBatchNode::create("game_main.png");
     this->addChild(batchNode, ORDER_GAME_SCENE_BATCH_NODE, TAG_GAME_SCENE_BATCH_NODE);
+    
+    // ami
+    CCSprite* backAmi = CCSprite::createWithSpriteFrameName(TEXTURE_IMG_YAKITORI_AMI);
+    backAmi->setPosition(ccp(size.width * 0.64, size.height * 0.49));
+    batchNode->addChild(backAmi, ORDER_GAME_SCENE_BACKGROUND_AMI);
+    
     
     // yakitori button
     CCMenuItemImage *yakitori1Item = CCMenuItemImage::create(
@@ -141,7 +152,7 @@ void GameScene::initCompornent()
     
     // pack
     CCSprite* pack = CCSprite::createWithSpriteFrameName(TEXTURE_IMG_YAKITORI_PACK);
-    packPosition = ccp(size.width * 0.1, size.height * 0.5);
+    packPosition = ccp(size.width * 0.125, size.height * 0.5);
     pack->setPosition(packPosition);
     batchNode->addChild(pack, ORDER_GAME_SCENE_YAKITORI_PACK, TAG_GAME_SCENE_YAKITORI_PACK);
     
@@ -536,7 +547,7 @@ void GameScene::order()
     CCSpriteBatchNode* batchNode = (CCSpriteBatchNode*)this->getChildByTag(TAG_GAME_SCENE_BATCH_NODE);
     
     CCSprite* sprite = CCSprite::createWithSpriteFrameName(TEXTURE_IMG_HUMAN);
-    sprite->setPosition(ccp(size.width * 0.75, size.height * 0.8));
+    sprite->setPosition(ccp(size.width * 0.75, size.height * 0.78));
     batchNode->addChild(sprite, ORDER_GAME_SCENE_HUMAN, TAG_GAME_SCENE_HUMAN);
     
     CCSprite* fukidashiOrder = CCSprite::createWithSpriteFrameName(TEXTURE_IMG_ORDER_FUKIDASHI);
@@ -762,6 +773,9 @@ void GameScene::updateLife()
 
 void GameScene::gameOverAction()
 {
+    GameManager* gameManager = GameManager::sharedGameManager();
+    gameManager->setPoint(this->sales - this->lossCost);
+    
     CCScene* scene = (CCScene*)GameOverScene::create();
     CCTransitionMoveInT* move = CCTransitionMoveInT::create(1.5f, scene);
     CCDirector::sharedDirector()->replaceScene(move);

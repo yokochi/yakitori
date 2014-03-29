@@ -20,7 +20,7 @@
             <key>fukidashi_order.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,276},{400,200}}</string>
+                <string>{{565,406},{400,200}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -33,11 +33,11 @@
             <key>gauge_base.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,680},{280,48}}</string>
+                <string>{{700,698},{280,48}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{0,0},{280,48}}</string>
                 <key>sourceSize</key>
@@ -46,11 +46,11 @@
             <key>gauge_base2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{52,680},{276,44}}</string>
+                <string>{{700,748},{276,44}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{2,2},{276,44}}</string>
                 <key>sourceSize</key>
@@ -59,11 +59,11 @@
             <key>gauge_life.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{98,680},{274,42}}</string>
+                <string>{{204,354},{274,42}}</string>
                 <key>offset</key>
                 <string>{-1,1}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
                 <string>{{2,2},{274,42}}</string>
                 <key>sourceSize</key>
@@ -72,41 +72,41 @@
             <key>human.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{227,680},{100,148}}</string>
+                <string>{{546,698},{152,286}}</string>
                 <key>offset</key>
-                <string>{0,-1}</string>
+                <string>{1,-3}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,2},{100,148}}</string>
+                <string>{{15,10},{152,286}}</string>
                 <key>sourceSize</key>
-                <string>{100,150}</string>
+                <string>{180,300}</string>
             </dict>
             <key>human_2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{404,378},{100,148}}</string>
+                <string>{{392,536},{152,286}}</string>
                 <key>offset</key>
-                <string>{0,-1}</string>
+                <string>{1,-3}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,2},{100,148}}</string>
+                <string>{{15,10},{152,286}}</string>
                 <key>sourceSize</key>
-                <string>{100,150}</string>
+                <string>{180,300}</string>
             </dict>
             <key>human_3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{404,276},{100,148}}</string>
+                <string>{{204,698},{152,286}}</string>
                 <key>offset</key>
-                <string>{0,-1}</string>
+                <string>{1,-3}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,2},{100,148}}</string>
+                <string>{{15,10},{152,286}}</string>
                 <key>sourceSize</key>
-                <string>{100,150}</string>
+                <string>{180,300}</string>
             </dict>
             <key>rare_alert.png</key>
             <dict>
@@ -124,7 +124,7 @@
             <key>sale_waku.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{142,680},{250,83}}</string>
+                <string>{{480,276},{250,83}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -137,11 +137,11 @@
             <key>thanks.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,478},{386,200}}</string>
+                <string>{{2,608},{386,200}}</string>
                 <key>offset</key>
                 <string>{-7,0}</string>
                 <key>rotated</key>
-                <false/>
+                <true/>
                 <key>sourceColorRect</key>
                 <string>{{0,0},{386,200}}</string>
                 <key>sourceSize</key>
@@ -160,252 +160,265 @@
                 <key>sourceSize</key>
                 <string>{400,200}</string>
             </dict>
+            <key>yakiami.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,276},{476,76}}</string>
+                <key>offset</key>
+                <string>{7,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{14,12},{476,76}}</string>
+                <key>sourceSize</key>
+                <string>{490,100}</string>
+            </dict>
             <key>yakitori1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{546,480},{44,120}}</string>
+                <string>{{358,872},{54,144}}</string>
+                <key>offset</key>
+                <string>{0,-2}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{3,6},{54,144}}</string>
+                <key>sourceSize</key>
+                <string>{60,152}</string>
+            </dict>
+            <key>yakitori1_2.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{692,608},{54,144}}</string>
+                <key>offset</key>
+                <string>{0,-2}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{3,6},{54,144}}</string>
+                <key>sourceSize</key>
+                <string>{60,152}</string>
+            </dict>
+            <key>yakitori1_3.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{546,608},{54,144}}</string>
+                <key>offset</key>
+                <string>{0,-2}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{3,6},{54,144}}</string>
+                <key>sourceSize</key>
+                <string>{60,152}</string>
+            </dict>
+            <key>yakitori2.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{150,528},{54,144}}</string>
+                <key>offset</key>
+                <string>{0,-2}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{3,6},{54,144}}</string>
+                <key>sourceSize</key>
+                <string>{60,152}</string>
+            </dict>
+            <key>yakitori2_2.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{967,552},{54,144}}</string>
+                <key>offset</key>
+                <string>{0,-2}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{3,6},{54,144}}</string>
+                <key>sourceSize</key>
+                <string>{60,152}</string>
+            </dict>
+            <key>yakitori2_3.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{967,406},{54,144}}</string>
+                <key>offset</key>
+                <string>{0,-2}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{3,6},{54,144}}</string>
+                <key>sourceSize</key>
+                <string>{60,152}</string>
+            </dict>
+            <key>yakitori3.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,414},{58,146}}</string>
+                <key>offset</key>
+                <string>{1,-1}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{2,4},{58,146}}</string>
+                <key>sourceSize</key>
+                <string>{60,152}</string>
+            </dict>
+            <key>yakitori3_2.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,354},{58,146}}</string>
+                <key>offset</key>
+                <string>{1,-1}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{2,4},{58,146}}</string>
+                <key>sourceSize</key>
+                <string>{60,152}</string>
+            </dict>
+            <key>yakitori3_3.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,528},{58,146}}</string>
+                <key>offset</key>
+                <string>{1,-1}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{2,4},{58,146}}</string>
+                <key>sourceSize</key>
+                <string>{60,152}</string>
+            </dict>
+            <key>yakitori4.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{700,794},{42,142}}</string>
+                <key>offset</key>
+                <string>{0,-3}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{9,8},{42,142}}</string>
+                <key>sourceSize</key>
+                <string>{60,152}</string>
+            </dict>
+            <key>yakitori4_2.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{978,748},{42,142}}</string>
+                <key>offset</key>
+                <string>{0,-3}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{9,8},{42,142}}</string>
+                <key>sourceSize</key>
+                <string>{60,152}</string>
+            </dict>
+            <key>yakitori4_3.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{468,872},{42,142}}</string>
+                <key>offset</key>
+                <string>{0,-3}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{9,8},{42,142}}</string>
+                <key>sourceSize</key>
+                <string>{60,152}</string>
+            </dict>
+            <key>yakitori5.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{358,824},{46,148}}</string>
+                <key>offset</key>
+                <string>{-2,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{5,2},{46,148}}</string>
+                <key>sourceSize</key>
+                <string>{60,152}</string>
+            </dict>
+            <key>yakitori5_2.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{344,536},{46,148}}</string>
                 <key>offset</key>
                 <string>{-2,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{1,0},{44,120}}</string>
+                <string>{{5,2},{46,148}}</string>
                 <key>sourceSize</key>
-                <string>{50,120}</string>
-            </dict>
-            <key>yakitori1_2.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{512,602},{48,120}}</string>
-                <key>offset</key>
-                <string>{1,0}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{2,0},{48,120}}</string>
-                <key>sourceSize</key>
-                <string>{50,120}</string>
-            </dict>
-            <key>yakitori1_3.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{368,976},{46,120}}</string>
-                <key>offset</key>
-                <string>{-1,0}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{1,0},{46,120}}</string>
-                <key>sourceSize</key>
-                <string>{50,120}</string>
-            </dict>
-            <key>yakitori2.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{485,654},{50,120}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{50,120}}</string>
-                <key>sourceSize</key>
-                <string>{50,120}</string>
-            </dict>
-            <key>yakitori2_2.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{453,776},{50,120}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{50,120}}</string>
-                <key>sourceSize</key>
-                <string>{50,120}</string>
-            </dict>
-            <key>yakitori2_3.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{433,654},{50,120}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{50,120}}</string>
-                <key>sourceSize</key>
-                <string>{50,120}</string>
-            </dict>
-            <key>yakitori3.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{494,480},{50,120}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{50,120}}</string>
-                <key>sourceSize</key>
-                <string>{50,120}</string>
-            </dict>
-            <key>yakitori3_2.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{442,480},{50,120}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{50,120}}</string>
-                <key>sourceSize</key>
-                <string>{50,120}</string>
-            </dict>
-            <key>yakitori3_3.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{390,602},{50,120}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{50,120}}</string>
-                <key>sourceSize</key>
-                <string>{50,120}</string>
-            </dict>
-            <key>yakitori4.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{390,480},{50,120}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{50,120}}</string>
-                <key>sourceSize</key>
-                <string>{50,120}</string>
-            </dict>
-            <key>yakitori4_2.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{401,802},{50,120}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{50,120}}</string>
-                <key>sourceSize</key>
-                <string>{50,120}</string>
-            </dict>
-            <key>yakitori4_3.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{368,924},{50,120}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <true/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{50,120}}</string>
-                <key>sourceSize</key>
-                <string>{50,120}</string>
-            </dict>
-            <key>yakitori5.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{381,680},{50,120}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{50,120}}</string>
-                <key>sourceSize</key>
-                <string>{50,120}</string>
-            </dict>
-            <key>yakitori5_2.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{349,802},{50,120}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{50,120}}</string>
-                <key>sourceSize</key>
-                <string>{50,120}</string>
+                <string>{60,152}</string>
             </dict>
             <key>yakitori5_3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{329,680},{50,120}}</string>
+                <string>{{296,536},{46,148}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-2,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{50,120}}</string>
+                <string>{{5,2},{46,148}}</string>
                 <key>sourceSize</key>
-                <string>{50,120}</string>
+                <string>{60,152}</string>
             </dict>
             <key>yakitori6.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{246,952},{50,120}}</string>
+                <string>{{414,872},{52,144}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-2,-2}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{50,120}}</string>
+                <string>{{2,6},{52,144}}</string>
                 <key>sourceSize</key>
-                <string>{50,120}</string>
+                <string>{60,152}</string>
             </dict>
             <key>yakitori6_2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{124,956},{50,120}}</string>
+                <string>{{2,474},{52,144}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-2,-2}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{50,120}}</string>
+                <string>{{2,6},{52,144}}</string>
                 <key>sourceSize</key>
-                <string>{50,120}</string>
+                <string>{60,152}</string>
             </dict>
             <key>yakitori6_3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,962},{50,120}}</string>
+                <string>{{150,354},{52,144}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-2,-2}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{50,120}}</string>
+                <string>{{2,6},{52,144}}</string>
                 <key>sourceSize</key>
-                <string>{50,120}</string>
+                <string>{60,152}</string>
             </dict>
             <key>yakitori_pack.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{227,830},{120,120}}</string>
+                <string>{{296,398},{156,136}}</string>
                 <key>offset</key>
-                <string>{0,0}</string>
+                <string>{-1,1}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{120,120}}</string>
+                <string>{{2,3},{156,136}}</string>
                 <key>sourceSize</key>
-                <string>{120,120}</string>
+                <string>{162,144}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -417,7 +430,7 @@
             <key>size</key>
             <string>{1024,1024}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:5062feeb896a743508236d4f6e5ca71e:871fdf190320590777d28b26f828a825:194d3e7c97a4587c99947ddce79afb3e$</string>
+            <string>$TexturePacker:SmartUpdate:49b2adc8193bfd67b0120490f7090de0:0c20143f5aeb90f5c25d4f36c0a4802a:194d3e7c97a4587c99947ddce79afb3e$</string>
             <key>textureFileName</key>
             <string>game_main.png</string>
         </dict>
