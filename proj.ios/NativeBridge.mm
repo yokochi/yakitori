@@ -49,3 +49,9 @@ void NativeBridge::openFacebookDialog(int score)
     UIViewController *myViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
     [myViewController presentViewController: composeViewController animated:NO completion: nil];
 }
+
+void NativeBridge::openAppStore()
+{
+    NSURL *url = [NSURL URLWithString:NSLocalizedString(@"AppUrl", nil)];
+    [[UIApplication sharedApplication] openURL:url];
+}

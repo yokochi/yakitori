@@ -100,42 +100,42 @@ void GameScene::initCompornent()
     // yakitori button
     CCMenuItemImage *yakitori1Item = CCMenuItemImage::create(
                                                          "yakitori_button1.png",
-                                                         "yakitori_button1.png",
+                                                         "yakitori_button1_off.png",
                                                          this,
                                                          menu_selector(GameScene::yakitori1MenuCallback));
     yakitori1Item->setPosition(ccp(size.width * 0.175, size.height * 0.35));
     
     CCMenuItemImage *yakitori2Item = CCMenuItemImage::create(
                                                              "yakitori_button2.png",
-                                                             "yakitori_button2.png",
+                                                             "yakitori_button2_off.png",
                                                              this,
                                                              menu_selector(GameScene::yakitori2MenuCallback));
     yakitori2Item->setPosition(ccp(size.width * 0.5, size.height * 0.35));
     
     CCMenuItemImage *yakitori3Item = CCMenuItemImage::create(
                                                              "yakitori_button3.png",
-                                                             "yakitori_button3.png",
+                                                             "yakitori_button3_off.png",
                                                              this,
                                                              menu_selector(GameScene::yakitori3MenuCallback));
     yakitori3Item->setPosition(ccp(size.width * 0.825, size.height * 0.35));
     
     CCMenuItemImage *yakitori4Item = CCMenuItemImage::create(
                                                              "yakitori_button4.png",
-                                                             "yakitori_button4.png",
+                                                             "yakitori_button4_off.png",
                                                              this,
                                                              menu_selector(GameScene::yakitori4MenuCallback));
     yakitori4Item->setPosition(ccp(size.width * 0.175, size.height * 0.185));
     
     CCMenuItemImage *yakitori5Item = CCMenuItemImage::create(
                                                              "yakitori_button5.png",
-                                                             "yakitori_button5.png",
+                                                             "yakitori_button5_off.png",
                                                              this,
                                                              menu_selector(GameScene::yakitori5MenuCallback));
     yakitori5Item->setPosition(ccp(size.width * 0.5, size.height * 0.185));
     
     CCMenuItemImage *yakitori6Item = CCMenuItemImage::create(
                                                              "yakitori_button6.png",
-                                                             "yakitori_button6.png",
+                                                             "yakitori_button6_off.png",
                                                              this,
                                                              menu_selector(GameScene::yakitori6MenuCallback));
     yakitori6Item->setPosition(ccp(size.width * 0.825, size.height * 0.185));

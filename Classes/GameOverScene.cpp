@@ -22,7 +22,7 @@ GameOverScene::GameOverScene()
 
 GameOverScene::~GameOverScene()
 {
-    m_webView->removeWebView();
+//    m_webView->removeWebView();
 }
 
 CCScene* GameOverScene::scene()
@@ -89,14 +89,14 @@ void GameOverScene::initCompornent()
     
     CCMenuItemImage *twitterItem = CCMenuItemImage::create(
                                                          "twitter_on.png",
-                                                         "twitter_on.png",
+                                                         "twitter_off.png",
                                                          this,
                                                          menu_selector(GameOverScene::menuTwitterCallback));
     twitterItem->setPosition(ccp(size.width * 0.1, size.height * 0.55));
     
     CCMenuItemImage *facebookItem = CCMenuItemImage::create(
                                                            "facebook_on.png",
-                                                           "facebook_on.png",
+                                                           "facebook_off.png",
                                                            this,
                                                            menu_selector(GameOverScene::menuFaceBookCallback));
     facebookItem->setPosition(ccp(size.width * 0.1, size.height * 0.45));
@@ -175,12 +175,14 @@ void GameOverScene::showViewAfter()
 
 void GameOverScene::menuTitleCallback(cocos2d::CCObject *pSender)
 {
+    m_webView->removeWebView();
     CCScene* scene = (CCScene*)TitleScene::create();
     CCDirector::sharedDirector()->replaceScene(scene);
 }
 
 void GameOverScene::menuRetryCallback(cocos2d::CCObject *pSender)
 {
+    m_webView->removeWebView();
     CCScene* scene = (CCScene*)GameScene::create();
     CCDirector::sharedDirector()->replaceScene(scene);
 }
