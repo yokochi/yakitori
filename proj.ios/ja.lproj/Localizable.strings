@@ -13,3 +13,7 @@
 "Tweet" = "やきとり道場、今回の売上は%d円です。#yakitoridojo";
 "FaceBookSend" = "やきとり道場、今回の売上は%d円です。#yakitoridojo";
 "AppUrl" = "https://itunes.apple.com/us/app/kattobi-ren-fa-shu/id828904956?mt=8";
+"OverAlert" = "一杯だよ！";
+"RareAlert" = "焼けてない！";
+"ThanksMessage" = "おまち";
+"ScorchedMessage" = "焼きすぎ！";

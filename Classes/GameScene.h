@@ -22,21 +22,23 @@
 #define USER_SMALL_DOWN_LIFE 30.0
 
 #define ORDER_GAME_SCENE_BACKGROUND 10
-#define ORDER_GAME_SCENE_BACKGROUND_2 11
+#define ORDER_GAME_SCENE_HUMAN 12
+#define ORDER_GAME_SCENE_BACKGROUND_2 13
+#define ORDER_GAME_SCENE_FIRE 14
 #define ORDER_GAME_SCENE_BACKGROUND_AMI 15
 #define ORDER_GAME_SCENE_MENU 20
 #define ORDER_GAME_SCENE_YAKITORI 20
 #define ORDER_GAME_SCENE_BATCH_NODE 30
-#define ORDER_GAME_SCENE_HUMAN 40
 #define ORDER_GAME_SCENE_ORDER_YAKITORI 45
 #define ORDER_GAME_SCENE_SCORE_WAKU 50
 #define ORDER_GAME_SCENE_SCORE 51
 #define ORDER_GAME_SCENE_GAUGE_1 62
 #define ORDER_GAME_SCENE_GAUGE_2 60
 #define ORDER_GAME_SCENE_GAUGE_LIFE 61
+#define ORDER_GAME_SCENE_YAKITORI_PACK_DUMMY 70
+#define ORDER_GAME_SCENE_YAKITORI_PACK 71
 #define ORDER_GAME_SCENE_FUKIDASHI 80
-#define ORDER_GAME_SCENE_YAKITORI_PACK_DUMMY 89
-#define ORDER_GAME_SCENE_YAKITORI_PACK 90
+#define ORDER_GAME_SCENE_FUKIDASHI_MESSAGE 81
 #define ORDER_GAME_SCENE_COUNT_DOWN 100
 
 #define TAG_YAKITORI1 1
@@ -56,6 +58,7 @@
 #define TAG_GAME_SCENE_YAKITORI_PACK 30
 #define TAG_GAME_SCENE_YAKITORI_SALE 31
 #define TAG_GAME_SCENE_GAUGE_LIFE 40
+#define TAG_GAME_SCENE_FIRE 41
 
 #define TEXTURE_IMG_YAKITORI1_1 "yakitori1.png"
 #define TEXTURE_IMG_YAKITORI1_2 "yakitori1_2.png"
@@ -81,6 +84,9 @@
 #define TEXTURE_IMG_ORDER_FUKIDASHI "fukidashi_order.png"
 #define TEXTURE_IMG_YAKITORI_PACK "yakitori_pack.png"
 #define TEXTURE_IMG_YAKITORI_AMI "yakiami.png"
+#define TEXTURE_IMG_FIRE_1 "fire_01.png"
+#define TEXTURE_IMG_FIRE_2 "fire_02.png"
+#define TEXTURE_IMG_FIRE_3 "fire_03.png"
 
 #define YAKITORI_COST_NEGIMA 90
 #define YAKITORI_COST_MOMO 120
@@ -132,6 +138,11 @@ private:
         well_donw_yakitori,
         thanks,
     };
+    enum FireState {
+        fireState1,
+        fireState2,
+        fireState3
+    };
     Yakitori yakitori1;
     Yakitori yakitori2;
     Yakitori yakitori3;
@@ -150,7 +161,8 @@ private:
     YakitoriStatus yakitori3Status;
     YakitoriStatus yakitori4Status;
     YakitoriStatus yakitori5Status;
-    
+
+    FireState m_fireState;
     CCPoint packPosition;
     
     bool orderFlg;
@@ -165,6 +177,7 @@ private:
     int lossCost;
     float life;
     bool isGameOver;
+    short m_fireCount;
     
     void initCompornent();
     void beforeAction();
@@ -193,6 +206,7 @@ private:
     void updateScore();
     void showSaleScore(int saleScore, short positionX, short positionY);
     void updateLife();
+    void updateFire();
 };
 
 #endif /* defined(__Yakitori__GameScene__) */

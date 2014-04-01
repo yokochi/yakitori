@@ -10,6 +10,7 @@
 #include "GameScene.h"
 #include "WebScene.h"
 #include "NativeBridge.h"
+#include "HelpScene.h"
 
 USING_NS_CC;
 
@@ -122,7 +123,9 @@ void TitleScene::menuStartCallback(CCObject* pSender)
 
 void TitleScene::menuHelpCallback(cocos2d::CCObject *pSender)
 {
-    
+    m_webView->removeWebView();
+    CCScene* scene = (CCScene*)HelpScene::create();
+    CCDirector::sharedDirector()->replaceScene(scene);
 }
 
 void TitleScene::menuMoreAppCallback(cocos2d::CCObject *pSender)

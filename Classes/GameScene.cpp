@@ -41,6 +41,8 @@ GameScene::GameScene()
     lossCost = 0;
     life = 0;
     isGameOver = false;
+    m_fireCount = 0;
+    m_fireState = fireState1;
 }
 
 CCScene* GameScene::scene()
@@ -96,6 +98,10 @@ void GameScene::initCompornent()
     backAmi->setPosition(ccp(size.width * 0.64, size.height * 0.49));
     batchNode->addChild(backAmi, ORDER_GAME_SCENE_BACKGROUND_AMI);
     
+    // fire
+    CCSprite* pFire = CCSprite::createWithSpriteFrameName(TEXTURE_IMG_FIRE_1);
+    pFire->setPosition(ccp(size.width * 0.64, size.height * 0.49));
+    batchNode->addChild(pFire, ORDER_GAME_SCENE_FIRE, TAG_GAME_SCENE_FIRE);
     
     // yakitori button
     CCMenuItemImage *yakitori1Item = CCMenuItemImage::create(
@@ -141,7 +147,7 @@ void GameScene::initCompornent()
     yakitori6Item->setPosition(ccp(size.width * 0.825, size.height * 0.185));
     
     // home
-    CCMenuItemImage *home = CCMenuItemImage::create("home.png", "home.png", this, menu_selector(GameScene::homeMenuCallback));
+    CCMenuItemImage *home = CCMenuItemImage::create("home_on.png", "home_off.png", this, menu_selector(GameScene::homeMenuCallback));
     home->setPosition(ccp(size.width * 0.1, size.height * 0.95));
     
     // create menu, it's an autorelease object
@@ -225,6 +231,7 @@ void GameScene::update(float delta)
         this->updateBakeYakitori();
         this->updateScore();
         this->updateLife();
+        this->updateFire();
         if (isGameOver) {
             this->gameOverAction();
         }
@@ -265,7 +272,7 @@ void GameScene::ccTouchEnded(CCTouch *pTouch, CCEvent *pEvent)
     if (isPackCatch) {
         CCSpriteBatchNode* batchNode = (CCSpriteBatchNode*)this->getChildByTag(TAG_GAME_SCENE_BATCH_NODE);
         CCSprite* pack = (CCSprite*)batchNode->getChildByTag(TAG_GAME_SCENE_YAKITORI_PACK);
-        CCSprite* human = (CCSprite*)batchNode->getChildByTag(TAG_GAME_SCENE_HUMAN);
+        CCSprite* human = (CCSprite*)this->getChildByTag(TAG_GAME_SCENE_HUMAN);
         CCSpriteFrameCache* cache = CCSpriteFrameCache::sharedSpriteFrameCache();
         
         if (human != NULL && human->boundingBox().intersectsRect(pack->boundingBox())) {
@@ -547,8 +554,8 @@ void GameScene::order()
     CCSpriteBatchNode* batchNode = (CCSpriteBatchNode*)this->getChildByTag(TAG_GAME_SCENE_BATCH_NODE);
     
     CCSprite* sprite = CCSprite::createWithSpriteFrameName(TEXTURE_IMG_HUMAN);
-    sprite->setPosition(ccp(size.width * 0.75, size.height * 0.78));
-    batchNode->addChild(sprite, ORDER_GAME_SCENE_HUMAN, TAG_GAME_SCENE_HUMAN);
+    sprite->setPosition(ccp(size.width * 0.78, size.height * 0.775));
+    this->addChild(sprite, ORDER_GAME_SCENE_HUMAN, TAG_GAME_SCENE_HUMAN);
     
     CCSprite* fukidashiOrder = CCSprite::createWithSpriteFrameName(TEXTURE_IMG_ORDER_FUKIDASHI);
     fukidashiOrder->setPosition(ccp(size.width * 0.35, size.height * 0.8));
@@ -605,22 +612,37 @@ void GameScene::showAlert(GameScene::YakitoriAlert alertType)
     CCSpriteBatchNode* batchNode = (CCSpriteBatchNode*)this->getChildByTag(TAG_GAME_SCENE_BATCH_NODE);
     
     CCSprite* sprite;
+    const char* pMessage;
     if (over_flow == alertType) {
-        sprite = CCSprite::createWithSpriteFrameName("fukidashi1.png");
+        sprite = CCSprite::createWithSpriteFrameName("balloon_01.png");
+        pMessage = NativeBridge::getLocalizeString("OverAlert");
     } else if (rare_yakitori == alertType) {
-        sprite = CCSprite::createWithSpriteFrameName("rare_alert.png");
+        sprite = CCSprite::createWithSpriteFrameName("balloon_01.png");
+        pMessage = NativeBridge::getLocalizeString("RareAlert");
     } else if (well_donw_yakitori == alertType) {
-        sprite = CCSprite::createWithSpriteFrameName("well_done_alert.png");
+        sprite = CCSprite::createWithSpriteFrameName("balloon_01.png");
+        pMessage = NativeBridge::getLocalizeString("ScorchedMessage");
     } else if (thanks == alertType) {
-        sprite = CCSprite::createWithSpriteFrameName("thanks.png");
+        sprite = CCSprite::createWithSpriteFrameName("balloon_02.png");
+        pMessage = NativeBridge::getLocalizeString("ThanksMessage");
     }
     
     sprite->setPosition(ccp(size.width * 0.5, size.height * 0.5));
+    sprite->setScale(1.5f);
     batchNode->addChild(sprite, ORDER_GAME_SCENE_FUKIDASHI);
     
     CCDelayTime* delayTime = CCDelayTime::create(0.5f);
     CCSequence* sequence = CCSequence::create(delayTime, CCRemoveSelf::create(), NULL);
     sprite->runAction(sequence);
+    
+    CCLabelBMFont* pMessageFont = CCLabelBMFont::create(pMessage, "YakitoriFont.fnt");
+    pMessageFont->setColor(ccc3(100, 0, 0));
+    pMessageFont->setPosition(CCPointMake(size.width * 0.5, size.height * 0.5));
+    this->addChild(pMessageFont, ORDER_GAME_SCENE_FUKIDASHI_MESSAGE);
+    
+    CCDelayTime* pDelayTime = CCDelayTime::create(0.5f);
+    CCSequence* pSequence = CCSequence::create(pDelayTime, CCRemoveSelf::create(), NULL);
+    pMessageFont->runAction(pSequence);
 }
 
 void GameScene::removeWellDoneYakitori(int tag, Yakitori yakitori)
@@ -768,6 +790,26 @@ void GameScene::updateLife()
     lifeGauge->setScaleX(ratio);
     if (this->life <= 0) {
         isGameOver = true;
+    }
+}
+
+void GameScene::updateFire()
+{
+    if (3 < m_fireCount++) {
+        CCSpriteBatchNode* pBatchNode = (CCSpriteBatchNode*)this->getChildByTag(TAG_GAME_SCENE_BATCH_NODE);
+        CCSpriteFrameCache* pCache = CCSpriteFrameCache::sharedSpriteFrameCache();
+        CCSprite* pFire = (CCSprite*)pBatchNode->getChildByTag(TAG_GAME_SCENE_FIRE);
+        if (m_fireState == fireState1) {
+            pFire->setDisplayFrame(pCache->spriteFrameByName(TEXTURE_IMG_FIRE_2));
+            m_fireState = fireState2;
+        } else if (m_fireState == fireState2) {
+            pFire->setDisplayFrame(pCache->spriteFrameByName(TEXTURE_IMG_FIRE_3));
+            m_fireState = fireState3;
+        } else {
+            pFire->setDisplayFrame(pCache->spriteFrameByName(TEXTURE_IMG_FIRE_1));
+            m_fireState = fireState1;
+        }
+        m_fireCount = 0;
     }
 }
 

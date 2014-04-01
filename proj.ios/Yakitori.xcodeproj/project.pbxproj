@@ -288,6 +288,8 @@
 		7B3C67FD18E805F4008F3129 /* AudioUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C67FB18E805F4008F3129 /* AudioUtil.cpp */; };
 		7B3C680018E80713008F3129 /* WebScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C67FE18E80713008F3129 /* WebScene.cpp */; };
 		7B3C680218E8111A008F3129 /* review_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B3C680118E8111A008F3129 /* review_on.png */; };
+		7B3C680518E86F20008F3129 /* home_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B3C680318E86F20008F3129 /* home_off.png */; };
+		7B3C680618E86F20008F3129 /* home_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B3C680418E86F20008F3129 /* home_on.png */; };
 		7B4F367E18D57D5000E887E2 /* TitleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F367C18D57D5000E887E2 /* TitleScene.cpp */; };
 		7B5BF64418D5879E00051414 /* start_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B5BF64118D5879E00051414 /* start_off.png */; };
 		7B5BF64518D5879E00051414 /* start_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B5BF64218D5879E00051414 /* start_on.png */; };
@@ -300,7 +302,14 @@
 		7B5BF65818D597D700051414 /* yakitori_button4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B5BF65318D597D700051414 /* yakitori_button4.png */; };
 		7B5BF65918D597D700051414 /* yakitori_button5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B5BF65418D597D700051414 /* yakitori_button5.png */; };
 		7B5BF65B18D597DD00051414 /* yakitori_button6.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B5BF65A18D597DD00051414 /* yakitori_button6.png */; };
-		7B5BF65E18D6651D00051414 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B5BF65D18D6651D00051414 /* home.png */; };
+		7B98E49E18EAEDCA0040EF13 /* icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E49818EAEDCA0040EF13 /* icon-60@2x.png */; };
+		7B98E49F18EAEDCA0040EF13 /* icon-small-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E49918EAEDCA0040EF13 /* icon-small-40@2x.png */; };
+		7B98E4A018EAEDCA0040EF13 /* icon-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E49A18EAEDCA0040EF13 /* icon-small.png */; };
+		7B98E4A118EAEDCA0040EF13 /* icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E49B18EAEDCA0040EF13 /* icon-small@2x.png */; };
+		7B98E4A218EAEDCA0040EF13 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E49C18EAEDCA0040EF13 /* icon.png */; };
+		7B98E4A318EAEDCA0040EF13 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E49D18EAEDCA0040EF13 /* icon@2x.png */; };
+		7B98E4A518EAF3880040EF13 /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E4A418EAF3880040EF13 /* help.png */; };
+		7B98E4A818EAF4010040EF13 /* HelpScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B98E4A618EAF4010040EF13 /* HelpScene.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712461292920000B8313A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB212928DE900B8313A /* libxml2.dylib */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -884,6 +893,8 @@
 		7B3C67FE18E80713008F3129 /* WebScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WebScene.cpp; path = ../Classes/WebScene.cpp; sourceTree = "<group>"; };
 		7B3C67FF18E80713008F3129 /* WebScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebScene.h; path = ../Classes/WebScene.h; sourceTree = "<group>"; };
 		7B3C680118E8111A008F3129 /* review_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = review_on.png; sourceTree = "<group>"; };
+		7B3C680318E86F20008F3129 /* home_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_off.png; sourceTree = "<group>"; };
+		7B3C680418E86F20008F3129 /* home_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_on.png; sourceTree = "<group>"; };
 		7B4F367C18D57D5000E887E2 /* TitleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TitleScene.cpp; path = ../Classes/TitleScene.cpp; sourceTree = "<group>"; };
 		7B4F367D18D57D5000E887E2 /* TitleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TitleScene.h; path = ../Classes/TitleScene.h; sourceTree = "<group>"; };
 		7B5BF64118D5879E00051414 /* start_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start_off.png; sourceTree = "<group>"; };
@@ -898,7 +909,15 @@
 		7B5BF65318D597D700051414 /* yakitori_button4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yakitori_button4.png; sourceTree = "<group>"; };
 		7B5BF65418D597D700051414 /* yakitori_button5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yakitori_button5.png; sourceTree = "<group>"; };
 		7B5BF65A18D597DD00051414 /* yakitori_button6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yakitori_button6.png; sourceTree = "<group>"; };
-		7B5BF65D18D6651D00051414 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		7B98E49818EAEDCA0040EF13 /* icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-60@2x.png"; sourceTree = SOURCE_ROOT; };
+		7B98E49918EAEDCA0040EF13 /* icon-small-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small-40@2x.png"; sourceTree = SOURCE_ROOT; };
+		7B98E49A18EAEDCA0040EF13 /* icon-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small.png"; sourceTree = SOURCE_ROOT; };
+		7B98E49B18EAEDCA0040EF13 /* icon-small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-small@2x.png"; sourceTree = SOURCE_ROOT; };
+		7B98E49C18EAEDCA0040EF13 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = SOURCE_ROOT; };
+		7B98E49D18EAEDCA0040EF13 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = SOURCE_ROOT; };
+		7B98E4A418EAF3880040EF13 /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help.png; sourceTree = "<group>"; };
+		7B98E4A618EAF4010040EF13 /* HelpScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HelpScene.cpp; path = ../Classes/HelpScene.cpp; sourceTree = "<group>"; };
+		7B98E4A718EAF4010040EF13 /* HelpScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelpScene.h; path = ../Classes/HelpScene.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB212928DE900B8313A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -1457,6 +1476,8 @@
 				7B5BF64818D58B1D00051414 /* GameScene.h */,
 				7B3C675018DEEFA2008F3129 /* GameOverScene.cpp */,
 				7B3C675118DEEFA2008F3129 /* GameOverScene.h */,
+				7B98E4A618EAF4010040EF13 /* HelpScene.cpp */,
+				7B98E4A718EAF4010040EF13 /* HelpScene.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -2060,6 +2081,15 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7B98E4A418EAF3880040EF13 /* help.png */,
+				7B98E49818EAEDCA0040EF13 /* icon-60@2x.png */,
+				7B98E49918EAEDCA0040EF13 /* icon-small-40@2x.png */,
+				7B98E49A18EAEDCA0040EF13 /* icon-small.png */,
+				7B98E49B18EAEDCA0040EF13 /* icon-small@2x.png */,
+				7B98E49C18EAEDCA0040EF13 /* icon.png */,
+				7B98E49D18EAEDCA0040EF13 /* icon@2x.png */,
+				7B3C680318E86F20008F3129 /* home_off.png */,
+				7B3C680418E86F20008F3129 /* home_on.png */,
 				7B3C680118E8111A008F3129 /* review_on.png */,
 				7B3C67F418E805B4008F3129 /* back_off.png */,
 				7B3C67F518E805B4008F3129 /* back_on.png */,
@@ -2093,7 +2123,6 @@
 				7B3C675618DEF0C0008F3129 /* retry_on.png */,
 				7B3C673D18DEB1CD008F3129 /* YakitoriFont.fnt */,
 				7B3C673E18DEB1CD008F3129 /* YakitoriFont.png */,
-				7B5BF65D18D6651D00051414 /* home.png */,
 				7B5BF65A18D597DD00051414 /* yakitori_button6.png */,
 				7B5BF65018D597D700051414 /* yakitori_button1.png */,
 				7B5BF65118D597D700051414 /* yakitori_button2.png */,
@@ -2237,7 +2266,6 @@
 			files = (
 				7855E0E1153FEF240059DD9A /* Default.png in Resources */,
 				7B3C674A18DEB5BD008F3129 /* InfoPlist.strings in Resources */,
-				7B5BF65E18D6651D00051414 /* home.png in Resources */,
 				7B3C677B18E65233008F3129 /* ranking_on.png in Resources */,
 				D4EF949A15BD2D8B00D803EB /* Icon-57.png in Resources */,
 				7B3C67C018E7048E008F3129 /* facebook_off.png in Resources */,
@@ -2254,7 +2282,10 @@
 				7B3C675818DEF0C0008F3129 /* for_title_on.png in Resources */,
 				D4EF949C15BD2D8E00D803EB /* Icon-114.png in Resources */,
 				7B5BF64418D5879E00051414 /* start_off.png in Resources */,
+				7B98E49E18EAEDCA0040EF13 /* icon-60@2x.png in Resources */,
 				7B5BF65818D597D700051414 /* yakitori_button4.png in Resources */,
+				7B98E4A518EAF3880040EF13 /* help.png in Resources */,
+				7B98E4A018EAEDCA0040EF13 /* icon-small.png in Resources */,
 				7B3C67D018E78CA7008F3129 /* yakitori_button3_off.png in Resources */,
 				7B3C67D118E78CA7008F3129 /* yakitori_button4_off.png in Resources */,
 				7B3C67D318E78CA7008F3129 /* yakitori_button6_off.png in Resources */,
@@ -2262,20 +2293,25 @@
 				7B3C679118E67C96008F3129 /* README.txt in Resources */,
 				7B3C674318DEB46C008F3129 /* Localizable.strings in Resources */,
 				7B5BF64F18D5975A00051414 /* game_main.png in Resources */,
+				7B98E49F18EAEDCA0040EF13 /* icon-small-40@2x.png in Resources */,
 				D4EF94A015BD2D9800D803EB /* Icon-144.png in Resources */,
 				7B5BF64E18D5975A00051414 /* game_main.plist in Resources */,
+				7B3C680518E86F20008F3129 /* home_off.png in Resources */,
 				7B5BF65918D597D700051414 /* yakitori_button5.png in Resources */,
 				D41A0AD1160F154A004552AE /* Default-568h@2x.png in Resources */,
 				7B3C677F18E65EDF008F3129 /* twitter_on.png in Resources */,
 				7B3C677918E65233008F3129 /* help_on.png in Resources */,
 				7B3C677A18E65233008F3129 /* more_on.png in Resources */,
 				7B3C67C318E7048E008F3129 /* ranking_off.png in Resources */,
+				7B3C680618E86F20008F3129 /* home_on.png in Resources */,
 				7B3C676F18E64BC7008F3129 /* game_background2.png in Resources */,
 				D446FD6E16102124000ADA7B /* Default@2x.png in Resources */,
+				7B98E4A318EAEDCA0040EF13 /* icon@2x.png in Resources */,
 				7B3C67F718E805B4008F3129 /* back_on.png in Resources */,
 				7B5BF64518D5879E00051414 /* start_on.png in Resources */,
 				7B3C677E18E65EDF008F3129 /* facebook_on.png in Resources */,
 				7B3C67C418E7048E008F3129 /* start_title.png in Resources */,
+				7B98E4A118EAEDCA0040EF13 /* icon-small@2x.png in Resources */,
 				7B3C676E18E64BC7008F3129 /* close_background.jpg in Resources */,
 				7B3C67F618E805B4008F3129 /* back_off.png in Resources */,
 				7B5BF65618D597D700051414 /* yakitori_button2.png in Resources */,
@@ -2290,6 +2326,7 @@
 				7B3C675718DEF0C0008F3129 /* for_title_off.png in Resources */,
 				7B3C67CF18E78CA7008F3129 /* yakitori_button2_off.png in Resources */,
 				7B3C67CE18E78CA7008F3129 /* yakitori_button1_off.png in Resources */,
+				7B98E4A218EAEDCA0040EF13 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2329,6 +2366,7 @@
 				15A3D9161682F7D5002FB0C5 /* b2WorldCallbacks.cpp in Sources */,
 				15A3D9171682F7D5002FB0C5 /* b2ChainAndCircleContact.cpp in Sources */,
 				15A3D9181682F7D5002FB0C5 /* b2ChainAndPolygonContact.cpp in Sources */,
+				7B98E4A818EAF4010040EF13 /* HelpScene.cpp in Sources */,
 				298B29C218D0668400C1920F /* LoadingBarReader.cpp in Sources */,
 				375BD5111868454E0024609E /* CCActionManager.cpp in Sources */,
 				15A3D9191682F7D5002FB0C5 /* b2CircleContact.cpp in Sources */,

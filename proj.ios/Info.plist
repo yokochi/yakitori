@@ -12,6 +12,10 @@
 	<string>Icon-57.png</string>
 	<key>CFBundleIconFiles</key>
 	<array>
+		<string>icon-small-40</string>
+		<string>icon-small</string>
+		<string>icon-60</string>
+		<string>icon</string>
 		<string>Icon.png</string>
 		<string>Icon@2x.png</string>
 		<string>Icon-57.png</string>
