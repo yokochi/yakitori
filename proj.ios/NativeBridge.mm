@@ -55,3 +55,21 @@ void NativeBridge::openAppStore()
     NSURL *url = [NSURL URLWithString:NSLocalizedString(@"AppUrl", nil)];
     [[UIApplication sharedApplication] openURL:url];
 }
+
+void NativeBridge::openAppStoreList()
+{
+    NSURL *url = [NSURL URLWithString:NSLocalizedString(@"AppStoreListUrl", nil)];
+    [[UIApplication sharedApplication] openURL:url];
+}
+
+const char* NativeBridge::getCurrentLanguage()
+{
+    ccLanguageType rt = CCApplication::sharedApplication()->getCurrentLanguage();
+    if (rt == kLanguageChinese) {
+        return "zh";
+    } else if (rt == kLanguageJapanese) {
+        return "ja";
+    } else {
+        return "en";
+    }
+}

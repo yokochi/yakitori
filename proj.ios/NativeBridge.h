@@ -7,4 +7,6 @@ public:
     static void openTweetDialog(int score);
     static void openFacebookDialog(int score);
     static void openAppStore();
+    static void openAppStoreList();
+    static const char* getCurrentLanguage();
 };

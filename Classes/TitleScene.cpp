@@ -59,7 +59,8 @@ void TitleScene::initCompornent()
     back->setPosition(ccp(size.width * 0.5, size.height * 0.5));
     this->addChild(back);
     
-    CCSprite* pTitle = CCSprite::create("start_title.png");
+    CCString* pTitleString = CCString::createWithFormat("%s_%s", NativeBridge::getCurrentLanguage(), "start_title.png");
+    CCSprite* pTitle = CCSprite::create(pTitleString->getCString());
     pTitle->setPosition(ccp(size.width * 0.5, size.height * 0.65));
     this->addChild(pTitle);
     
@@ -131,8 +132,12 @@ void TitleScene::menuHelpCallback(cocos2d::CCObject *pSender)
 void TitleScene::menuMoreAppCallback(cocos2d::CCObject *pSender)
 {
     m_webView->removeWebView();
-    CCScene* scene = (CCScene*)WebScene::create();
-    CCDirector::sharedDirector()->replaceScene(scene);
+    if (strcmp(NativeBridge::getCurrentLanguage(), "ja") == 0) {
+        CCScene* scene = (CCScene*)WebScene::create();
+        CCDirector::sharedDirector()->replaceScene(scene);
+    } else {
+        NativeBridge::openAppStoreList();
+    }
 }
 
 void TitleScene::menuRankingCallback(cocos2d::CCObject *pSender)

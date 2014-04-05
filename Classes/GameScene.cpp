@@ -110,44 +110,56 @@ void GameScene::initCompornent()
     batchNode->addChild(pFire, ORDER_GAME_SCENE_FIRE, TAG_GAME_SCENE_FIRE);
     
     // yakitori button
+    CCString* pYakitori1ItemStringOn = CCString::createWithFormat("%s_%s", NativeBridge::getCurrentLanguage(), "yakitori_button1.png");
+    CCString* pYakitori1ItemStringOff = CCString::createWithFormat("%s_%s", NativeBridge::getCurrentLanguage(), "yakitori_button1_off.png");
     CCMenuItemImage *yakitori1Item = CCMenuItemImage::create(
-                                                         "yakitori_button1.png",
-                                                         "yakitori_button1_off.png",
+                                                         pYakitori1ItemStringOn->getCString(),
+                                                         pYakitori1ItemStringOff->getCString(),
                                                          this,
                                                          menu_selector(GameScene::yakitori1MenuCallback));
     yakitori1Item->setPosition(ccp(size.width * 0.175, size.height * 0.35));
     
+    CCString* pYakitori2ItemStringOn = CCString::createWithFormat("%s_%s", NativeBridge::getCurrentLanguage(), "yakitori_button2.png");
+    CCString* pYakitori2ItemStringOff = CCString::createWithFormat("%s_%s", NativeBridge::getCurrentLanguage(), "yakitori_button2_off.png");
     CCMenuItemImage *yakitori2Item = CCMenuItemImage::create(
-                                                             "yakitori_button2.png",
-                                                             "yakitori_button2_off.png",
+                                                             pYakitori2ItemStringOn->getCString(),
+                                                             pYakitori2ItemStringOff->getCString(),
                                                              this,
                                                              menu_selector(GameScene::yakitori2MenuCallback));
     yakitori2Item->setPosition(ccp(size.width * 0.5, size.height * 0.35));
     
+    CCString* pYakitori3ItemStringOn = CCString::createWithFormat("%s_%s", NativeBridge::getCurrentLanguage(), "yakitori_button3.png");
+    CCString* pYakitori3ItemStringOff = CCString::createWithFormat("%s_%s", NativeBridge::getCurrentLanguage(), "yakitori_button3_off.png");
     CCMenuItemImage *yakitori3Item = CCMenuItemImage::create(
-                                                             "yakitori_button3.png",
-                                                             "yakitori_button3_off.png",
+                                                             pYakitori3ItemStringOn->getCString(),
+                                                             pYakitori3ItemStringOff->getCString(),
                                                              this,
                                                              menu_selector(GameScene::yakitori3MenuCallback));
     yakitori3Item->setPosition(ccp(size.width * 0.825, size.height * 0.35));
     
+    CCString* pYakitori4ItemStringOn = CCString::createWithFormat("%s_%s", NativeBridge::getCurrentLanguage(), "yakitori_button4.png");
+    CCString* pYakitori4ItemStringOff = CCString::createWithFormat("%s_%s", NativeBridge::getCurrentLanguage(), "yakitori_button4_off.png");
     CCMenuItemImage *yakitori4Item = CCMenuItemImage::create(
-                                                             "yakitori_button4.png",
-                                                             "yakitori_button4_off.png",
+                                                             pYakitori4ItemStringOn->getCString(),
+                                                             pYakitori4ItemStringOff->getCString(),
                                                              this,
                                                              menu_selector(GameScene::yakitori4MenuCallback));
     yakitori4Item->setPosition(ccp(size.width * 0.175, size.height * 0.185));
     
+    CCString* pYakitori5ItemStringOn = CCString::createWithFormat("%s_%s", NativeBridge::getCurrentLanguage(), "yakitori_button5.png");
+    CCString* pYakitori5ItemStringOff = CCString::createWithFormat("%s_%s", NativeBridge::getCurrentLanguage(), "yakitori_button5_off.png");
     CCMenuItemImage *yakitori5Item = CCMenuItemImage::create(
-                                                             "yakitori_button5.png",
-                                                             "yakitori_button5_off.png",
+                                                             pYakitori5ItemStringOn->getCString(),
+                                                             pYakitori5ItemStringOff->getCString(),
                                                              this,
                                                              menu_selector(GameScene::yakitori5MenuCallback));
     yakitori5Item->setPosition(ccp(size.width * 0.5, size.height * 0.185));
     
+    CCString* pYakitori6ItemStringOn = CCString::createWithFormat("%s_%s", NativeBridge::getCurrentLanguage(), "yakitori_button6.png");
+    CCString* pYakitori6ItemStringOff = CCString::createWithFormat("%s_%s", NativeBridge::getCurrentLanguage(), "yakitori_button6_off.png");
     CCMenuItemImage *yakitori6Item = CCMenuItemImage::create(
-                                                             "yakitori_button6.png",
-                                                             "yakitori_button6_off.png",
+                                                             pYakitori6ItemStringOn->getCString(),
+                                                             pYakitori6ItemStringOff->getCString(),
                                                              this,
                                                              menu_selector(GameScene::yakitori6MenuCallback));
     yakitori6Item->setPosition(ccp(size.width * 0.825, size.height * 0.185));
