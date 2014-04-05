@@ -8,6 +8,7 @@
 
 #include "HelpScene.h"
 #include "TitleScene.h"
+#include "AudioUtil.h"
 
 USING_NS_CC;
 
@@ -35,6 +36,8 @@ bool HelpScene::init()
     {
         return false;
     }
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect(SOUND_ENTER);
+    
     this->initCompornent();
     return true;
 }
@@ -48,7 +51,7 @@ void HelpScene::initCompornent()
     this->addChild(back);
     
     CCSprite* pHelpSprite = CCSprite::create("help.png");
-    pHelpSprite->setPosition(ccp(size.width * 0.5, size.height * 0.5));
+    pHelpSprite->setPosition(ccp(size.width * 0.5, size.height * 0.55));
     this->addChild(pHelpSprite);
     
     this->setTouchEnabled(true);
@@ -58,6 +61,7 @@ void HelpScene::initCompornent()
 
 bool HelpScene::ccTouchBegan(cocos2d::CCTouch *pTouch, cocos2d::CCEvent *pEvent)
 {
+    AudioUtil::sharedEngine()->playEffect(SOUND_ENTER, false);
     return true;
 }
 

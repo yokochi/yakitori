@@ -18,12 +18,12 @@
 using namespace cocos2d;
 using namespace cocos2d::extension;
 
-#define SOUND_GAME_PLAY "game_play.mp3"
+#define SOUND_GAME_PLAY "game_music.mp3"
 #define SOUND_ENTER "enter.mp3"
-#define SOUND_TITLE "game_title.mp3"
-#define SOUND_JUMP "jump.mp3"
-#define SOUND_GAMEOVER_SCENE "gameover_scene.mp3"
-#define SOUND_EXPLOSION "explosion.mp3"
+#define SOUND_GAMEOVER_SCENE "game_over.mp3"
+#define SOUND_CORRECT_ANSWER "correct_answer.mp3"
+#define SOUND_NON_CORRECT_ANSWER "non_correct_answer.mp3"
+#define SOUND_PUT "put.mp3"
 
 class AudioUtil
 {

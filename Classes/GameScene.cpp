@@ -11,6 +11,7 @@
 #include "NativeBridge.h"
 #include "GameOverScene.h"
 #include "GameManager.h"
+#include "AudioUtil.h"
 
 GameScene::GameScene()
 {
@@ -75,6 +76,12 @@ bool GameScene::init()
     {
         return false;
     }
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect(SOUND_ENTER);
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect(SOUND_CORRECT_ANSWER);
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect(SOUND_NON_CORRECT_ANSWER);
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect(SOUND_PUT);
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadBackgroundMusic(SOUND_GAME_PLAY);
+    
     this->initCompornent();
     
     countDown = 3;
@@ -242,6 +249,7 @@ void GameScene::afterAction()
     this->setTouchEnabled(true);
     this->setTouchMode(kCCTouchesOneByOne);
     this->scheduleUpdate();
+    AudioUtil::sharedEngine()->playBackgroundMusic(SOUND_GAME_PLAY, true);
 }
 
 void GameScene::update(float delta)
@@ -298,9 +306,11 @@ void GameScene::ccTouchEnded(CCTouch *pTouch, CCEvent *pEvent)
             this->showAlert(thanks);
             bool isOrder = this->checkOrder();
             if (isOrder) {
+                AudioUtil::sharedEngine()->playEffect(SOUND_CORRECT_ANSWER, false);
                 human->setDisplayFrame(cache->spriteFrameByName(TEXTURE_IMG_HUMAN_3));
                 this->life += USER_UP_LIFE;
             } else {
+                AudioUtil::sharedEngine()->playEffect(SOUND_NON_CORRECT_ANSWER, false);
                 human->setDisplayFrame(cache->spriteFrameByName(TEXTURE_IMG_HUMAN_2));
                 this->life -= USER_DOWN_LIFE;
             }
@@ -498,6 +508,8 @@ void GameScene::yakitori6MenuCallback()
 
 void GameScene::homeMenuCallback()
 {
+    AudioUtil::sharedEngine()->stopBackgroundMusic(true);
+    AudioUtil::sharedEngine()->playEffect(SOUND_ENTER, false);
     CCScene* titleScene = (CCScene*)TitleScene::create();
     CCDirector::sharedDirector()->replaceScene(titleScene);
 }
@@ -550,6 +562,7 @@ bool GameScene::setYakitori(GameScene::Yakitori yakitori)
         this->showAlert(over_flow);
         return false;
     }
+    AudioUtil::sharedEngine()->playEffect(SOUND_PUT, false);
     return true;
 }
 
@@ -708,14 +721,17 @@ void GameScene::showAlert(GameScene::YakitoriAlert alertType)
     CCSprite* sprite;
     const char* pMessage;
     if (over_flow == alertType) {
+        AudioUtil::sharedEngine()->playEffect(SOUND_NON_CORRECT_ANSWER, false);
         sprite = CCSprite::createWithSpriteFrameName("balloon_01.png");
         sprite->setScale(1.5f);
         pMessage = NativeBridge::getLocalizeString("OverAlert");
     } else if (rare_yakitori == alertType) {
+        AudioUtil::sharedEngine()->playEffect(SOUND_NON_CORRECT_ANSWER, false);
         sprite = CCSprite::createWithSpriteFrameName("balloon_01.png");
         sprite->setScale(1.5f);
         pMessage = NativeBridge::getLocalizeString("RareAlert");
     } else if (well_donw_yakitori == alertType) {
+        AudioUtil::sharedEngine()->playEffect(SOUND_NON_CORRECT_ANSWER, false);
         sprite = CCSprite::createWithSpriteFrameName("balloon_01.png");
         sprite->setScale(1.5f);
         pMessage = NativeBridge::getLocalizeString("ScorchedMessage");
@@ -911,6 +927,8 @@ void GameScene::updateFire()
 
 void GameScene::gameOverAction()
 {
+    AudioUtil::sharedEngine()->stopBackgroundMusic(true);
+    
     GameManager* gameManager = GameManager::sharedGameManager();
     gameManager->setPoint(this->sales - this->lossCost);
     

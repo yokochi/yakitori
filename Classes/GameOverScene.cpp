@@ -11,7 +11,7 @@
 #include "TitleScene.h"
 #include "NativeBridge.h"
 #include "GameManager.h"
-
+#include "AudioUtil.h"
 
 USING_NS_CC;
 
@@ -49,6 +49,9 @@ bool GameOverScene::init()
     {
         return false;
     }
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect(SOUND_ENTER);
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadBackgroundMusic(SOUND_GAMEOVER_SCENE);
+    
     this->initCompornent();
     return true;
 }
@@ -56,6 +59,7 @@ bool GameOverScene::init()
 void GameOverScene::onEnter()
 {
     CCLayer::onEnter();
+    AudioUtil::sharedEngine()->playBackgroundMusic(SOUND_GAMEOVER_SCENE, false);
 }
 
 void GameOverScene::initCompornent()
@@ -175,6 +179,8 @@ void GameOverScene::showViewAfter()
 
 void GameOverScene::menuTitleCallback(cocos2d::CCObject *pSender)
 {
+    AudioUtil::sharedEngine()->stopBackgroundMusic(true);
+    AudioUtil::sharedEngine()->playEffect(SOUND_ENTER, false);
     m_webView->removeWebView();
     CCScene* scene = (CCScene*)TitleScene::create();
     CCDirector::sharedDirector()->replaceScene(scene);
@@ -182,6 +188,8 @@ void GameOverScene::menuTitleCallback(cocos2d::CCObject *pSender)
 
 void GameOverScene::menuRetryCallback(cocos2d::CCObject *pSender)
 {
+    AudioUtil::sharedEngine()->stopBackgroundMusic(true);
+    AudioUtil::sharedEngine()->playEffect(SOUND_ENTER, false);
     m_webView->removeWebView();
     CCScene* scene = (CCScene*)GameScene::create();
     CCDirector::sharedDirector()->replaceScene(scene);
@@ -189,10 +197,12 @@ void GameOverScene::menuRetryCallback(cocos2d::CCObject *pSender)
 
 void GameOverScene::menuTwitterCallback(cocos2d::CCObject *pSender)
 {
+    AudioUtil::sharedEngine()->playEffect(SOUND_ENTER, false);
     NativeBridge::openTweetDialog(m_score);
 }
 
 void GameOverScene::menuFaceBookCallback(cocos2d::CCObject *pSender)
 {
+    AudioUtil::sharedEngine()->playEffect(SOUND_ENTER, false);
     NativeBridge::openFacebookDialog(m_score);
 }

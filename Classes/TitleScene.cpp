@@ -11,6 +11,7 @@
 #include "WebScene.h"
 #include "NativeBridge.h"
 #include "HelpScene.h"
+#include "AudioUtil.h"
 
 USING_NS_CC;
 
@@ -48,6 +49,8 @@ bool TitleScene::init()
     {
         return false;
     }
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect(SOUND_ENTER);
+    
     this->initCompornent();
     return true;
 }
@@ -104,10 +107,21 @@ void TitleScene::initCompornent()
     
     pReviewItem->setPosition(ccp(size.width * 0.725, size.height * 0.4));
     
+    // speaker
+    std::string pSpeakerIcon;
+    if (AudioUtil::sharedEngine()->isVolume) {
+        pSpeakerIcon = IMAGE_SPEAKER_ON;
+    } else {
+        pSpeakerIcon = IMAGE_SPEAKER_OFF;
+    }
+    CCMenuItemImage *pVolumeMenu = CCMenuItemImage::create(pSpeakerIcon.c_str(), pSpeakerIcon.c_str(), this, menu_selector(TitleScene::menuVolumeCallback));
+    pVolumeMenu->setPosition(size.width * 0.1, size.height * 0.81);
+    pVolumeMenu->setTag(TAG_TITLE_SCENE_MENU_SPEAKER);
+    
     // create menu, it's an autorelease object
-    CCMenu* pMenu = CCMenu::create(startItem, pHelpItem, pMoreAppItem, pRankingItem, pReviewItem, NULL);
+    CCMenu* pMenu = CCMenu::create(startItem, pHelpItem, pMoreAppItem, pRankingItem, pReviewItem,pVolumeMenu, NULL);
     pMenu->setPosition(CCPointZero);
-    this->addChild(pMenu);
+    this->addChild(pMenu, ORDER_TITLE_SCENE_MENU, TAG_TITLE_SCENE_MENU);
     
     // webview
     m_webView = new ZYWebView();
@@ -117,6 +131,8 @@ void TitleScene::initCompornent()
 
 void TitleScene::menuStartCallback(CCObject* pSender)
 {
+    AudioUtil::sharedEngine()->playEffect(SOUND_ENTER, false);
+    
     m_webView->removeWebView();
     CCScene* gameScene = (CCScene*)GameScene::create();
     CCDirector::sharedDirector()->replaceScene(gameScene);
@@ -124,6 +140,8 @@ void TitleScene::menuStartCallback(CCObject* pSender)
 
 void TitleScene::menuHelpCallback(cocos2d::CCObject *pSender)
 {
+    AudioUtil::sharedEngine()->playEffect(SOUND_ENTER, false);
+    
     m_webView->removeWebView();
     CCScene* scene = (CCScene*)HelpScene::create();
     CCDirector::sharedDirector()->replaceScene(scene);
@@ -131,6 +149,8 @@ void TitleScene::menuHelpCallback(cocos2d::CCObject *pSender)
 
 void TitleScene::menuMoreAppCallback(cocos2d::CCObject *pSender)
 {
+    AudioUtil::sharedEngine()->playEffect(SOUND_ENTER, false);
+    
     m_webView->removeWebView();
     if (strcmp(NativeBridge::getCurrentLanguage(), "ja") == 0) {
         CCScene* scene = (CCScene*)WebScene::create();
@@ -142,10 +162,33 @@ void TitleScene::menuMoreAppCallback(cocos2d::CCObject *pSender)
 
 void TitleScene::menuRankingCallback(cocos2d::CCObject *pSender)
 {
-    
+    AudioUtil::sharedEngine()->playEffect(SOUND_ENTER, false);
 }
 
 void TitleScene::menuReviewCallback(cocos2d::CCObject *pSender)
 {
+    AudioUtil::sharedEngine()->playEffect(SOUND_ENTER, false);
     NativeBridge::openAppStore();
+}
+
+void TitleScene::menuVolumeCallback()
+{
+    AudioUtil* pAudioUtil = AudioUtil::sharedEngine();
+    pAudioUtil->changeVolume();
+    
+    CCMenu* pMenu = (CCMenu*)this->getChildByTag(TAG_TITLE_SCENE_MENU);
+    CCMenuItemImage* pSpeaker = (CCMenuItemImage*)pMenu->getChildByTag(TAG_TITLE_SCENE_MENU_SPEAKER);
+    
+    if (pAudioUtil->isVolume) {
+        CCSprite* pSpeakerOn = CCSprite::create(IMAGE_SPEAKER_ON);
+        pSpeaker->setNormalImage(pSpeakerOn);
+        pSpeaker->setSelectedImage(pSpeakerOn);
+        
+    } else {
+        CCSprite* pSpeakerOff = CCSprite::create(IMAGE_SPEAKER_OFF);
+        pSpeaker->setNormalImage(pSpeakerOff);
+        pSpeaker->setSelectedImage(pSpeakerOff);
+
+    }
+    pAudioUtil->playEffect(SOUND_ENTER, false);
 }

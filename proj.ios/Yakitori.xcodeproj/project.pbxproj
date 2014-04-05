@@ -337,6 +337,14 @@
 		7B98E56718EFCB5E0040EF13 /* zh_yakitori_button5_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E54018EFCB5E0040EF13 /* zh_yakitori_button5_off.png */; };
 		7B98E56818EFCB5E0040EF13 /* zh_yakitori_button6.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E54118EFCB5E0040EF13 /* zh_yakitori_button6.png */; };
 		7B98E56918EFCB5E0040EF13 /* zh_yakitori_button6_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E54218EFCB5E0040EF13 /* zh_yakitori_button6_off.png */; };
+		7B98E57118EFE6250040EF13 /* correct_answer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E56B18EFE6250040EF13 /* correct_answer.mp3 */; };
+		7B98E57218EFE6250040EF13 /* enter.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E56C18EFE6250040EF13 /* enter.mp3 */; };
+		7B98E57318EFE6250040EF13 /* game_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E56D18EFE6250040EF13 /* game_music.mp3 */; };
+		7B98E57418EFE6250040EF13 /* game_over.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E56E18EFE6250040EF13 /* game_over.mp3 */; };
+		7B98E57518EFE6250040EF13 /* non_correct_answer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E56F18EFE6250040EF13 /* non_correct_answer.mp3 */; };
+		7B98E57618EFE6250040EF13 /* put.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E57018EFE6250040EF13 /* put.mp3 */; };
+		7B98E57A18EFE8B10040EF13 /* speaker_icon_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E57818EFE8B10040EF13 /* speaker_icon_off.png */; };
+		7B98E57B18EFE8B10040EF13 /* speaker_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E57918EFE8B10040EF13 /* speaker_icon.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712461292920000B8313A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB212928DE900B8313A /* libxml2.dylib */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -972,6 +980,14 @@
 		7B98E54018EFCB5E0040EF13 /* zh_yakitori_button5_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_yakitori_button5_off.png; sourceTree = "<group>"; };
 		7B98E54118EFCB5E0040EF13 /* zh_yakitori_button6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_yakitori_button6.png; sourceTree = "<group>"; };
 		7B98E54218EFCB5E0040EF13 /* zh_yakitori_button6_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_yakitori_button6_off.png; sourceTree = "<group>"; };
+		7B98E56B18EFE6250040EF13 /* correct_answer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correct_answer.mp3; sourceTree = "<group>"; };
+		7B98E56C18EFE6250040EF13 /* enter.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = enter.mp3; sourceTree = "<group>"; };
+		7B98E56D18EFE6250040EF13 /* game_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = game_music.mp3; sourceTree = "<group>"; };
+		7B98E56E18EFE6250040EF13 /* game_over.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = game_over.mp3; sourceTree = "<group>"; };
+		7B98E56F18EFE6250040EF13 /* non_correct_answer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = non_correct_answer.mp3; sourceTree = "<group>"; };
+		7B98E57018EFE6250040EF13 /* put.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = put.mp3; sourceTree = "<group>"; };
+		7B98E57818EFE8B10040EF13 /* speaker_icon_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker_icon_off.png; sourceTree = "<group>"; };
+		7B98E57918EFE8B10040EF13 /* speaker_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker_icon.png; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB212928DE900B8313A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -2135,6 +2151,9 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7B98E57818EFE8B10040EF13 /* speaker_icon_off.png */,
+				7B98E57918EFE8B10040EF13 /* speaker_icon.png */,
+				7B98E56A18EFE6250040EF13 /* audio */,
 				7B98E51918EFCB5E0040EF13 /* en */,
 				7B98E52718EFCB5E0040EF13 /* ja */,
 				7B98E53518EFCB5E0040EF13 /* zh */,
@@ -2298,6 +2317,19 @@
 			path = zh;
 			sourceTree = "<group>";
 		};
+		7B98E56A18EFE6250040EF13 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				7B98E56B18EFE6250040EF13 /* correct_answer.mp3 */,
+				7B98E56C18EFE6250040EF13 /* enter.mp3 */,
+				7B98E56D18EFE6250040EF13 /* game_music.mp3 */,
+				7B98E56E18EFE6250040EF13 /* game_over.mp3 */,
+				7B98E56F18EFE6250040EF13 /* non_correct_answer.mp3 */,
+				7B98E57018EFE6250040EF13 /* put.mp3 */,
+			);
+			path = audio;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2378,6 +2410,7 @@
 				7B3C67C018E7048E008F3129 /* facebook_off.png in Resources */,
 				7B98E55B18EFCB5E0040EF13 /* ja_yakitori_button6.png in Resources */,
 				7B3C676518E45111008F3129 /* new.png in Resources */,
+				7B98E57218EFE6250040EF13 /* enter.mp3 in Resources */,
 				7B98E56018EFCB5E0040EF13 /* zh_yakitori_button2.png in Resources */,
 				7B3C67C718E7048E008F3129 /* twitter_off.png in Resources */,
 				7B3C675A18DEF0C0008F3129 /* retry_on.png in Resources */,
@@ -2389,13 +2422,16 @@
 				7B3C675C18E1B629008F3129 /* game_over_sale_waku.png in Resources */,
 				7B3C675918DEF0C0008F3129 /* retry_off.png in Resources */,
 				7B3C675818DEF0C0008F3129 /* for_title_on.png in Resources */,
+				7B98E57518EFE6250040EF13 /* non_correct_answer.mp3 in Resources */,
 				D4EF949C15BD2D8E00D803EB /* Icon-114.png in Resources */,
 				7B5BF64418D5879E00051414 /* start_off.png in Resources */,
+				7B98E57118EFE6250040EF13 /* correct_answer.mp3 in Resources */,
 				7B98E49E18EAEDCA0040EF13 /* icon-60@2x.png in Resources */,
 				7B98E4A518EAF3880040EF13 /* help.png in Resources */,
 				7B98E56818EFCB5E0040EF13 /* zh_yakitori_button6.png in Resources */,
 				7B98E4A018EAEDCA0040EF13 /* icon-small.png in Resources */,
 				D4EF949E15BD2D9600D803EB /* Icon-72.png in Resources */,
+				7B98E57618EFE6250040EF13 /* put.mp3 in Resources */,
 				7B3C679118E67C96008F3129 /* README.txt in Resources */,
 				7B98E55E18EFCB5E0040EF13 /* zh_yakitori_button1.png in Resources */,
 				7B3C674318DEB46C008F3129 /* Localizable.strings in Resources */,
@@ -2418,6 +2454,7 @@
 				7B3C67C318E7048E008F3129 /* ranking_off.png in Resources */,
 				7B3C680618E86F20008F3129 /* home_on.png in Resources */,
 				7B3C676F18E64BC7008F3129 /* game_background2.png in Resources */,
+				7B98E57A18EFE8B10040EF13 /* speaker_icon_off.png in Resources */,
 				D446FD6E16102124000ADA7B /* Default@2x.png in Resources */,
 				7B98E56618EFCB5E0040EF13 /* zh_yakitori_button5.png in Resources */,
 				7B98E55818EFCB5E0040EF13 /* ja_yakitori_button4_off.png in Resources */,
@@ -2445,12 +2482,15 @@
 				7B98E55018EFCB5E0040EF13 /* ja_start_title.png in Resources */,
 				7B3C67C518E7048E008F3129 /* title_background.jpg in Resources */,
 				7B98E4AC18EF81770040EF13 /* gauge_life.png in Resources */,
+				7B98E57418EFE6250040EF13 /* game_over.mp3 in Resources */,
 				7B3C67C118E7048E008F3129 /* help_off.png in Resources */,
 				7B98E55C18EFCB5E0040EF13 /* ja_yakitori_button6_off.png in Resources */,
 				7B98E54F18EFCB5E0040EF13 /* en_yakitori_button6_off.png in Resources */,
 				7B98E54518EFCB5E0040EF13 /* en_yakitori_button1_off.png in Resources */,
 				15A3D9961682F7F9002FB0C5 /* CMakeLists.txt in Resources */,
 				7B98E56218EFCB5E0040EF13 /* zh_yakitori_button3.png in Resources */,
+				7B98E57B18EFE8B10040EF13 /* speaker_icon.png in Resources */,
+				7B98E57318EFE6250040EF13 /* game_music.mp3 in Resources */,
 				7B98E54A18EFCB5E0040EF13 /* en_yakitori_button4.png in Resources */,
 				7B3C674018DEB1CD008F3129 /* YakitoriFont.png in Resources */,
 				7B98E56418EFCB5E0040EF13 /* zh_yakitori_button4.png in Resources */,

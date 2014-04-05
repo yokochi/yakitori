@@ -16,6 +16,14 @@
 
 #define AD_WEBVIEW_HEIGHT 90
 
+#define TAG_TITLE_SCENE_MENU_SPEAKER 1
+#define TAG_TITLE_SCENE_MENU 2
+
+#define ORDER_TITLE_SCENE_MENU 30
+
+#define IMAGE_SPEAKER_ON "speaker_icon.png"
+#define IMAGE_SPEAKER_OFF "speaker_icon_off.png"
+
 class TitleScene : public cocos2d::CCLayer
 {
 public:
@@ -33,6 +41,7 @@ public:
     void menuRankingCallback(CCObject* pSender);
     void menuHelpCallback(CCObject* pSender);
     void menuReviewCallback(CCObject* pSender);
+    void menuVolumeCallback();
     
     // implement the "static node()" method manually
     CREATE_FUNC(TitleScene);
