@@ -97,11 +97,11 @@ void TitleScene::initCompornent()
     
     CCMenuItemImage *pReviewItem = CCMenuItemImage::create(
                                                             "review_on.png",
-                                                            "review_on.png",
+                                                            "review_off.png",
                                                             this,
                                                             menu_selector(TitleScene::menuReviewCallback));
     
-    pReviewItem->setPosition(ccp(size.width * 0.725, size.height * 0.45));
+    pReviewItem->setPosition(ccp(size.width * 0.725, size.height * 0.4));
     
     // create menu, it's an autorelease object
     CCMenu* pMenu = CCMenu::create(startItem, pHelpItem, pMoreAppItem, pRankingItem, pReviewItem, NULL);

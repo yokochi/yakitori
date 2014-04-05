@@ -42,6 +42,11 @@ bool HelpScene::init()
 void HelpScene::initCompornent()
 {
     CCSize size = CCDirector::sharedDirector()->getWinSize();
+    
+    CCSprite* back = CCSprite::create("title_background.jpg");
+    back->setPosition(ccp(size.width * 0.5, size.height * 0.5));
+    this->addChild(back);
+    
     CCSprite* pHelpSprite = CCSprite::create("help.png");
     pHelpSprite->setPosition(ccp(size.width * 0.5, size.height * 0.5));
     this->addChild(pHelpSprite);

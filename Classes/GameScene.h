@@ -17,7 +17,7 @@
 #define BAKE_YAKITORI_WELL_DONE_TIME BAKE_YAKITORI_MEDIUM_TIME + 360
 #define YAKITORI_LOSS_COST 0.5f
 #define USER_MAX_LIFE 2400.0
-#define USER_UP_LIFE 300.0
+#define USER_UP_LIFE 350.0
 #define USER_DOWN_LIFE 60.0
 #define USER_SMALL_DOWN_LIFE 30.0
 
@@ -33,10 +33,11 @@
 #define ORDER_GAME_SCENE_SCORE_WAKU 50
 #define ORDER_GAME_SCENE_SCORE 51
 #define ORDER_GAME_SCENE_GAUGE_1 62
-#define ORDER_GAME_SCENE_GAUGE_2 60
-#define ORDER_GAME_SCENE_GAUGE_LIFE 61
+#define ORDER_GAME_SCENE_GAUGE_2 64
+#define ORDER_GAME_SCENE_GAUGE_LIFE 63
 #define ORDER_GAME_SCENE_YAKITORI_PACK_DUMMY 70
 #define ORDER_GAME_SCENE_YAKITORI_PACK 71
+#define ORDER_GAME_SCENE_SMOKE 75
 #define ORDER_GAME_SCENE_FUKIDASHI 80
 #define ORDER_GAME_SCENE_FUKIDASHI_MESSAGE 81
 #define ORDER_GAME_SCENE_COUNT_DOWN 100
@@ -59,6 +60,11 @@
 #define TAG_GAME_SCENE_YAKITORI_SALE 31
 #define TAG_GAME_SCENE_GAUGE_LIFE 40
 #define TAG_GAME_SCENE_FIRE 41
+#define TAG_GAME_SCENE_SMOKE_1 42
+#define TAG_GAME_SCENE_SMOKE_2 43
+#define TAG_GAME_SCENE_SMOKE_3 44
+#define TAG_GAME_SCENE_SMOKE_4 45
+#define TAG_GAME_SCENE_SMOKE_5 46
 
 #define TEXTURE_IMG_YAKITORI1_1 "yakitori1.png"
 #define TEXTURE_IMG_YAKITORI1_2 "yakitori1_2.png"
@@ -178,6 +184,12 @@ private:
     float life;
     bool isGameOver;
     short m_fireCount;
+    int m_lifeGaugeWidth;
+    short m_smokeCount1;
+    short m_smokeCount2;
+    short m_smokeCount3;
+    short m_smokeCount4;
+    short m_smokeCount5;
     
     void initCompornent();
     void beforeAction();

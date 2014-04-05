@@ -43,6 +43,12 @@ GameScene::GameScene()
     isGameOver = false;
     m_fireCount = 0;
     m_fireState = fireState1;
+    m_lifeGaugeWidth = 0;
+    m_smokeCount1 = 0;
+    m_smokeCount2 = 0;
+    m_smokeCount3 = 0;
+    m_smokeCount4 = 0;
+    m_smokeCount5 = 0;
 }
 
 CCScene* GameScene::scene()
@@ -180,19 +186,20 @@ void GameScene::initCompornent()
     
     // gauge
     CCSprite* gaugeBase = CCSprite::createWithSpriteFrameName("gauge_base.png");
-    gaugeBase->setPosition(ccp(size.width * 0.2, size.height * 0.95));
+    gaugeBase->setPosition(ccp(size.width * 0.18, size.height * 0.95));
     gaugeBase->setAnchorPoint(ccp(0, 0.5));
     batchNode->addChild(gaugeBase, ORDER_GAME_SCENE_GAUGE_1);
     
-    CCSprite* gaugeBase2 = CCSprite::createWithSpriteFrameName("gauge_base2.png");
-    gaugeBase2->setPosition(ccp(size.width * 0.2, size.height * 0.95));
-    gaugeBase2->setAnchorPoint(ccp(0, 0.5));
-    batchNode->addChild(gaugeBase2, ORDER_GAME_SCENE_GAUGE_2);
+//    CCSprite* gaugeBase2 = CCSprite::createWithSpriteFrameName("gauge_base2.png");
+//    gaugeBase2->setPosition(ccp(size.width * 0.18, size.height * 0.95));
+//    gaugeBase2->setAnchorPoint(ccp(0, 0.5));
+//    batchNode->addChild(gaugeBase2, ORDER_GAME_SCENE_GAUGE_2);
     
-    CCSprite* gaugeLife = CCSprite::createWithSpriteFrameName("gauge_life.png");
-    gaugeLife->setPosition(ccp(size.width * 0.2, size.height * 0.95));
+    CCSprite* gaugeLife = CCSprite::create("gauge_life.png");
+    gaugeLife->setPosition(ccp(size.width * 0.18, size.height * 0.95));
     gaugeLife->setAnchorPoint(ccp(0, 0.5));
-    batchNode->addChild(gaugeLife, ORDER_GAME_SCENE_GAUGE_LIFE, TAG_GAME_SCENE_GAUGE_LIFE);
+    this->addChild(gaugeLife, ORDER_GAME_SCENE_GAUGE_LIFE, TAG_GAME_SCENE_GAUGE_LIFE);
+    m_lifeGaugeWidth = gaugeLife->getContentSize().width;
 }
 
 void GameScene::beforeAction()
@@ -354,20 +361,95 @@ void GameScene::updateBakeYakitori(GameScene::Yakitori yakitori, int count, int 
 {
     CCSpriteBatchNode* batchNode = (CCSpriteBatchNode*)this->getChildByTag(TAG_GAME_SCENE_BATCH_NODE);
     CCSpriteFrameCache* cache = CCSpriteFrameCache::sharedSpriteFrameCache();
+    CCSprite* pBakeYakitori = (CCSprite*)batchNode->getChildByTag(tag);
     if (yakitori != none) {
-        CCSprite* bakeYakitori = (CCSprite*)batchNode->getChildByTag(tag);
+        
         if (BAKE_YAKITORI_WELL_DONE_TIME <= count) {
             if (status != welldone) {
                 const char* imageName = this->getYakitoriFileName(yakitori, welldone);
-                bakeYakitori->setDisplayFrame(cache->spriteFrameByName(imageName));
+                pBakeYakitori->setDisplayFrame(cache->spriteFrameByName(imageName));
                 status = welldone;
             }
         } else if (BAKE_YAKITORI_MEDIUM_TIME <= count) {
             if (status != medium) {
                 const char* imageName = this->getYakitoriFileName(yakitori, medium);
-                bakeYakitori->setDisplayFrame(cache->spriteFrameByName(imageName));
+                pBakeYakitori->setDisplayFrame(cache->spriteFrameByName(imageName));
                 status = medium;
             }
+        }
+    }
+    // smoke
+    int pSmokeTag;
+    short *pSmokeCount;
+    if (tag == TAG_YAKITORI1) {
+        pSmokeTag = TAG_GAME_SCENE_SMOKE_1;
+        pSmokeCount = &m_smokeCount1;
+    } else if (tag == TAG_YAKITORI2) {
+        pSmokeTag = TAG_GAME_SCENE_SMOKE_2;
+        pSmokeCount = &m_smokeCount2;
+    } else if (tag == TAG_YAKITORI3) {
+        pSmokeTag = TAG_GAME_SCENE_SMOKE_3;
+        pSmokeCount = &m_smokeCount3;
+    } else if (tag == TAG_YAKITORI4) {
+        pSmokeTag = TAG_GAME_SCENE_SMOKE_4;
+        pSmokeCount = &m_smokeCount4;
+    } else if (tag == TAG_YAKITORI5) {
+        pSmokeTag = TAG_GAME_SCENE_SMOKE_5;
+        pSmokeCount = &m_smokeCount5;
+    }
+    CCSprite* pSmokeSprite = (CCSprite*)batchNode->getChildByTag(pSmokeTag);
+    if (yakitori != none) {
+        if (pSmokeSprite != NULL) {
+            if (status != medium) {
+                batchNode->removeChildByTag(pSmokeTag);
+            } else {
+                (*pSmokeCount)++;
+                int pBaseNum = 5;
+                if (*pSmokeCount < pBaseNum) {
+                    pSmokeSprite->setDisplayFrame(cache->spriteFrameByName("smoke_01.png"));
+                    pSmokeSprite->setOpacity(255);
+                } else if (*pSmokeCount < pBaseNum * 2) {
+                    pSmokeSprite->setDisplayFrame(cache->spriteFrameByName("smoke_01.png"));
+                    pSmokeSprite->setOpacity(128);
+                } else if (*pSmokeCount < pBaseNum * 3) {
+                    pSmokeSprite->setDisplayFrame(cache->spriteFrameByName("smoke_02.png"));
+                    pSmokeSprite->setOpacity(255);
+                } else if (*pSmokeCount < pBaseNum * 4) {
+                    pSmokeSprite->setDisplayFrame(cache->spriteFrameByName("smoke_02.png"));
+                    pSmokeSprite->setOpacity(128);
+                } else if (*pSmokeCount < pBaseNum * 5) {
+                    pSmokeSprite->setDisplayFrame(cache->spriteFrameByName("smoke_03.png"));
+                    pSmokeSprite->setOpacity(255);
+                } else if (*pSmokeCount < pBaseNum * 6) {
+                    pSmokeSprite->setDisplayFrame(cache->spriteFrameByName("smoke_03.png"));
+                    pSmokeSprite->setOpacity(128);
+                } else if (*pSmokeCount < pBaseNum * 7) {
+                    pSmokeSprite->setDisplayFrame(cache->spriteFrameByName("smoke_04.png"));
+                    pSmokeSprite->setOpacity(255);
+                } else if (*pSmokeCount < pBaseNum * 8) {
+                    pSmokeSprite->setDisplayFrame(cache->spriteFrameByName("smoke_04.png"));
+                    pSmokeSprite->setOpacity(128);
+                } else if (*pSmokeCount < pBaseNum * 9) {
+                    pSmokeSprite->setDisplayFrame(cache->spriteFrameByName("smoke_05.png"));
+                    pSmokeSprite->setOpacity(255);
+                } else if (*pSmokeCount < pBaseNum * 10) {
+                    pSmokeSprite->setDisplayFrame(cache->spriteFrameByName("smoke_05.png"));
+                    pSmokeSprite->setOpacity(128);
+                } else {
+                    (*pSmokeCount) = 0;
+                }
+            }
+        } else {
+            if (status == medium) {
+                pSmokeSprite = CCSprite::createWithSpriteFrameName("smoke_01.png");
+                pSmokeSprite->setPosition(ccp(pBakeYakitori->getPositionX(), pBakeYakitori->getPositionY() + (pBakeYakitori->getContentSize().height * 0.5f) ));
+                batchNode->addChild(pSmokeSprite, ORDER_GAME_SCENE_SMOKE, pSmokeTag);
+                (*pSmokeCount) = 0;
+            }
+        }
+    } else {
+        if (pSmokeSprite != NULL) {
+            batchNode->removeChildByTag(pSmokeTag);
         }
     }
 }
@@ -615,12 +697,15 @@ void GameScene::showAlert(GameScene::YakitoriAlert alertType)
     const char* pMessage;
     if (over_flow == alertType) {
         sprite = CCSprite::createWithSpriteFrameName("balloon_01.png");
+        sprite->setScale(1.5f);
         pMessage = NativeBridge::getLocalizeString("OverAlert");
     } else if (rare_yakitori == alertType) {
         sprite = CCSprite::createWithSpriteFrameName("balloon_01.png");
+        sprite->setScale(1.5f);
         pMessage = NativeBridge::getLocalizeString("RareAlert");
     } else if (well_donw_yakitori == alertType) {
         sprite = CCSprite::createWithSpriteFrameName("balloon_01.png");
+        sprite->setScale(1.5f);
         pMessage = NativeBridge::getLocalizeString("ScorchedMessage");
     } else if (thanks == alertType) {
         sprite = CCSprite::createWithSpriteFrameName("balloon_02.png");
@@ -628,7 +713,6 @@ void GameScene::showAlert(GameScene::YakitoriAlert alertType)
     }
     
     sprite->setPosition(ccp(size.width * 0.5, size.height * 0.5));
-    sprite->setScale(1.5f);
     batchNode->addChild(sprite, ORDER_GAME_SCENE_FUKIDASHI);
     
     CCDelayTime* delayTime = CCDelayTime::create(0.5f);
@@ -714,7 +798,7 @@ bool GameScene::checkOrder()
     }
     
     CCSize size = CCDirector::sharedDirector()->getWinSize();
-    short x = size.width * 0.7;
+    short x = size.width * 0.6;
     short y = size.height * 0.7;
     if (result) {
         this->sales += tmpSaleCost;
@@ -764,9 +848,9 @@ void GameScene::showSaleScore(int saleScore, short positionX, short positionY)
     }
     CCLabelBMFont* saleLabel = CCLabelBMFont::create(sale->getCString(), "YakitoriFont.fnt");
     if (saleScore <= 0) {
-        saleLabel->setColor(ccc3(100, 0, 0));
+        saleLabel->setColor(ccc3(255, 0, 0));
     } else {
-        saleLabel->setColor(ccc3(0, 0, 100));
+        saleLabel->setColor(ccc3(0, 0, 255));
     }
     saleLabel->setScale(0.5f);
     saleLabel->setPosition(CCPointMake(positionX, positionY));
@@ -781,13 +865,13 @@ void GameScene::showSaleScore(int saleScore, short positionX, short positionY)
 
 void GameScene::updateLife()
 {
-    CCSpriteBatchNode* batchNode = (CCSpriteBatchNode*)this->getChildByTag(TAG_GAME_SCENE_BATCH_NODE);
-    CCSprite* lifeGauge = (CCSprite*)batchNode->getChildByTag(TAG_GAME_SCENE_GAUGE_LIFE);
+    CCSprite* lifeGauge = (CCSprite*)this->getChildByTag(TAG_GAME_SCENE_GAUGE_LIFE);
     if (USER_MAX_LIFE < --this->life) {
         this->life = USER_MAX_LIFE;
     }
     float ratio = this->life / USER_MAX_LIFE;
-    lifeGauge->setScaleX(ratio);
+    float pLifeWidth = m_lifeGaugeWidth * ratio;
+    lifeGauge->setTextureRect(CCRectMake(0, 0, pLifeWidth, lifeGauge->getContentSize().height));
     if (this->life <= 0) {
         isGameOver = true;
     }

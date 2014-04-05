@@ -275,7 +275,6 @@
 		7B3C67C318E7048E008F3129 /* ranking_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B3C67BB18E7048E008F3129 /* ranking_off.png */; };
 		7B3C67C418E7048E008F3129 /* start_title.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B3C67BC18E7048E008F3129 /* start_title.png */; };
 		7B3C67C518E7048E008F3129 /* title_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7B3C67BD18E7048E008F3129 /* title_background.jpg */; };
-		7B3C67C618E7048E008F3129 /* title_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B3C67BE18E7048E008F3129 /* title_off.png */; };
 		7B3C67C718E7048E008F3129 /* twitter_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B3C67BF18E7048E008F3129 /* twitter_off.png */; };
 		7B3C67CE18E78CA7008F3129 /* yakitori_button1_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B3C67C818E78CA7008F3129 /* yakitori_button1_off.png */; };
 		7B3C67CF18E78CA7008F3129 /* yakitori_button2_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B3C67C918E78CA7008F3129 /* yakitori_button2_off.png */; };
@@ -310,6 +309,8 @@
 		7B98E4A318EAEDCA0040EF13 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E49D18EAEDCA0040EF13 /* icon@2x.png */; };
 		7B98E4A518EAF3880040EF13 /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E4A418EAF3880040EF13 /* help.png */; };
 		7B98E4A818EAF4010040EF13 /* HelpScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B98E4A618EAF4010040EF13 /* HelpScene.cpp */; };
+		7B98E4AA18EE161E0040EF13 /* review_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E4A918EE161E0040EF13 /* review_off.png */; };
+		7B98E4AC18EF81770040EF13 /* gauge_life.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E4AB18EF81770040EF13 /* gauge_life.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712461292920000B8313A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB212928DE900B8313A /* libxml2.dylib */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -878,7 +879,6 @@
 		7B3C67BB18E7048E008F3129 /* ranking_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ranking_off.png; sourceTree = "<group>"; };
 		7B3C67BC18E7048E008F3129 /* start_title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start_title.png; sourceTree = "<group>"; };
 		7B3C67BD18E7048E008F3129 /* title_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = title_background.jpg; sourceTree = "<group>"; };
-		7B3C67BE18E7048E008F3129 /* title_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title_off.png; sourceTree = "<group>"; };
 		7B3C67BF18E7048E008F3129 /* twitter_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter_off.png; sourceTree = "<group>"; };
 		7B3C67C818E78CA7008F3129 /* yakitori_button1_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yakitori_button1_off.png; sourceTree = "<group>"; };
 		7B3C67C918E78CA7008F3129 /* yakitori_button2_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yakitori_button2_off.png; sourceTree = "<group>"; };
@@ -918,6 +918,8 @@
 		7B98E4A418EAF3880040EF13 /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help.png; sourceTree = "<group>"; };
 		7B98E4A618EAF4010040EF13 /* HelpScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HelpScene.cpp; path = ../Classes/HelpScene.cpp; sourceTree = "<group>"; };
 		7B98E4A718EAF4010040EF13 /* HelpScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelpScene.h; path = ../Classes/HelpScene.h; sourceTree = "<group>"; };
+		7B98E4A918EE161E0040EF13 /* review_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = review_off.png; sourceTree = "<group>"; };
+		7B98E4AB18EF81770040EF13 /* gauge_life.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gauge_life.png; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB212928DE900B8313A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -2081,6 +2083,8 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7B98E4AB18EF81770040EF13 /* gauge_life.png */,
+				7B98E4A918EE161E0040EF13 /* review_off.png */,
 				7B98E4A418EAF3880040EF13 /* help.png */,
 				7B98E49818EAEDCA0040EF13 /* icon-60@2x.png */,
 				7B98E49918EAEDCA0040EF13 /* icon-small-40@2x.png */,
@@ -2105,7 +2109,6 @@
 				7B3C67BB18E7048E008F3129 /* ranking_off.png */,
 				7B3C67BC18E7048E008F3129 /* start_title.png */,
 				7B3C67BD18E7048E008F3129 /* title_background.jpg */,
-				7B3C67BE18E7048E008F3129 /* title_off.png */,
 				7B3C67BF18E7048E008F3129 /* twitter_off.png */,
 				7B3C677C18E65EDF008F3129 /* facebook_on.png */,
 				7B3C677D18E65EDF008F3129 /* twitter_on.png */,
@@ -2272,7 +2275,6 @@
 				7B3C676518E45111008F3129 /* new.png in Resources */,
 				7B3C67C718E7048E008F3129 /* twitter_off.png in Resources */,
 				7B5BF65718D597D700051414 /* yakitori_button3.png in Resources */,
-				7B3C67C618E7048E008F3129 /* title_off.png in Resources */,
 				7B3C67D218E78CA7008F3129 /* yakitori_button5_off.png in Resources */,
 				7B3C675A18DEF0C0008F3129 /* retry_on.png in Resources */,
 				7B3C673F18DEB1CD008F3129 /* YakitoriFont.fnt in Resources */,
@@ -2309,6 +2311,7 @@
 				7B98E4A318EAEDCA0040EF13 /* icon@2x.png in Resources */,
 				7B3C67F718E805B4008F3129 /* back_on.png in Resources */,
 				7B5BF64518D5879E00051414 /* start_on.png in Resources */,
+				7B98E4AA18EE161E0040EF13 /* review_off.png in Resources */,
 				7B3C677E18E65EDF008F3129 /* facebook_on.png in Resources */,
 				7B3C67C418E7048E008F3129 /* start_title.png in Resources */,
 				7B98E4A118EAEDCA0040EF13 /* icon-small@2x.png in Resources */,
@@ -2317,6 +2320,7 @@
 				7B5BF65618D597D700051414 /* yakitori_button2.png in Resources */,
 				7B3C680218E8111A008F3129 /* review_on.png in Resources */,
 				7B3C67C518E7048E008F3129 /* title_background.jpg in Resources */,
+				7B98E4AC18EF81770040EF13 /* gauge_life.png in Resources */,
 				7B5BF65B18D597DD00051414 /* yakitori_button6.png in Resources */,
 				7B3C67C118E7048E008F3129 /* help_off.png in Resources */,
 				15A3D9961682F7F9002FB0C5 /* CMakeLists.txt in Resources */,
