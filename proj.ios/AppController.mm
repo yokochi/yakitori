@@ -53,7 +53,7 @@ static AppDelegate s_sharedApplication;
     // AdMob
 //    [self setAdMobSetting];
     // appCCloud
-    [self setAppCCloud];
+    [self setAppCCloud:launchOptions];
     
     cocos2d::CCApplication::sharedApplication()->run();
 
@@ -125,9 +125,36 @@ static AppDelegate s_sharedApplication;
     [bannerView_ loadRequest:request];
 }
 
-- (void)setAppCCloud {
-    //メディアキーを指定します。管理画面内にて確認できるメディアキーを指定しないと成果が取得できません。
-    [appCCloud setupAppCWithMediaKey:@"ee36e55576953f391b9f63183c6147acf7c8b477" option:APPC_CLOUD_AD];
+- (void)setAppCCloud:(NSDictionary *)launchOptions {
+    /*
+     *メディアキーを指定します。
+     *optionパラメータで有効にしたい機能を | で接続してください。
+     *Push通知を利用する場合は必ず APPC_CLOUD_PUSH をオプションに指定してください。
+     *setupAppCWithMediaKey はアプリ内で1回コールするのみでOKです。2回目以降は無視されます。
+     *プッシュ経由の起動数を取得場合は引数にlaunchOptionsを追加してください
+     */
+    [appCCloud setupAppCWithMediaKey:@"ee36e55576953f391b9f63183c6147acf7c8b477" option:APPC_CLOUD_AD | APPC_CLOUD_PUSH launchOptions:launchOptions];
+}
+
+/*
+ *3、AppDelegate.m に次の３つの処理を追加してください。
+ *既にメソッドが存在する場合は、メソッド内の処理のみを追加してください。
+ */
+- (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *) devToken
+{
+    [appCCloud pushNotificationDidRegisterWithDeviceToken:devToken];
+}
+
+
+- (void)application:(UIApplication *)app didFailToRegisterForRemoteNotificationsWithError:(NSError *) err
+{
+    [appCCloud pushNotificationDidFailWithError:err];
+}
+
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    [appCCloud pushNotificationDidReceive:userInfo appStat:application.applicationState];
 }
 
 - (void)dealloc {
