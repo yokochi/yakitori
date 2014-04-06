@@ -13,6 +13,6 @@ extern "C"{
     RootViewController    *viewController;
     GADBannerView *bannerView_;
 }
-
+@property (nonatomic, strong)   UIView *adView1;
 @end
 

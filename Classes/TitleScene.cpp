@@ -52,6 +52,7 @@ bool TitleScene::init()
     CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadEffect(SOUND_ENTER);
     
     this->initCompornent();
+    NativeBridge::showAppCMarqueeView();
     return true;
 }
 
@@ -136,6 +137,7 @@ void TitleScene::menuStartCallback(CCObject* pSender)
     m_webView->removeWebView();
     CCScene* gameScene = (CCScene*)GameScene::create();
     CCDirector::sharedDirector()->replaceScene(gameScene);
+    NativeBridge::removeAppCMarqueeView();
 }
 
 void TitleScene::menuHelpCallback(cocos2d::CCObject *pSender)
@@ -145,6 +147,7 @@ void TitleScene::menuHelpCallback(cocos2d::CCObject *pSender)
     m_webView->removeWebView();
     CCScene* scene = (CCScene*)HelpScene::create();
     CCDirector::sharedDirector()->replaceScene(scene);
+    NativeBridge::removeAppCMarqueeView();
 }
 
 void TitleScene::menuMoreAppCallback(cocos2d::CCObject *pSender)

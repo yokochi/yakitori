@@ -9,4 +9,6 @@ public:
     static void openAppStore();
     static void openAppStoreList();
     static const char* getCurrentLanguage();
+    static void showAppCMarqueeView();
+    static void removeAppCMarqueeView();
 };

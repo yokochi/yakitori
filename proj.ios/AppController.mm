@@ -3,6 +3,7 @@
 #import "cocos2d.h"
 #import "AppDelegate.h"
 #import "RootViewController.h"
+#import "appCCloud.h"
 
 @implementation AppController
 
@@ -51,6 +52,8 @@ static AppDelegate s_sharedApplication;
     
     // AdMob
 //    [self setAdMobSetting];
+    // appCCloud
+    [self setAppCCloud];
     
     cocos2d::CCApplication::sharedApplication()->run();
 
@@ -122,6 +125,10 @@ static AppDelegate s_sharedApplication;
     [bannerView_ loadRequest:request];
 }
 
+- (void)setAppCCloud {
+    //メディアキーを指定します。管理画面内にて確認できるメディアキーを指定しないと成果が取得できません。
+    [appCCloud setupAppCWithMediaKey:@"ee36e55576953f391b9f63183c6147acf7c8b477" option:APPC_CLOUD_AD];
+}
 
 - (void)dealloc {
     [window release];

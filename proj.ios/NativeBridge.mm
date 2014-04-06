@@ -1,6 +1,8 @@
 #import "NativeBridge.h"
 #import <Twitter/Twitter.h>
 #import <Social/Social.h>
+#import "AppController.h"
+#import "appCCloud.h"
 
 USING_NS_CC;
 
@@ -71,5 +73,30 @@ const char* NativeBridge::getCurrentLanguage()
         return "ja";
     } else {
         return "en";
+    }
+}
+
+void NativeBridge::showAppCMarqueeView()
+{
+    ccLanguageType rt = CCApplication::sharedApplication()->getCurrentLanguage();
+    if (rt == kLanguageJapanese) {
+        UIViewController *myViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
+        AppController *appController = (AppController *)[UIApplication sharedApplication].delegate;
+        CGPoint origin = CGPointMake(0.0, myViewController.view.frame.size.height - GAD_SIZE_320x50.height - 25);
+        appController.adView1 = [[appCMarqueeView alloc] initWithPosition:origin
+                                                                       viewController:myViewController];
+        [myViewController.view addSubview:appController.adView1];
+    }
+}
+
+void NativeBridge::removeAppCMarqueeView()
+{
+    ccLanguageType rt = CCApplication::sharedApplication()->getCurrentLanguage();
+    if (rt == kLanguageJapanese) {
+        AppController *appController = (AppController *)[UIApplication sharedApplication].delegate;
+        if (appController.adView1 != nil) {
+            [appController.adView1 removeFromSuperview];
+            appController.adView1 = nil;
+        }
     }
 }
