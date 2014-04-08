@@ -1,0 +1,20 @@
+/*
+ Localizable.strings
+ Yakitori
+ 
+ Created by Akio Yamazaki on 2014/03/23.
+ 
+ */
+"Sale" = "营业额";
+"SaleFormat" = "￥%5d";
+"SaleSuffix" = "%5d";
+"BestSale" = "最高营业额";
+"AccumulationSales" = "累计营业额";
+"Tweet" = "串烧道场，本次的营业额是%d日元。#yakitoridojo";
+"FaceBookSend" = "串烧道场，本次的营业额是%d日元。#yakitoridojo";
+"AppUrl" = "https://itunes.apple.com/us/app/kattobi-ren-fa-shu/id828904956?mt=8";
+"AppStoreListUrl" = "https://itunes.apple.com/us/artist/akio-yamazaki/id641929893";
+"OverAlert" = "已经满了哦！";
+"RareAlert" = "还没烤好！";
+"ThanksMessage" = "您久等了";
+"ScorchedMessage" = "烤焦了！";

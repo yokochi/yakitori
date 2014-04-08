@@ -5,16 +5,16 @@
   Created by Akio Yamazaki on 2014/03/23.
 
 */
-"Sale" = "売上";
+"Sale" = "Sales";
 "SaleFormat" = "￥%5d";
 "SaleSuffix" = "%5d";
-"BestSale" = "最高売上";
-"AccumulationSales" = "累積売上";
-"Tweet" = "やきとり道場、今回の売上は%d円です。#yakitoridojo";
-"FaceBookSend" = "やきとり道場、今回の売上は%d円です。#yakitoridojo";
+"BestSale" = "Record Sales";
+"AccumulationSales" = "Gross Sales";
+"Tweet" = "I just earned %d yen in Yakitori Dojo! #yakitoridojo";
+"FaceBookSend" = "I just earned %d yen in Yakitori Dojo! #yakitoridojo";
 "AppUrl" = "https://itunes.apple.com/us/app/kattobi-ren-fa-shu/id828904956?mt=8";
 "AppStoreListUrl" = "https://itunes.apple.com/us/artist/akio-yamazaki/id641929893";
-"OverAlert" = "一杯だよ！";
-"RareAlert" = "焼けてない！";
-"ThanksMessage" = "おまち";
-"ScorchedMessage" = "焼きすぎ！";
+"OverAlert" = "The grill is full!";
+"RareAlert" = "It's still raw!";
+"ThanksMessage" = "Order's up!";
+"ScorchedMessage" = "You burned it!";

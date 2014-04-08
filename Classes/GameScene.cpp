@@ -720,6 +720,7 @@ void GameScene::showAlert(GameScene::YakitoriAlert alertType)
     
     CCSprite* sprite;
     const char* pMessage;
+    float pFontPostionX = size.width * 0.5f;
     if (over_flow == alertType) {
         AudioUtil::sharedEngine()->playEffect(SOUND_NON_CORRECT_ANSWER, false);
         sprite = CCSprite::createWithSpriteFrameName("balloon_01.png");
@@ -738,6 +739,8 @@ void GameScene::showAlert(GameScene::YakitoriAlert alertType)
     } else if (thanks == alertType) {
         sprite = CCSprite::createWithSpriteFrameName("balloon_02.png");
         pMessage = NativeBridge::getLocalizeString("ThanksMessage");
+        sprite->setScale(1.2f);
+        pFontPostionX = size.width * 0.55f;
     }
     
     sprite->setPosition(ccp(size.width * 0.5, size.height * 0.5));
@@ -749,7 +752,7 @@ void GameScene::showAlert(GameScene::YakitoriAlert alertType)
     
     CCLabelBMFont* pMessageFont = CCLabelBMFont::create(pMessage, "YakitoriFont.fnt");
     pMessageFont->setColor(ccc3(100, 0, 0));
-    pMessageFont->setPosition(CCPointMake(size.width * 0.5, size.height * 0.5));
+    pMessageFont->setPosition(CCPointMake(pFontPostionX, size.height * 0.5));
     this->addChild(pMessageFont, ORDER_GAME_SCENE_FUKIDASHI_MESSAGE);
     
     CCDelayTime* pDelayTime = CCDelayTime::create(0.5f);
