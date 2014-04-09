@@ -41,7 +41,9 @@ public:
     void menuRankingCallback(CCObject* pSender);
     void menuHelpCallback(CCObject* pSender);
     void menuReviewCallback(CCObject* pSender);
+    void menuInfoCallback(CCObject* pSender);
     void menuVolumeCallback();
+    
     
     // implement the "static node()" method manually
     CREATE_FUNC(TitleScene);

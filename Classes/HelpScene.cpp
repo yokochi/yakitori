@@ -9,6 +9,7 @@
 #include "HelpScene.h"
 #include "TitleScene.h"
 #include "AudioUtil.h"
+#include "NativeBridge.h"
 
 USING_NS_CC;
 
@@ -50,7 +51,8 @@ void HelpScene::initCompornent()
     back->setPosition(ccp(size.width * 0.5, size.height * 0.5));
     this->addChild(back);
     
-    CCSprite* pHelpSprite = CCSprite::create("help.png");
+    CCString* pHelpString = CCString::createWithFormat("%s_%s", NativeBridge::getCurrentLanguage(), "help.png");
+    CCSprite* pHelpSprite = CCSprite::create(pHelpString->getCString());
     pHelpSprite->setPosition(ccp(size.width * 0.5, size.height * 0.55));
     this->addChild(pHelpSprite);
     

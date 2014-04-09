@@ -108,6 +108,14 @@ void TitleScene::initCompornent()
     
     pReviewItem->setPosition(ccp(size.width * 0.725, size.height * 0.4));
     
+    CCMenuItemImage *pInfoItem = CCMenuItemImage::create(
+                                                           "i_icon.png",
+                                                           "i_icon_off.png",
+                                                           this,
+                                                           menu_selector(TitleScene::menuInfoCallback));
+    
+    pInfoItem->setPosition(ccp(size.width * 0.25, size.height * 0.81));
+    
     // speaker
     std::string pSpeakerIcon;
     if (AudioUtil::sharedEngine()->isVolume) {
@@ -120,7 +128,7 @@ void TitleScene::initCompornent()
     pVolumeMenu->setTag(TAG_TITLE_SCENE_MENU_SPEAKER);
     
     // create menu, it's an autorelease object
-    CCMenu* pMenu = CCMenu::create(startItem, pHelpItem, pMoreAppItem, pRankingItem, pReviewItem,pVolumeMenu, NULL);
+    CCMenu* pMenu = CCMenu::create(startItem, pHelpItem, pMoreAppItem, pRankingItem, pReviewItem,pInfoItem, pVolumeMenu, NULL);
     pMenu->setPosition(CCPointZero);
     this->addChild(pMenu, ORDER_TITLE_SCENE_MENU, TAG_TITLE_SCENE_MENU);
     
@@ -172,6 +180,11 @@ void TitleScene::menuReviewCallback(cocos2d::CCObject *pSender)
 {
     AudioUtil::sharedEngine()->playEffect(SOUND_ENTER, false);
     NativeBridge::openAppStore();
+}
+
+void TitleScene::menuInfoCallback(cocos2d::CCObject *pSender)
+{
+    AudioUtil::sharedEngine()->playEffect(SOUND_ENTER, false);
 }
 
 void TitleScene::menuVolumeCallback()
