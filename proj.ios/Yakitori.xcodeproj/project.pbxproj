@@ -388,6 +388,8 @@
 		7B98E5E718F58AB10040EF13 /* en_help.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E5E618F58AB10040EF13 /* en_help.png */; };
 		7B98E5EA18F5A42B0040EF13 /* i_icon_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E5E818F5A42B0040EF13 /* i_icon_off.png */; };
 		7B98E5EB18F5A42B0040EF13 /* i_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E5E918F5A42B0040EF13 /* i_icon.png */; };
+		7B98E5ED18F6ABDB0040EF13 /* know_your_yakiyori.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E5EC18F6ABDB0040EF13 /* know_your_yakiyori.png */; };
+		7B98E5F018F6ABFC0040EF13 /* InfoScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B98E5EE18F6ABFC0040EF13 /* InfoScene.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712461292920000B8313A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB212928DE900B8313A /* libxml2.dylib */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -1092,6 +1094,9 @@
 		7B98E5E618F58AB10040EF13 /* en_help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en_help.png; sourceTree = "<group>"; };
 		7B98E5E818F5A42B0040EF13 /* i_icon_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = i_icon_off.png; sourceTree = "<group>"; };
 		7B98E5E918F5A42B0040EF13 /* i_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = i_icon.png; sourceTree = "<group>"; };
+		7B98E5EC18F6ABDB0040EF13 /* know_your_yakiyori.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = know_your_yakiyori.png; sourceTree = "<group>"; };
+		7B98E5EE18F6ABFC0040EF13 /* InfoScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = InfoScene.cpp; path = ../Classes/InfoScene.cpp; sourceTree = "<group>"; };
+		7B98E5EF18F6ABFC0040EF13 /* InfoScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InfoScene.h; path = ../Classes/InfoScene.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB212928DE900B8313A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -1655,6 +1660,8 @@
 				7B3C675118DEEFA2008F3129 /* GameOverScene.h */,
 				7B98E4A618EAF4010040EF13 /* HelpScene.cpp */,
 				7B98E4A718EAF4010040EF13 /* HelpScene.h */,
+				7B98E5EE18F6ABFC0040EF13 /* InfoScene.cpp */,
+				7B98E5EF18F6ABFC0040EF13 /* InfoScene.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -2259,6 +2266,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7B98E5EC18F6ABDB0040EF13 /* know_your_yakiyori.png */,
 				7B98E5E818F5A42B0040EF13 /* i_icon_off.png */,
 				7B98E5E918F5A42B0040EF13 /* i_icon.png */,
 				7B98E57818EFE8B10040EF13 /* speaker_icon_off.png */,
@@ -2649,6 +2657,7 @@
 				7B3C674318DEB46C008F3129 /* Localizable.strings in Resources */,
 				7B98E54B18EFCB5E0040EF13 /* en_yakitori_button4_off.png in Resources */,
 				7B98E5CF18F0D7410040EF13 /* appc_web_close@2x.png in Resources */,
+				7B98E5ED18F6ABDB0040EF13 /* know_your_yakiyori.png in Resources */,
 				7B5BF64F18D5975A00051414 /* game_main.png in Resources */,
 				7B98E55918EFCB5E0040EF13 /* ja_yakitori_button5.png in Resources */,
 				7B98E49F18EAEDCA0040EF13 /* icon-small-40@2x.png in Resources */,
@@ -2752,6 +2761,7 @@
 				15A3D9001682F7D5002FB0C5 /* b2CollideCircle.cpp in Sources */,
 				298B29C018D0668400C1920F /* LayoutReader.cpp in Sources */,
 				15A3D9011682F7D5002FB0C5 /* b2CollideEdge.cpp in Sources */,
+				7B98E5F018F6ABFC0040EF13 /* InfoScene.cpp in Sources */,
 				15A3D9021682F7D5002FB0C5 /* b2CollidePolygon.cpp in Sources */,
 				15A3D9031682F7D5002FB0C5 /* b2Collision.cpp in Sources */,
 				15A3D9041682F7D5002FB0C5 /* b2Distance.cpp in Sources */,

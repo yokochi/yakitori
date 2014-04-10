@@ -12,6 +12,7 @@
 #include "NativeBridge.h"
 #include "HelpScene.h"
 #include "AudioUtil.h"
+#include "InfoScene.h"
 
 USING_NS_CC;
 
@@ -185,6 +186,11 @@ void TitleScene::menuReviewCallback(cocos2d::CCObject *pSender)
 void TitleScene::menuInfoCallback(cocos2d::CCObject *pSender)
 {
     AudioUtil::sharedEngine()->playEffect(SOUND_ENTER, false);
+    
+    m_webView->removeWebView();
+    CCScene* scene = (CCScene*)InfoScene::create();
+    CCDirector::sharedDirector()->replaceScene(scene);
+    NativeBridge::removeAppCMarqueeView();
 }
 
 void TitleScene::menuVolumeCallback()
