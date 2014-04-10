@@ -100,3 +100,48 @@ void NativeBridge::removeAppCMarqueeView()
         }
     }
 }
+
+/**
+ * GameCenter score送信
+ */
+void NativeBridge::sendRecordSales(int yen)
+{
+    GKScore *scoreReporter = [[GKScore alloc] initWithCategory:@"RecordSales"];
+    scoreReporter.value = yen;
+    [scoreReporter reportScoreWithCompletionHandler:^(NSError *error) {
+        if (error != nil)
+        {
+            // 報告エラーの処理
+            NSLog(@"error %@",error);
+        }
+    }];
+    
+}
+
+/**
+ * GameCenter score送信
+ */
+void NativeBridge::sendGrossSales(int yen)
+{
+    GKScore *scoreReporter = [[GKScore alloc] initWithCategory:@"GrossSales"];
+    scoreReporter.value = yen;
+    [scoreReporter reportScoreWithCompletionHandler:^(NSError *error) {
+        if (error != nil)
+        {
+            // 報告エラーの処理
+            NSLog(@"error %@",error);
+        }
+    }];
+    
+}
+
+/**
+ * GameCenter ランキング表示
+ */
+void NativeBridge::showBord()
+{
+//    RootViewController *myViewController = (RootViewController*)[UIApplication sharedApplication].keyWindow.rootViewController;
+//    [myViewController showBord];
+    AppController *appController = (AppController*)[[UIApplication sharedApplication] delegate];
+    [appController showBord];
+}

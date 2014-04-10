@@ -11,4 +11,8 @@ public:
     static const char* getCurrentLanguage();
     static void showAppCMarqueeView();
     static void removeAppCMarqueeView();
+    
+    static void sendRecordSales(int yen);
+    static void sendGrossSales(int yen);
+    static void showBord();
 };

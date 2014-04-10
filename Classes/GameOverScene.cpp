@@ -124,6 +124,8 @@ void GameOverScene::initCompornent()
         CCSprite* pNewSprite = CCSprite::create("new.png");
         pNewSprite->setPosition(ccp(size.width * 0.65, size.height * 0.7));
         baseLayer->addChild(pNewSprite, ORDER_GAME_OVER_SCENE_LABEL);
+        // gamecenter
+        NativeBridge::sendRecordSales(m_score);
     }
     
     CCLabelBMFont* saleLabel = CCLabelBMFont::create(NativeBridge::getLocalizeString("Sale"), "YakitoriFont.fnt");
@@ -164,6 +166,9 @@ void GameOverScene::initCompornent()
     pAllScoreLabel->setScale(0.75f);
     pAllScoreLabel->setPosition(CCPointMake(wakuSize.width * 0.5, wakuSize.height * 0.15));
     waku->addChild(pAllScoreLabel, ORDER_GAME_OVER_SCENE_LABEL);
+    
+    // gamecenter
+    NativeBridge::sendGrossSales(pGameManager->getAllScore());
     
     // webview
     m_webView = new ZYWebView();

@@ -175,6 +175,7 @@ void TitleScene::menuMoreAppCallback(cocos2d::CCObject *pSender)
 void TitleScene::menuRankingCallback(cocos2d::CCObject *pSender)
 {
     AudioUtil::sharedEngine()->playEffect(SOUND_ENTER, false);
+    NativeBridge::showBord();
 }
 
 void TitleScene::menuReviewCallback(cocos2d::CCObject *pSender)

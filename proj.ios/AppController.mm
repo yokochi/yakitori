@@ -50,8 +50,10 @@ static AppDelegate s_sharedApplication;
     
     [[UIApplication sharedApplication] setStatusBarHidden:true];
     
+    // game center login
+    [[GKLocalPlayer localPlayer] authenticateWithCompletionHandler:^(NSError *error){}];
     // AdMob
-//    [self setAdMobSetting];
+    [self setAdMobSetting];
     // appCCloud
     [self setAppCCloud:launchOptions];
     
@@ -155,6 +157,29 @@ static AppDelegate s_sharedApplication;
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
     [appCCloud pushNotificationDidReceive:userInfo appStat:application.applicationState];
+}
+
+- (void)showBord {
+    GKLeaderboardViewController *leaderboardController = [[GKLeaderboardViewController alloc] init];
+    if (leaderboardController != nil)
+    {
+        GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
+        if(localPlayer.authenticated) {
+            leaderboardController.leaderboardDelegate = self;
+            [viewController presentModalViewController: leaderboardController animated: YES];
+        } else {
+            NSString *alertTitle = @"Error";
+            NSString *alertMessage = @"Game Centerへのログインが必要です。";
+            UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:alertTitle message:alertMessage
+                                                              delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alertView show];
+        }
+    }
+    
+}
+
+- (void)leaderboardViewControllerDidFinish:(GKLeaderboardViewController *)viewController {
+    [viewController dismissModalViewControllerAnimated:YES];
 }
 
 - (void)dealloc {
