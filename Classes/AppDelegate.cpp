@@ -24,9 +24,16 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // set FPS. the default value is 1.0/60 if you don't call this
     pDirector->setAnimationInterval(1.0 / 60);
 
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+    //デバイスがiOSの時
+#else
+    //デバイスがAndroidの時
+    pEGLView->setDesignResolutionSize(640, 1136, kResolutionShowAll);
+#endif
+    
     // create a scene. it's an autorelease object
     CCScene *pScene = TitleScene::scene();
-
+    
     // run
     pDirector->runWithScene(pScene);
 

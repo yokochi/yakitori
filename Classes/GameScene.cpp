@@ -568,57 +568,56 @@ bool GameScene::setYakitori(GameScene::Yakitori yakitori)
 
 const char* GameScene::getYakitoriFileName(GameScene::Yakitori yakitori, GameScene::YakitoriStatus status)
 {
-    std::string result;
     if (negima == yakitori) {
         if (status == rare) {
-            result = TEXTURE_IMG_YAKITORI1_1;
+            return TEXTURE_IMG_YAKITORI1_1;
         } else if (status == medium) {
-            result = TEXTURE_IMG_YAKITORI1_2;
+            return TEXTURE_IMG_YAKITORI1_2;
         } else {
-            result = TEXTURE_IMG_YAKITORI1_3;
+            return TEXTURE_IMG_YAKITORI1_3;
         }
     } else if (momo == yakitori) {
         if (status == rare) {
-            result = TEXTURE_IMG_YAKITORI2_1;
+            return TEXTURE_IMG_YAKITORI2_1;
         } else if (status == medium) {
-            result = TEXTURE_IMG_YAKITORI2_2;
+            return TEXTURE_IMG_YAKITORI2_2;
         } else {
-            result = TEXTURE_IMG_YAKITORI2_3;
+            return TEXTURE_IMG_YAKITORI2_3;
         }
     } else if (nankotu == yakitori) {
         if (status == rare) {
-            result = TEXTURE_IMG_YAKITORI3_1;
+            return TEXTURE_IMG_YAKITORI3_1;
         } else if (status == medium) {
-            result = TEXTURE_IMG_YAKITORI3_2;
+            return TEXTURE_IMG_YAKITORI3_2;
         } else {
-            result = TEXTURE_IMG_YAKITORI3_3;
+            return TEXTURE_IMG_YAKITORI3_3;
         }
     } else if (tsukune == yakitori) {
         if (status == rare) {
-            result = TEXTURE_IMG_YAKITORI4_1;
+            return TEXTURE_IMG_YAKITORI4_1;
         } else if (status == medium) {
-            result = TEXTURE_IMG_YAKITORI4_2;
+            return TEXTURE_IMG_YAKITORI4_2;
         } else {
-            result = TEXTURE_IMG_YAKITORI4_3;
+            return TEXTURE_IMG_YAKITORI4_3;
         }
     } else if (lever == yakitori) {
         if (status == rare) {
-            result = TEXTURE_IMG_YAKITORI5_1;
+            return TEXTURE_IMG_YAKITORI5_1;
         } else if (status == medium) {
-            result = TEXTURE_IMG_YAKITORI5_2;
+            return TEXTURE_IMG_YAKITORI5_2;
         } else {
-            result = TEXTURE_IMG_YAKITORI5_3;
+            return TEXTURE_IMG_YAKITORI5_3;
         }
     } else if (kawa == yakitori) {
         if (status == rare) {
-            result = TEXTURE_IMG_YAKITORI6_1;
+            return TEXTURE_IMG_YAKITORI6_1;
         } else if (status == medium) {
-            result = TEXTURE_IMG_YAKITORI6_2;
+            return TEXTURE_IMG_YAKITORI6_2;
         } else {
-            result = TEXTURE_IMG_YAKITORI6_3;
+            return TEXTURE_IMG_YAKITORI6_3;
         }
     }
-    return result.c_str();
+    return "";
 }
 
 void GameScene::order()
@@ -654,9 +653,8 @@ void GameScene::order()
         order3 = choiceYakitori();
         order4 = choiceYakitori();
         order5 = choiceYakitori();
-        
     }
-    
+
     CCSize size = CCDirector::sharedDirector()->getWinSize();
     CCSpriteBatchNode* batchNode = (CCSpriteBatchNode*)this->getChildByTag(TAG_GAME_SCENE_BATCH_NODE);
     

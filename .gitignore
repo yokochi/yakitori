@@ -37,3 +37,4 @@ out/
 
 #JAVA
 *.class
+.settings

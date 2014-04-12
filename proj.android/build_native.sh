@@ -29,6 +29,7 @@ esac
 done
 
 # paths
+NDK_ROOT=$HOME/android/cocos2dx_eclipse/android-ndk-r9d
 
 if [ -z "${NDK_ROOT+aaa}" ];then
 echo "please define NDK_ROOT"

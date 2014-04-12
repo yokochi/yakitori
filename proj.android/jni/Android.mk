@@ -8,7 +8,16 @@ LOCAL_MODULE_FILENAME := libcocos2dcpp
 
 LOCAL_SRC_FILES := hellocpp/main.cpp \
                    ../../Classes/AppDelegate.cpp \
-                   ../../Classes/HelloWorldScene.cpp
+                   ../../Classes/AudioUtil.cpp \
+                   ../../Classes/android/BFWebView.cpp \
+                   ../../Classes/android/NativeBridge.cpp \
+                   ../../Classes/GameManager.cpp \
+                   ../../Classes/GameOverScene.cpp \
+                   ../../Classes/GameScene.cpp \
+                   ../../Classes/HelpScene.cpp \
+                   ../../Classes/InfoScene.cpp \
+                   ../../Classes/TitleScene.cpp \
+                   ../../Classes/WebScene.cpp
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes
 

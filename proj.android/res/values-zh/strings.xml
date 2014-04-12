@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">串烧道场</string>
+    <string name="Sale">营业额</string>
+    <string name="SaleFormat">￥%5d</string>
+    <string name="SaleSuffix">%5d</string>
+    <string name="BestSale">最高营业额</string>
+    <string name="AccumulationSales">累计营业额</string>
+    <string name="Tweet">串烧道场，本次的营业额是%d日元。#yakitoridojo</string>
+    <string name="FaceBookSend">串烧道场，本次的营业额是%d日元。#yakitoridojo</string>
+    <string name="AppUrl">https://play.google.com/store/apps/details?id=com.iankohbo.yahoo.auction</string>
+    <string name="AppStoreListUrl">https://play.google.com/store/apps/developer?id=yokochi</string>
+    <string name="OverAlert">已经满了哦！</string>
+    <string name="RareAlert">还没烤好！</string>
+    <string name="ThanksMessage">您久等了</string>
+    <string name="ScorchedMessage">烤焦了！</string>
+</resources>

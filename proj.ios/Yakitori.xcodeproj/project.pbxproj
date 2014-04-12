@@ -236,8 +236,6 @@
 		379BB9D417F03F3700829B88 /* SceneReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 379BB99317F03F3700829B88 /* SceneReader.cpp */; };
 		46513EB1187BFBA200B5ABE1 /* UITouchGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46513EAF187BFBA200B5ABE1 /* UITouchGroup.cpp */; };
 		7855E0E1153FEF240059DD9A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7855E0DF153FEF240059DD9A /* Default.png */; };
-		7B3C673F18DEB1CD008F3129 /* YakitoriFont.fnt in Resources */ = {isa = PBXBuildFile; fileRef = 7B3C673D18DEB1CD008F3129 /* YakitoriFont.fnt */; };
-		7B3C674018DEB1CD008F3129 /* YakitoriFont.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B3C673E18DEB1CD008F3129 /* YakitoriFont.png */; };
 		7B3C674318DEB46C008F3129 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B3C674518DEB46C008F3129 /* Localizable.strings */; };
 		7B3C674918DEB519008F3129 /* NativeBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7B3C674818DEB519008F3129 /* NativeBridge.mm */; };
 		7B3C674A18DEB5BD008F3129 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B3C674C18DEB5BD008F3129 /* InfoPlist.strings */; };
@@ -297,51 +295,6 @@
 		7B98E4A818EAF4010040EF13 /* HelpScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B98E4A618EAF4010040EF13 /* HelpScene.cpp */; };
 		7B98E4AA18EE161E0040EF13 /* review_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E4A918EE161E0040EF13 /* review_off.png */; };
 		7B98E4AC18EF81770040EF13 /* gauge_life.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E4AB18EF81770040EF13 /* gauge_life.png */; };
-		7B98E54318EFCB5E0040EF13 /* en_start_title.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E51A18EFCB5E0040EF13 /* en_start_title.png */; };
-		7B98E54418EFCB5E0040EF13 /* en_yakitori_button1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E51B18EFCB5E0040EF13 /* en_yakitori_button1.png */; };
-		7B98E54518EFCB5E0040EF13 /* en_yakitori_button1_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E51C18EFCB5E0040EF13 /* en_yakitori_button1_off.png */; };
-		7B98E54618EFCB5E0040EF13 /* en_yakitori_button2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E51D18EFCB5E0040EF13 /* en_yakitori_button2.png */; };
-		7B98E54718EFCB5E0040EF13 /* en_yakitori_button2_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E51E18EFCB5E0040EF13 /* en_yakitori_button2_off.png */; };
-		7B98E54818EFCB5E0040EF13 /* en_yakitori_button3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E51F18EFCB5E0040EF13 /* en_yakitori_button3.png */; };
-		7B98E54918EFCB5E0040EF13 /* en_yakitori_button3_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E52018EFCB5E0040EF13 /* en_yakitori_button3_off.png */; };
-		7B98E54A18EFCB5E0040EF13 /* en_yakitori_button4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E52118EFCB5E0040EF13 /* en_yakitori_button4.png */; };
-		7B98E54B18EFCB5E0040EF13 /* en_yakitori_button4_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E52218EFCB5E0040EF13 /* en_yakitori_button4_off.png */; };
-		7B98E54C18EFCB5E0040EF13 /* en_yakitori_button5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E52318EFCB5E0040EF13 /* en_yakitori_button5.png */; };
-		7B98E54D18EFCB5E0040EF13 /* en_yakitori_button5_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E52418EFCB5E0040EF13 /* en_yakitori_button5_off.png */; };
-		7B98E54E18EFCB5E0040EF13 /* en_yakitori_button6.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E52518EFCB5E0040EF13 /* en_yakitori_button6.png */; };
-		7B98E54F18EFCB5E0040EF13 /* en_yakitori_button6_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E52618EFCB5E0040EF13 /* en_yakitori_button6_off.png */; };
-		7B98E55018EFCB5E0040EF13 /* ja_start_title.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E52818EFCB5E0040EF13 /* ja_start_title.png */; };
-		7B98E55118EFCB5E0040EF13 /* ja_yakitori_button1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E52918EFCB5E0040EF13 /* ja_yakitori_button1.png */; };
-		7B98E55218EFCB5E0040EF13 /* ja_yakitori_button1_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E52A18EFCB5E0040EF13 /* ja_yakitori_button1_off.png */; };
-		7B98E55318EFCB5E0040EF13 /* ja_yakitori_button2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E52B18EFCB5E0040EF13 /* ja_yakitori_button2.png */; };
-		7B98E55418EFCB5E0040EF13 /* ja_yakitori_button2_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E52C18EFCB5E0040EF13 /* ja_yakitori_button2_off.png */; };
-		7B98E55518EFCB5E0040EF13 /* ja_yakitori_button3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E52D18EFCB5E0040EF13 /* ja_yakitori_button3.png */; };
-		7B98E55618EFCB5E0040EF13 /* ja_yakitori_button3_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E52E18EFCB5E0040EF13 /* ja_yakitori_button3_off.png */; };
-		7B98E55718EFCB5E0040EF13 /* ja_yakitori_button4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E52F18EFCB5E0040EF13 /* ja_yakitori_button4.png */; };
-		7B98E55818EFCB5E0040EF13 /* ja_yakitori_button4_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E53018EFCB5E0040EF13 /* ja_yakitori_button4_off.png */; };
-		7B98E55918EFCB5E0040EF13 /* ja_yakitori_button5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E53118EFCB5E0040EF13 /* ja_yakitori_button5.png */; };
-		7B98E55A18EFCB5E0040EF13 /* ja_yakitori_button5_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E53218EFCB5E0040EF13 /* ja_yakitori_button5_off.png */; };
-		7B98E55B18EFCB5E0040EF13 /* ja_yakitori_button6.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E53318EFCB5E0040EF13 /* ja_yakitori_button6.png */; };
-		7B98E55C18EFCB5E0040EF13 /* ja_yakitori_button6_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E53418EFCB5E0040EF13 /* ja_yakitori_button6_off.png */; };
-		7B98E55D18EFCB5E0040EF13 /* zh_start_title.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E53618EFCB5E0040EF13 /* zh_start_title.png */; };
-		7B98E55E18EFCB5E0040EF13 /* zh_yakitori_button1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E53718EFCB5E0040EF13 /* zh_yakitori_button1.png */; };
-		7B98E55F18EFCB5E0040EF13 /* zh_yakitori_button1_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E53818EFCB5E0040EF13 /* zh_yakitori_button1_off.png */; };
-		7B98E56018EFCB5E0040EF13 /* zh_yakitori_button2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E53918EFCB5E0040EF13 /* zh_yakitori_button2.png */; };
-		7B98E56118EFCB5E0040EF13 /* zh_yakitori_button2_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E53A18EFCB5E0040EF13 /* zh_yakitori_button2_off.png */; };
-		7B98E56218EFCB5E0040EF13 /* zh_yakitori_button3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E53B18EFCB5E0040EF13 /* zh_yakitori_button3.png */; };
-		7B98E56318EFCB5E0040EF13 /* zh_yakitori_button3_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E53C18EFCB5E0040EF13 /* zh_yakitori_button3_off.png */; };
-		7B98E56418EFCB5E0040EF13 /* zh_yakitori_button4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E53D18EFCB5E0040EF13 /* zh_yakitori_button4.png */; };
-		7B98E56518EFCB5E0040EF13 /* zh_yakitori_button4_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E53E18EFCB5E0040EF13 /* zh_yakitori_button4_off.png */; };
-		7B98E56618EFCB5E0040EF13 /* zh_yakitori_button5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E53F18EFCB5E0040EF13 /* zh_yakitori_button5.png */; };
-		7B98E56718EFCB5E0040EF13 /* zh_yakitori_button5_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E54018EFCB5E0040EF13 /* zh_yakitori_button5_off.png */; };
-		7B98E56818EFCB5E0040EF13 /* zh_yakitori_button6.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E54118EFCB5E0040EF13 /* zh_yakitori_button6.png */; };
-		7B98E56918EFCB5E0040EF13 /* zh_yakitori_button6_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E54218EFCB5E0040EF13 /* zh_yakitori_button6_off.png */; };
-		7B98E57118EFE6250040EF13 /* correct_answer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E56B18EFE6250040EF13 /* correct_answer.mp3 */; };
-		7B98E57218EFE6250040EF13 /* enter.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E56C18EFE6250040EF13 /* enter.mp3 */; };
-		7B98E57318EFE6250040EF13 /* game_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E56D18EFE6250040EF13 /* game_music.mp3 */; };
-		7B98E57418EFE6250040EF13 /* game_over.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E56E18EFE6250040EF13 /* game_over.mp3 */; };
-		7B98E57518EFE6250040EF13 /* non_correct_answer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E56F18EFE6250040EF13 /* non_correct_answer.mp3 */; };
-		7B98E57618EFE6250040EF13 /* put.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E57018EFE6250040EF13 /* put.mp3 */; };
 		7B98E57A18EFE8B10040EF13 /* speaker_icon_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E57818EFE8B10040EF13 /* speaker_icon_off.png */; };
 		7B98E57B18EFE8B10040EF13 /* speaker_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E57918EFE8B10040EF13 /* speaker_icon.png */; };
 		7B98E5B118F0D7410040EF13 /* appc_cutin2_base_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E58018F0D7410040EF13 /* appc_cutin2_base_down@2x.png */; };
@@ -383,13 +336,60 @@
 		7B98E5D518F0D7410040EF13 /* appcc_web_splash_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E5A518F0D7410040EF13 /* appcc_web_splash_logo.png */; };
 		7B98E5D618F0D7410040EF13 /* libappCCloud.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B98E5B018F0D7410040EF13 /* libappCCloud.a */; };
 		7B98E5D918F32BC20040EF13 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B98E5D818F32BC20040EF13 /* GameKit.framework */; };
-		7B98E5E318F58AA00040EF13 /* zh_help.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E5E218F58AA00040EF13 /* zh_help.png */; };
-		7B98E5E518F58AA90040EF13 /* ja_help.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E5E418F58AA90040EF13 /* ja_help.png */; };
-		7B98E5E718F58AB10040EF13 /* en_help.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E5E618F58AB10040EF13 /* en_help.png */; };
 		7B98E5EA18F5A42B0040EF13 /* i_icon_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E5E818F5A42B0040EF13 /* i_icon_off.png */; };
 		7B98E5EB18F5A42B0040EF13 /* i_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E5E918F5A42B0040EF13 /* i_icon.png */; };
 		7B98E5ED18F6ABDB0040EF13 /* know_your_yakiyori.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B98E5EC18F6ABDB0040EF13 /* know_your_yakiyori.png */; };
 		7B98E5F018F6ABFC0040EF13 /* InfoScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7B98E5EE18F6ABFC0040EF13 /* InfoScene.cpp */; };
+		7BFFD9BD18F8CB7C00F6EB4A /* correct_answer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9AD18F8CB7B00F6EB4A /* correct_answer.mp3 */; };
+		7BFFD9BE18F8CB7C00F6EB4A /* en_help.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9AE18F8CB7B00F6EB4A /* en_help.png */; };
+		7BFFD9BF18F8CB7C00F6EB4A /* en_start_title.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9AF18F8CB7B00F6EB4A /* en_start_title.png */; };
+		7BFFD9C018F8CB7C00F6EB4A /* en_yakitori_button1_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9B018F8CB7B00F6EB4A /* en_yakitori_button1_off.png */; };
+		7BFFD9C118F8CB7C00F6EB4A /* en_yakitori_button1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9B118F8CB7B00F6EB4A /* en_yakitori_button1.png */; };
+		7BFFD9C218F8CB7C00F6EB4A /* en_yakitori_button2_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9B218F8CB7B00F6EB4A /* en_yakitori_button2_off.png */; };
+		7BFFD9C318F8CB7C00F6EB4A /* en_yakitori_button2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9B318F8CB7B00F6EB4A /* en_yakitori_button2.png */; };
+		7BFFD9C418F8CB7C00F6EB4A /* en_yakitori_button3_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9B418F8CB7B00F6EB4A /* en_yakitori_button3_off.png */; };
+		7BFFD9C518F8CB7C00F6EB4A /* en_yakitori_button3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9B518F8CB7B00F6EB4A /* en_yakitori_button3.png */; };
+		7BFFD9C618F8CB7C00F6EB4A /* en_yakitori_button4_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9B618F8CB7C00F6EB4A /* en_yakitori_button4_off.png */; };
+		7BFFD9C718F8CB7C00F6EB4A /* en_yakitori_button4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9B718F8CB7C00F6EB4A /* en_yakitori_button4.png */; };
+		7BFFD9C818F8CB7C00F6EB4A /* en_yakitori_button5_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9B818F8CB7C00F6EB4A /* en_yakitori_button5_off.png */; };
+		7BFFD9C918F8CB7C00F6EB4A /* en_yakitori_button5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9B918F8CB7C00F6EB4A /* en_yakitori_button5.png */; };
+		7BFFD9CA18F8CB7C00F6EB4A /* en_yakitori_button6_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9BA18F8CB7C00F6EB4A /* en_yakitori_button6_off.png */; };
+		7BFFD9CB18F8CB7C00F6EB4A /* en_yakitori_button6.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9BB18F8CB7C00F6EB4A /* en_yakitori_button6.png */; };
+		7BFFD9CC18F8CB7C00F6EB4A /* enter.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9BC18F8CB7C00F6EB4A /* enter.mp3 */; };
+		7BFFD9EF18F8CB8600F6EB4A /* game_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9CD18F8CB8600F6EB4A /* game_music.mp3 */; };
+		7BFFD9F018F8CB8600F6EB4A /* game_over.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9CE18F8CB8600F6EB4A /* game_over.mp3 */; };
+		7BFFD9F118F8CB8600F6EB4A /* ja_help.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9CF18F8CB8600F6EB4A /* ja_help.png */; };
+		7BFFD9F218F8CB8600F6EB4A /* ja_start_title.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9D018F8CB8600F6EB4A /* ja_start_title.png */; };
+		7BFFD9F318F8CB8600F6EB4A /* ja_yakitori_button1_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9D118F8CB8600F6EB4A /* ja_yakitori_button1_off.png */; };
+		7BFFD9F418F8CB8600F6EB4A /* ja_yakitori_button1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9D218F8CB8600F6EB4A /* ja_yakitori_button1.png */; };
+		7BFFD9F518F8CB8600F6EB4A /* ja_yakitori_button2_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9D318F8CB8600F6EB4A /* ja_yakitori_button2_off.png */; };
+		7BFFD9F618F8CB8600F6EB4A /* ja_yakitori_button2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9D418F8CB8600F6EB4A /* ja_yakitori_button2.png */; };
+		7BFFD9F718F8CB8600F6EB4A /* ja_yakitori_button3_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9D518F8CB8600F6EB4A /* ja_yakitori_button3_off.png */; };
+		7BFFD9F818F8CB8600F6EB4A /* ja_yakitori_button3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9D618F8CB8600F6EB4A /* ja_yakitori_button3.png */; };
+		7BFFD9F918F8CB8600F6EB4A /* ja_yakitori_button4_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9D718F8CB8600F6EB4A /* ja_yakitori_button4_off.png */; };
+		7BFFD9FA18F8CB8600F6EB4A /* ja_yakitori_button4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9D818F8CB8600F6EB4A /* ja_yakitori_button4.png */; };
+		7BFFD9FB18F8CB8600F6EB4A /* ja_yakitori_button5_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9D918F8CB8600F6EB4A /* ja_yakitori_button5_off.png */; };
+		7BFFD9FC18F8CB8600F6EB4A /* ja_yakitori_button5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9DA18F8CB8600F6EB4A /* ja_yakitori_button5.png */; };
+		7BFFD9FD18F8CB8600F6EB4A /* ja_yakitori_button6_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9DB18F8CB8600F6EB4A /* ja_yakitori_button6_off.png */; };
+		7BFFD9FE18F8CB8600F6EB4A /* ja_yakitori_button6.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9DC18F8CB8600F6EB4A /* ja_yakitori_button6.png */; };
+		7BFFD9FF18F8CB8600F6EB4A /* non_correct_answer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9DD18F8CB8600F6EB4A /* non_correct_answer.mp3 */; };
+		7BFFDA0018F8CB8600F6EB4A /* put.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9DE18F8CB8600F6EB4A /* put.mp3 */; };
+		7BFFDA0118F8CB8600F6EB4A /* YakitoriFont.fnt in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9DF18F8CB8600F6EB4A /* YakitoriFont.fnt */; };
+		7BFFDA0218F8CB8600F6EB4A /* YakitoriFont.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9E018F8CB8600F6EB4A /* YakitoriFont.png */; };
+		7BFFDA0318F8CB8600F6EB4A /* zh_help.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9E118F8CB8600F6EB4A /* zh_help.png */; };
+		7BFFDA0418F8CB8600F6EB4A /* zh_start_title.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9E218F8CB8600F6EB4A /* zh_start_title.png */; };
+		7BFFDA0518F8CB8600F6EB4A /* zh_yakitori_button1_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9E318F8CB8600F6EB4A /* zh_yakitori_button1_off.png */; };
+		7BFFDA0618F8CB8600F6EB4A /* zh_yakitori_button1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9E418F8CB8600F6EB4A /* zh_yakitori_button1.png */; };
+		7BFFDA0718F8CB8600F6EB4A /* zh_yakitori_button2_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9E518F8CB8600F6EB4A /* zh_yakitori_button2_off.png */; };
+		7BFFDA0818F8CB8600F6EB4A /* zh_yakitori_button2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9E618F8CB8600F6EB4A /* zh_yakitori_button2.png */; };
+		7BFFDA0918F8CB8600F6EB4A /* zh_yakitori_button3_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9E718F8CB8600F6EB4A /* zh_yakitori_button3_off.png */; };
+		7BFFDA0A18F8CB8600F6EB4A /* zh_yakitori_button3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9E818F8CB8600F6EB4A /* zh_yakitori_button3.png */; };
+		7BFFDA0B18F8CB8600F6EB4A /* zh_yakitori_button4_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9E918F8CB8600F6EB4A /* zh_yakitori_button4_off.png */; };
+		7BFFDA0C18F8CB8600F6EB4A /* zh_yakitori_button4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9EA18F8CB8600F6EB4A /* zh_yakitori_button4.png */; };
+		7BFFDA0D18F8CB8600F6EB4A /* zh_yakitori_button5_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9EB18F8CB8600F6EB4A /* zh_yakitori_button5_off.png */; };
+		7BFFDA0E18F8CB8600F6EB4A /* zh_yakitori_button5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9EC18F8CB8600F6EB4A /* zh_yakitori_button5.png */; };
+		7BFFDA0F18F8CB8600F6EB4A /* zh_yakitori_button6_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9ED18F8CB8600F6EB4A /* zh_yakitori_button6_off.png */; };
+		7BFFDA1018F8CB8600F6EB4A /* zh_yakitori_button6.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFD9EE18F8CB8600F6EB4A /* zh_yakitori_button6.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712461292920000B8313A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB212928DE900B8313A /* libxml2.dylib */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -903,11 +903,8 @@
 		46513EAF187BFBA200B5ABE1 /* UITouchGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UITouchGroup.cpp; sourceTree = "<group>"; };
 		46513EB0187BFBA200B5ABE1 /* UITouchGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITouchGroup.h; sourceTree = "<group>"; };
 		7855E0DF153FEF240059DD9A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
-		7B3C673D18DEB1CD008F3129 /* YakitoriFont.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = YakitoriFont.fnt; path = fonts/YakitoriFont.fnt; sourceTree = "<group>"; };
-		7B3C673E18DEB1CD008F3129 /* YakitoriFont.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = YakitoriFont.png; path = fonts/YakitoriFont.png; sourceTree = "<group>"; };
 		7B3C674418DEB46C008F3129 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7B3C674618DEB46F008F3129 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		7B3C674718DEB519008F3129 /* NativeBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeBridge.h; sourceTree = SOURCE_ROOT; };
 		7B3C674818DEB519008F3129 /* NativeBridge.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NativeBridge.mm; sourceTree = SOURCE_ROOT; };
 		7B3C674B18DEB5BD008F3129 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7B3C674D18DEB5C0008F3129 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -948,7 +945,6 @@
 		7B3C679818E67CF1008F3129 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		7B3C679A18E68FB9008F3129 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
 		7B3C679C18E691F2008F3129 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		7B3C679F18E6B6EA008F3129 /* ZYWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYWebView.h; sourceTree = "<group>"; };
 		7B3C67A118E6B736008F3129 /* ZYWebView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZYWebView.mm; sourceTree = "<group>"; };
 		7B3C67A218E6B736008F3129 /* ZYWebView_iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYWebView_iOS.h; sourceTree = "<group>"; };
 		7B3C67A318E6B736008F3129 /* ZYWebView_iOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZYWebView_iOS.mm; sourceTree = "<group>"; };
@@ -985,51 +981,6 @@
 		7B98E4A718EAF4010040EF13 /* HelpScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelpScene.h; path = ../Classes/HelpScene.h; sourceTree = "<group>"; };
 		7B98E4A918EE161E0040EF13 /* review_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = review_off.png; sourceTree = "<group>"; };
 		7B98E4AB18EF81770040EF13 /* gauge_life.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gauge_life.png; sourceTree = "<group>"; };
-		7B98E51A18EFCB5E0040EF13 /* en_start_title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en_start_title.png; sourceTree = "<group>"; };
-		7B98E51B18EFCB5E0040EF13 /* en_yakitori_button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en_yakitori_button1.png; sourceTree = "<group>"; };
-		7B98E51C18EFCB5E0040EF13 /* en_yakitori_button1_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en_yakitori_button1_off.png; sourceTree = "<group>"; };
-		7B98E51D18EFCB5E0040EF13 /* en_yakitori_button2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en_yakitori_button2.png; sourceTree = "<group>"; };
-		7B98E51E18EFCB5E0040EF13 /* en_yakitori_button2_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en_yakitori_button2_off.png; sourceTree = "<group>"; };
-		7B98E51F18EFCB5E0040EF13 /* en_yakitori_button3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en_yakitori_button3.png; sourceTree = "<group>"; };
-		7B98E52018EFCB5E0040EF13 /* en_yakitori_button3_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en_yakitori_button3_off.png; sourceTree = "<group>"; };
-		7B98E52118EFCB5E0040EF13 /* en_yakitori_button4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en_yakitori_button4.png; sourceTree = "<group>"; };
-		7B98E52218EFCB5E0040EF13 /* en_yakitori_button4_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en_yakitori_button4_off.png; sourceTree = "<group>"; };
-		7B98E52318EFCB5E0040EF13 /* en_yakitori_button5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en_yakitori_button5.png; sourceTree = "<group>"; };
-		7B98E52418EFCB5E0040EF13 /* en_yakitori_button5_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en_yakitori_button5_off.png; sourceTree = "<group>"; };
-		7B98E52518EFCB5E0040EF13 /* en_yakitori_button6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en_yakitori_button6.png; sourceTree = "<group>"; };
-		7B98E52618EFCB5E0040EF13 /* en_yakitori_button6_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en_yakitori_button6_off.png; sourceTree = "<group>"; };
-		7B98E52818EFCB5E0040EF13 /* ja_start_title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ja_start_title.png; sourceTree = "<group>"; };
-		7B98E52918EFCB5E0040EF13 /* ja_yakitori_button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ja_yakitori_button1.png; sourceTree = "<group>"; };
-		7B98E52A18EFCB5E0040EF13 /* ja_yakitori_button1_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ja_yakitori_button1_off.png; sourceTree = "<group>"; };
-		7B98E52B18EFCB5E0040EF13 /* ja_yakitori_button2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ja_yakitori_button2.png; sourceTree = "<group>"; };
-		7B98E52C18EFCB5E0040EF13 /* ja_yakitori_button2_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ja_yakitori_button2_off.png; sourceTree = "<group>"; };
-		7B98E52D18EFCB5E0040EF13 /* ja_yakitori_button3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ja_yakitori_button3.png; sourceTree = "<group>"; };
-		7B98E52E18EFCB5E0040EF13 /* ja_yakitori_button3_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ja_yakitori_button3_off.png; sourceTree = "<group>"; };
-		7B98E52F18EFCB5E0040EF13 /* ja_yakitori_button4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ja_yakitori_button4.png; sourceTree = "<group>"; };
-		7B98E53018EFCB5E0040EF13 /* ja_yakitori_button4_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ja_yakitori_button4_off.png; sourceTree = "<group>"; };
-		7B98E53118EFCB5E0040EF13 /* ja_yakitori_button5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ja_yakitori_button5.png; sourceTree = "<group>"; };
-		7B98E53218EFCB5E0040EF13 /* ja_yakitori_button5_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ja_yakitori_button5_off.png; sourceTree = "<group>"; };
-		7B98E53318EFCB5E0040EF13 /* ja_yakitori_button6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ja_yakitori_button6.png; sourceTree = "<group>"; };
-		7B98E53418EFCB5E0040EF13 /* ja_yakitori_button6_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ja_yakitori_button6_off.png; sourceTree = "<group>"; };
-		7B98E53618EFCB5E0040EF13 /* zh_start_title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_start_title.png; sourceTree = "<group>"; };
-		7B98E53718EFCB5E0040EF13 /* zh_yakitori_button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_yakitori_button1.png; sourceTree = "<group>"; };
-		7B98E53818EFCB5E0040EF13 /* zh_yakitori_button1_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_yakitori_button1_off.png; sourceTree = "<group>"; };
-		7B98E53918EFCB5E0040EF13 /* zh_yakitori_button2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_yakitori_button2.png; sourceTree = "<group>"; };
-		7B98E53A18EFCB5E0040EF13 /* zh_yakitori_button2_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_yakitori_button2_off.png; sourceTree = "<group>"; };
-		7B98E53B18EFCB5E0040EF13 /* zh_yakitori_button3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_yakitori_button3.png; sourceTree = "<group>"; };
-		7B98E53C18EFCB5E0040EF13 /* zh_yakitori_button3_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_yakitori_button3_off.png; sourceTree = "<group>"; };
-		7B98E53D18EFCB5E0040EF13 /* zh_yakitori_button4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_yakitori_button4.png; sourceTree = "<group>"; };
-		7B98E53E18EFCB5E0040EF13 /* zh_yakitori_button4_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_yakitori_button4_off.png; sourceTree = "<group>"; };
-		7B98E53F18EFCB5E0040EF13 /* zh_yakitori_button5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_yakitori_button5.png; sourceTree = "<group>"; };
-		7B98E54018EFCB5E0040EF13 /* zh_yakitori_button5_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_yakitori_button5_off.png; sourceTree = "<group>"; };
-		7B98E54118EFCB5E0040EF13 /* zh_yakitori_button6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_yakitori_button6.png; sourceTree = "<group>"; };
-		7B98E54218EFCB5E0040EF13 /* zh_yakitori_button6_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_yakitori_button6_off.png; sourceTree = "<group>"; };
-		7B98E56B18EFE6250040EF13 /* correct_answer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correct_answer.mp3; sourceTree = "<group>"; };
-		7B98E56C18EFE6250040EF13 /* enter.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = enter.mp3; sourceTree = "<group>"; };
-		7B98E56D18EFE6250040EF13 /* game_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = game_music.mp3; sourceTree = "<group>"; };
-		7B98E56E18EFE6250040EF13 /* game_over.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = game_over.mp3; sourceTree = "<group>"; };
-		7B98E56F18EFE6250040EF13 /* non_correct_answer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = non_correct_answer.mp3; sourceTree = "<group>"; };
-		7B98E57018EFE6250040EF13 /* put.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = put.mp3; sourceTree = "<group>"; };
 		7B98E57818EFE8B10040EF13 /* speaker_icon_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker_icon_off.png; sourceTree = "<group>"; };
 		7B98E57918EFE8B10040EF13 /* speaker_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker_icon.png; sourceTree = "<group>"; };
 		7B98E57F18F0D7410040EF13 /* appC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = appC.h; sourceTree = "<group>"; };
@@ -1089,14 +1040,63 @@
 		7B98E5DF18F42C4E0040EF13 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		7B98E5E018F42CA50040EF13 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		7B98E5E118F42CA50040EF13 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		7B98E5E218F58AA00040EF13 /* zh_help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_help.png; sourceTree = "<group>"; };
-		7B98E5E418F58AA90040EF13 /* ja_help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ja_help.png; sourceTree = "<group>"; };
-		7B98E5E618F58AB10040EF13 /* en_help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en_help.png; sourceTree = "<group>"; };
 		7B98E5E818F5A42B0040EF13 /* i_icon_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = i_icon_off.png; sourceTree = "<group>"; };
 		7B98E5E918F5A42B0040EF13 /* i_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = i_icon.png; sourceTree = "<group>"; };
 		7B98E5EC18F6ABDB0040EF13 /* know_your_yakiyori.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = know_your_yakiyori.png; sourceTree = "<group>"; };
 		7B98E5EE18F6ABFC0040EF13 /* InfoScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = InfoScene.cpp; path = ../Classes/InfoScene.cpp; sourceTree = "<group>"; };
 		7B98E5EF18F6ABFC0040EF13 /* InfoScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InfoScene.h; path = ../Classes/InfoScene.h; sourceTree = "<group>"; };
+		7BFFD9AB18F8C83E00F6EB4A /* ZYWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZYWebView.h; path = ../Classes/ZYWebView.h; sourceTree = "<group>"; };
+		7BFFD9AC18F8C86600F6EB4A /* NativeBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NativeBridge.h; path = ../Classes/NativeBridge.h; sourceTree = "<group>"; };
+		7BFFD9AD18F8CB7B00F6EB4A /* correct_answer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correct_answer.mp3; sourceTree = "<group>"; };
+		7BFFD9AE18F8CB7B00F6EB4A /* en_help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en_help.png; sourceTree = "<group>"; };
+		7BFFD9AF18F8CB7B00F6EB4A /* en_start_title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en_start_title.png; sourceTree = "<group>"; };
+		7BFFD9B018F8CB7B00F6EB4A /* en_yakitori_button1_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en_yakitori_button1_off.png; sourceTree = "<group>"; };
+		7BFFD9B118F8CB7B00F6EB4A /* en_yakitori_button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en_yakitori_button1.png; sourceTree = "<group>"; };
+		7BFFD9B218F8CB7B00F6EB4A /* en_yakitori_button2_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en_yakitori_button2_off.png; sourceTree = "<group>"; };
+		7BFFD9B318F8CB7B00F6EB4A /* en_yakitori_button2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en_yakitori_button2.png; sourceTree = "<group>"; };
+		7BFFD9B418F8CB7B00F6EB4A /* en_yakitori_button3_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en_yakitori_button3_off.png; sourceTree = "<group>"; };
+		7BFFD9B518F8CB7B00F6EB4A /* en_yakitori_button3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en_yakitori_button3.png; sourceTree = "<group>"; };
+		7BFFD9B618F8CB7C00F6EB4A /* en_yakitori_button4_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en_yakitori_button4_off.png; sourceTree = "<group>"; };
+		7BFFD9B718F8CB7C00F6EB4A /* en_yakitori_button4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en_yakitori_button4.png; sourceTree = "<group>"; };
+		7BFFD9B818F8CB7C00F6EB4A /* en_yakitori_button5_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en_yakitori_button5_off.png; sourceTree = "<group>"; };
+		7BFFD9B918F8CB7C00F6EB4A /* en_yakitori_button5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en_yakitori_button5.png; sourceTree = "<group>"; };
+		7BFFD9BA18F8CB7C00F6EB4A /* en_yakitori_button6_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en_yakitori_button6_off.png; sourceTree = "<group>"; };
+		7BFFD9BB18F8CB7C00F6EB4A /* en_yakitori_button6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = en_yakitori_button6.png; sourceTree = "<group>"; };
+		7BFFD9BC18F8CB7C00F6EB4A /* enter.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = enter.mp3; sourceTree = "<group>"; };
+		7BFFD9CD18F8CB8600F6EB4A /* game_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = game_music.mp3; sourceTree = "<group>"; };
+		7BFFD9CE18F8CB8600F6EB4A /* game_over.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = game_over.mp3; sourceTree = "<group>"; };
+		7BFFD9CF18F8CB8600F6EB4A /* ja_help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ja_help.png; sourceTree = "<group>"; };
+		7BFFD9D018F8CB8600F6EB4A /* ja_start_title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ja_start_title.png; sourceTree = "<group>"; };
+		7BFFD9D118F8CB8600F6EB4A /* ja_yakitori_button1_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ja_yakitori_button1_off.png; sourceTree = "<group>"; };
+		7BFFD9D218F8CB8600F6EB4A /* ja_yakitori_button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ja_yakitori_button1.png; sourceTree = "<group>"; };
+		7BFFD9D318F8CB8600F6EB4A /* ja_yakitori_button2_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ja_yakitori_button2_off.png; sourceTree = "<group>"; };
+		7BFFD9D418F8CB8600F6EB4A /* ja_yakitori_button2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ja_yakitori_button2.png; sourceTree = "<group>"; };
+		7BFFD9D518F8CB8600F6EB4A /* ja_yakitori_button3_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ja_yakitori_button3_off.png; sourceTree = "<group>"; };
+		7BFFD9D618F8CB8600F6EB4A /* ja_yakitori_button3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ja_yakitori_button3.png; sourceTree = "<group>"; };
+		7BFFD9D718F8CB8600F6EB4A /* ja_yakitori_button4_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ja_yakitori_button4_off.png; sourceTree = "<group>"; };
+		7BFFD9D818F8CB8600F6EB4A /* ja_yakitori_button4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ja_yakitori_button4.png; sourceTree = "<group>"; };
+		7BFFD9D918F8CB8600F6EB4A /* ja_yakitori_button5_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ja_yakitori_button5_off.png; sourceTree = "<group>"; };
+		7BFFD9DA18F8CB8600F6EB4A /* ja_yakitori_button5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ja_yakitori_button5.png; sourceTree = "<group>"; };
+		7BFFD9DB18F8CB8600F6EB4A /* ja_yakitori_button6_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ja_yakitori_button6_off.png; sourceTree = "<group>"; };
+		7BFFD9DC18F8CB8600F6EB4A /* ja_yakitori_button6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ja_yakitori_button6.png; sourceTree = "<group>"; };
+		7BFFD9DD18F8CB8600F6EB4A /* non_correct_answer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = non_correct_answer.mp3; sourceTree = "<group>"; };
+		7BFFD9DE18F8CB8600F6EB4A /* put.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = put.mp3; sourceTree = "<group>"; };
+		7BFFD9DF18F8CB8600F6EB4A /* YakitoriFont.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = YakitoriFont.fnt; sourceTree = "<group>"; };
+		7BFFD9E018F8CB8600F6EB4A /* YakitoriFont.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YakitoriFont.png; sourceTree = "<group>"; };
+		7BFFD9E118F8CB8600F6EB4A /* zh_help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_help.png; sourceTree = "<group>"; };
+		7BFFD9E218F8CB8600F6EB4A /* zh_start_title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_start_title.png; sourceTree = "<group>"; };
+		7BFFD9E318F8CB8600F6EB4A /* zh_yakitori_button1_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_yakitori_button1_off.png; sourceTree = "<group>"; };
+		7BFFD9E418F8CB8600F6EB4A /* zh_yakitori_button1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_yakitori_button1.png; sourceTree = "<group>"; };
+		7BFFD9E518F8CB8600F6EB4A /* zh_yakitori_button2_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_yakitori_button2_off.png; sourceTree = "<group>"; };
+		7BFFD9E618F8CB8600F6EB4A /* zh_yakitori_button2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_yakitori_button2.png; sourceTree = "<group>"; };
+		7BFFD9E718F8CB8600F6EB4A /* zh_yakitori_button3_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_yakitori_button3_off.png; sourceTree = "<group>"; };
+		7BFFD9E818F8CB8600F6EB4A /* zh_yakitori_button3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_yakitori_button3.png; sourceTree = "<group>"; };
+		7BFFD9E918F8CB8600F6EB4A /* zh_yakitori_button4_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_yakitori_button4_off.png; sourceTree = "<group>"; };
+		7BFFD9EA18F8CB8600F6EB4A /* zh_yakitori_button4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_yakitori_button4.png; sourceTree = "<group>"; };
+		7BFFD9EB18F8CB8600F6EB4A /* zh_yakitori_button5_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_yakitori_button5_off.png; sourceTree = "<group>"; };
+		7BFFD9EC18F8CB8600F6EB4A /* zh_yakitori_button5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_yakitori_button5.png; sourceTree = "<group>"; };
+		7BFFD9ED18F8CB8600F6EB4A /* zh_yakitori_button6_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_yakitori_button6_off.png; sourceTree = "<group>"; };
+		7BFFD9EE18F8CB8600F6EB4A /* zh_yakitori_button6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zh_yakitori_button6.png; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB212928DE900B8313A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -1153,7 +1153,6 @@
 				7B98E57C18F0D7410040EF13 /* appCCloud */,
 				7B3C67A018E6B736008F3129 /* webview */,
 				7B3C678418E67C95008F3129 /* AdMob */,
-				7B3C674718DEB519008F3129 /* NativeBridge.h */,
 				7B3C674818DEB519008F3129 /* NativeBridge.mm */,
 				1AC3624216D4A1E8000847F2 /* AppController.h */,
 				1AC3624316D4A1E8000847F2 /* AppController.mm */,
@@ -1646,9 +1645,10 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				7BFFD9AC18F8C86600F6EB4A /* NativeBridge.h */,
+				7BFFD9AB18F8C83E00F6EB4A /* ZYWebView.h */,
 				7B3C67FE18E80713008F3129 /* WebScene.cpp */,
 				7B3C67FF18E80713008F3129 /* WebScene.h */,
-				7B3C679E18E6B6EA008F3129 /* webview */,
 				7B3C675F18E44A10008F3129 /* util */,
 				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
@@ -2266,15 +2266,61 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7BFFD9CD18F8CB8600F6EB4A /* game_music.mp3 */,
+				7BFFD9CE18F8CB8600F6EB4A /* game_over.mp3 */,
+				7BFFD9CF18F8CB8600F6EB4A /* ja_help.png */,
+				7BFFD9D018F8CB8600F6EB4A /* ja_start_title.png */,
+				7BFFD9D118F8CB8600F6EB4A /* ja_yakitori_button1_off.png */,
+				7BFFD9D218F8CB8600F6EB4A /* ja_yakitori_button1.png */,
+				7BFFD9D318F8CB8600F6EB4A /* ja_yakitori_button2_off.png */,
+				7BFFD9D418F8CB8600F6EB4A /* ja_yakitori_button2.png */,
+				7BFFD9D518F8CB8600F6EB4A /* ja_yakitori_button3_off.png */,
+				7BFFD9D618F8CB8600F6EB4A /* ja_yakitori_button3.png */,
+				7BFFD9D718F8CB8600F6EB4A /* ja_yakitori_button4_off.png */,
+				7BFFD9D818F8CB8600F6EB4A /* ja_yakitori_button4.png */,
+				7BFFD9D918F8CB8600F6EB4A /* ja_yakitori_button5_off.png */,
+				7BFFD9DA18F8CB8600F6EB4A /* ja_yakitori_button5.png */,
+				7BFFD9DB18F8CB8600F6EB4A /* ja_yakitori_button6_off.png */,
+				7BFFD9DC18F8CB8600F6EB4A /* ja_yakitori_button6.png */,
+				7BFFD9DD18F8CB8600F6EB4A /* non_correct_answer.mp3 */,
+				7BFFD9DE18F8CB8600F6EB4A /* put.mp3 */,
+				7BFFD9DF18F8CB8600F6EB4A /* YakitoriFont.fnt */,
+				7BFFD9E018F8CB8600F6EB4A /* YakitoriFont.png */,
+				7BFFD9E118F8CB8600F6EB4A /* zh_help.png */,
+				7BFFD9E218F8CB8600F6EB4A /* zh_start_title.png */,
+				7BFFD9E318F8CB8600F6EB4A /* zh_yakitori_button1_off.png */,
+				7BFFD9E418F8CB8600F6EB4A /* zh_yakitori_button1.png */,
+				7BFFD9E518F8CB8600F6EB4A /* zh_yakitori_button2_off.png */,
+				7BFFD9E618F8CB8600F6EB4A /* zh_yakitori_button2.png */,
+				7BFFD9E718F8CB8600F6EB4A /* zh_yakitori_button3_off.png */,
+				7BFFD9E818F8CB8600F6EB4A /* zh_yakitori_button3.png */,
+				7BFFD9E918F8CB8600F6EB4A /* zh_yakitori_button4_off.png */,
+				7BFFD9EA18F8CB8600F6EB4A /* zh_yakitori_button4.png */,
+				7BFFD9EB18F8CB8600F6EB4A /* zh_yakitori_button5_off.png */,
+				7BFFD9EC18F8CB8600F6EB4A /* zh_yakitori_button5.png */,
+				7BFFD9ED18F8CB8600F6EB4A /* zh_yakitori_button6_off.png */,
+				7BFFD9EE18F8CB8600F6EB4A /* zh_yakitori_button6.png */,
+				7BFFD9AD18F8CB7B00F6EB4A /* correct_answer.mp3 */,
+				7BFFD9AE18F8CB7B00F6EB4A /* en_help.png */,
+				7BFFD9AF18F8CB7B00F6EB4A /* en_start_title.png */,
+				7BFFD9B018F8CB7B00F6EB4A /* en_yakitori_button1_off.png */,
+				7BFFD9B118F8CB7B00F6EB4A /* en_yakitori_button1.png */,
+				7BFFD9B218F8CB7B00F6EB4A /* en_yakitori_button2_off.png */,
+				7BFFD9B318F8CB7B00F6EB4A /* en_yakitori_button2.png */,
+				7BFFD9B418F8CB7B00F6EB4A /* en_yakitori_button3_off.png */,
+				7BFFD9B518F8CB7B00F6EB4A /* en_yakitori_button3.png */,
+				7BFFD9B618F8CB7C00F6EB4A /* en_yakitori_button4_off.png */,
+				7BFFD9B718F8CB7C00F6EB4A /* en_yakitori_button4.png */,
+				7BFFD9B818F8CB7C00F6EB4A /* en_yakitori_button5_off.png */,
+				7BFFD9B918F8CB7C00F6EB4A /* en_yakitori_button5.png */,
+				7BFFD9BA18F8CB7C00F6EB4A /* en_yakitori_button6_off.png */,
+				7BFFD9BB18F8CB7C00F6EB4A /* en_yakitori_button6.png */,
+				7BFFD9BC18F8CB7C00F6EB4A /* enter.mp3 */,
 				7B98E5EC18F6ABDB0040EF13 /* know_your_yakiyori.png */,
 				7B98E5E818F5A42B0040EF13 /* i_icon_off.png */,
 				7B98E5E918F5A42B0040EF13 /* i_icon.png */,
 				7B98E57818EFE8B10040EF13 /* speaker_icon_off.png */,
 				7B98E57918EFE8B10040EF13 /* speaker_icon.png */,
-				7B98E56A18EFE6250040EF13 /* audio */,
-				7B98E51918EFCB5E0040EF13 /* en */,
-				7B98E52718EFCB5E0040EF13 /* ja */,
-				7B98E53518EFCB5E0040EF13 /* zh */,
 				7B98E4AB18EF81770040EF13 /* gauge_life.png */,
 				7B98E4A918EE161E0040EF13 /* review_off.png */,
 				7B98E49818EAEDCA0040EF13 /* icon-60@2x.png */,
@@ -2308,8 +2354,6 @@
 				7B3C675418DEF0C0008F3129 /* for_title_on.png */,
 				7B3C675518DEF0C0008F3129 /* retry_off.png */,
 				7B3C675618DEF0C0008F3129 /* retry_on.png */,
-				7B3C673D18DEB1CD008F3129 /* YakitoriFont.fnt */,
-				7B3C673E18DEB1CD008F3129 /* YakitoriFont.png */,
 				7B5BF64C18D5975A00051414 /* game_main.plist */,
 				7B5BF64D18D5975A00051414 /* game_main.png */,
 				7B5BF64118D5879E00051414 /* start_off.png */,
@@ -2355,15 +2399,6 @@
 			path = AdMob;
 			sourceTree = SOURCE_ROOT;
 		};
-		7B3C679E18E6B6EA008F3129 /* webview */ = {
-			isa = PBXGroup;
-			children = (
-				7B3C679F18E6B6EA008F3129 /* ZYWebView.h */,
-			);
-			name = webview;
-			path = ../Classes/webview;
-			sourceTree = "<group>";
-		};
 		7B3C67A018E6B736008F3129 /* webview */ = {
 			isa = PBXGroup;
 			children = (
@@ -2373,82 +2408,6 @@
 			);
 			path = webview;
 			sourceTree = SOURCE_ROOT;
-		};
-		7B98E51918EFCB5E0040EF13 /* en */ = {
-			isa = PBXGroup;
-			children = (
-				7B98E5E618F58AB10040EF13 /* en_help.png */,
-				7B98E51A18EFCB5E0040EF13 /* en_start_title.png */,
-				7B98E51B18EFCB5E0040EF13 /* en_yakitori_button1.png */,
-				7B98E51C18EFCB5E0040EF13 /* en_yakitori_button1_off.png */,
-				7B98E51D18EFCB5E0040EF13 /* en_yakitori_button2.png */,
-				7B98E51E18EFCB5E0040EF13 /* en_yakitori_button2_off.png */,
-				7B98E51F18EFCB5E0040EF13 /* en_yakitori_button3.png */,
-				7B98E52018EFCB5E0040EF13 /* en_yakitori_button3_off.png */,
-				7B98E52118EFCB5E0040EF13 /* en_yakitori_button4.png */,
-				7B98E52218EFCB5E0040EF13 /* en_yakitori_button4_off.png */,
-				7B98E52318EFCB5E0040EF13 /* en_yakitori_button5.png */,
-				7B98E52418EFCB5E0040EF13 /* en_yakitori_button5_off.png */,
-				7B98E52518EFCB5E0040EF13 /* en_yakitori_button6.png */,
-				7B98E52618EFCB5E0040EF13 /* en_yakitori_button6_off.png */,
-			);
-			path = en;
-			sourceTree = "<group>";
-		};
-		7B98E52718EFCB5E0040EF13 /* ja */ = {
-			isa = PBXGroup;
-			children = (
-				7B98E5E418F58AA90040EF13 /* ja_help.png */,
-				7B98E52818EFCB5E0040EF13 /* ja_start_title.png */,
-				7B98E52918EFCB5E0040EF13 /* ja_yakitori_button1.png */,
-				7B98E52A18EFCB5E0040EF13 /* ja_yakitori_button1_off.png */,
-				7B98E52B18EFCB5E0040EF13 /* ja_yakitori_button2.png */,
-				7B98E52C18EFCB5E0040EF13 /* ja_yakitori_button2_off.png */,
-				7B98E52D18EFCB5E0040EF13 /* ja_yakitori_button3.png */,
-				7B98E52E18EFCB5E0040EF13 /* ja_yakitori_button3_off.png */,
-				7B98E52F18EFCB5E0040EF13 /* ja_yakitori_button4.png */,
-				7B98E53018EFCB5E0040EF13 /* ja_yakitori_button4_off.png */,
-				7B98E53118EFCB5E0040EF13 /* ja_yakitori_button5.png */,
-				7B98E53218EFCB5E0040EF13 /* ja_yakitori_button5_off.png */,
-				7B98E53318EFCB5E0040EF13 /* ja_yakitori_button6.png */,
-				7B98E53418EFCB5E0040EF13 /* ja_yakitori_button6_off.png */,
-			);
-			path = ja;
-			sourceTree = "<group>";
-		};
-		7B98E53518EFCB5E0040EF13 /* zh */ = {
-			isa = PBXGroup;
-			children = (
-				7B98E5E218F58AA00040EF13 /* zh_help.png */,
-				7B98E53618EFCB5E0040EF13 /* zh_start_title.png */,
-				7B98E53718EFCB5E0040EF13 /* zh_yakitori_button1.png */,
-				7B98E53818EFCB5E0040EF13 /* zh_yakitori_button1_off.png */,
-				7B98E53918EFCB5E0040EF13 /* zh_yakitori_button2.png */,
-				7B98E53A18EFCB5E0040EF13 /* zh_yakitori_button2_off.png */,
-				7B98E53B18EFCB5E0040EF13 /* zh_yakitori_button3.png */,
-				7B98E53C18EFCB5E0040EF13 /* zh_yakitori_button3_off.png */,
-				7B98E53D18EFCB5E0040EF13 /* zh_yakitori_button4.png */,
-				7B98E53E18EFCB5E0040EF13 /* zh_yakitori_button4_off.png */,
-				7B98E53F18EFCB5E0040EF13 /* zh_yakitori_button5.png */,
-				7B98E54018EFCB5E0040EF13 /* zh_yakitori_button5_off.png */,
-				7B98E54118EFCB5E0040EF13 /* zh_yakitori_button6.png */,
-				7B98E54218EFCB5E0040EF13 /* zh_yakitori_button6_off.png */,
-			);
-			path = zh;
-			sourceTree = "<group>";
-		};
-		7B98E56A18EFE6250040EF13 /* audio */ = {
-			isa = PBXGroup;
-			children = (
-				7B98E56B18EFE6250040EF13 /* correct_answer.mp3 */,
-				7B98E56C18EFE6250040EF13 /* enter.mp3 */,
-				7B98E56D18EFE6250040EF13 /* game_music.mp3 */,
-				7B98E56E18EFE6250040EF13 /* game_over.mp3 */,
-				7B98E56F18EFE6250040EF13 /* non_correct_answer.mp3 */,
-				7B98E57018EFE6250040EF13 /* put.mp3 */,
-			);
-			path = audio;
-			sourceTree = "<group>";
 		};
 		7B98E57C18F0D7410040EF13 /* appCCloud */ = {
 			isa = PBXGroup;
@@ -2608,144 +2567,144 @@
 			buildActionMask = 2147483647;
 			files = (
 				7855E0E1153FEF240059DD9A /* Default.png in Resources */,
-				7B98E55F18EFCB5E0040EF13 /* zh_yakitori_button1_off.png in Resources */,
 				7B98E5B818F0D7410040EF13 /* appc_cutin_btn_other@2x.png in Resources */,
+				7BFFDA0018F8CB8600F6EB4A /* put.mp3 in Resources */,
+				7BFFD9F718F8CB8600F6EB4A /* ja_yakitori_button3_off.png in Resources */,
 				7B3C674A18DEB5BD008F3129 /* InfoPlist.strings in Resources */,
 				7B3C677B18E65233008F3129 /* ranking_on.png in Resources */,
-				7B98E55D18EFCB5E0040EF13 /* zh_start_title.png in Resources */,
 				D4EF949A15BD2D8B00D803EB /* Icon-57.png in Resources */,
 				7B3C67C018E7048E008F3129 /* facebook_off.png in Resources */,
-				7B98E55B18EFCB5E0040EF13 /* ja_yakitori_button6.png in Resources */,
 				7B3C676518E45111008F3129 /* new.png in Resources */,
+				7BFFDA0E18F8CB8600F6EB4A /* zh_yakitori_button5.png in Resources */,
 				7B98E5BB18F0D7410040EF13 /* appc_cutin_free@2x.png in Resources */,
-				7B98E57218EFE6250040EF13 /* enter.mp3 in Resources */,
 				7B98E5C018F0D7410040EF13 /* appc_manga_close@2x.png in Resources */,
 				7B98E5D518F0D7410040EF13 /* appcc_web_splash_logo.png in Resources */,
-				7B98E56018EFCB5E0040EF13 /* zh_yakitori_button2.png in Resources */,
+				7BFFDA0818F8CB8600F6EB4A /* zh_yakitori_button2.png in Resources */,
 				7B98E5C618F0D7410040EF13 /* appc_marquee_bg@2x.png in Resources */,
+				7BFFD9F618F8CB8600F6EB4A /* ja_yakitori_button2.png in Resources */,
 				7B3C67C718E7048E008F3129 /* twitter_off.png in Resources */,
 				7B3C675A18DEF0C0008F3129 /* retry_on.png in Resources */,
+				7BFFD9C718F8CB7C00F6EB4A /* en_yakitori_button4.png in Resources */,
 				7B98E5B318F0D7410040EF13 /* appc_cutin2_btn_moreapp@2x.png in Resources */,
-				7B98E55518EFCB5E0040EF13 /* ja_yakitori_button3.png in Resources */,
-				7B98E56718EFCB5E0040EF13 /* zh_yakitori_button5_off.png in Resources */,
 				7B98E5D418F0D7410040EF13 /* appcc_web_splash_cayto.png in Resources */,
-				7B3C673F18DEB1CD008F3129 /* YakitoriFont.fnt in Resources */,
-				7B98E55A18EFCB5E0040EF13 /* ja_yakitori_button5_off.png in Resources */,
+				7BFFD9F918F8CB8600F6EB4A /* ja_yakitori_button4_off.png in Resources */,
+				7BFFD9FE18F8CB8600F6EB4A /* ja_yakitori_button6.png in Resources */,
 				7B3C67C218E7048E008F3129 /* more_off.png in Resources */,
 				7B98E5B918F0D7410040EF13 /* appc_cutin_btn_other_on@2x.png in Resources */,
+				7BFFD9F118F8CB8600F6EB4A /* ja_help.png in Resources */,
 				7B3C675C18E1B629008F3129 /* game_over_sale_waku.png in Resources */,
 				7B98E5C718F0D7410040EF13 /* appc_marquee_btn@2x.png in Resources */,
+				7BFFD9C218F8CB7C00F6EB4A /* en_yakitori_button2_off.png in Resources */,
+				7BFFD9CC18F8CB7C00F6EB4A /* enter.mp3 in Resources */,
 				7B3C675918DEF0C0008F3129 /* retry_off.png in Resources */,
 				7B3C675818DEF0C0008F3129 /* for_title_on.png in Resources */,
-				7B98E57518EFE6250040EF13 /* non_correct_answer.mp3 in Resources */,
 				D4EF949C15BD2D8E00D803EB /* Icon-114.png in Resources */,
+				7BFFD9BD18F8CB7C00F6EB4A /* correct_answer.mp3 in Resources */,
 				7B98E5B718F0D7410040EF13 /* appc_cutin_btn_inst_on@2x.png in Resources */,
 				7B98E5B518F0D7410040EF13 /* appc_cutin2_icon_bg@2x.png in Resources */,
+				7BFFD9CB18F8CB7C00F6EB4A /* en_yakitori_button6.png in Resources */,
+				7BFFD9FD18F8CB8600F6EB4A /* ja_yakitori_button6_off.png in Resources */,
+				7BFFD9F318F8CB8600F6EB4A /* ja_yakitori_button1_off.png in Resources */,
+				7BFFD9BE18F8CB7C00F6EB4A /* en_help.png in Resources */,
+				7BFFDA0718F8CB8600F6EB4A /* zh_yakitori_button2_off.png in Resources */,
+				7BFFD9C018F8CB7C00F6EB4A /* en_yakitori_button1_off.png in Resources */,
 				7B5BF64418D5879E00051414 /* start_off.png in Resources */,
+				7BFFD9F018F8CB8600F6EB4A /* game_over.mp3 in Resources */,
 				7B98E5CB18F0D7410040EF13 /* appc_simple_app_pushed@2x.png in Resources */,
-				7B98E57118EFE6250040EF13 /* correct_answer.mp3 in Resources */,
 				7B98E49E18EAEDCA0040EF13 /* icon-60@2x.png in Resources */,
-				7B98E56818EFCB5E0040EF13 /* zh_yakitori_button6.png in Resources */,
 				7B98E4A018EAEDCA0040EF13 /* icon-small.png in Resources */,
 				7B98E5C818F0D7410040EF13 /* appc_marquee_new@2x.png in Resources */,
+				7BFFD9C818F8CB7C00F6EB4A /* en_yakitori_button5_off.png in Resources */,
 				D4EF949E15BD2D9600D803EB /* Icon-72.png in Resources */,
-				7B98E57618EFE6250040EF13 /* put.mp3 in Resources */,
 				7B98E5BC18F0D7410040EF13 /* appc_cutin_under@2x.png in Resources */,
 				7B98E5CC18F0D7410040EF13 /* appc_simple_bg@2x.png in Resources */,
+				7BFFD9C518F8CB7C00F6EB4A /* en_yakitori_button3.png in Resources */,
+				7BFFD9FF18F8CB8600F6EB4A /* non_correct_answer.mp3 in Resources */,
+				7BFFD9F418F8CB8600F6EB4A /* ja_yakitori_button1.png in Resources */,
+				7BFFD9CA18F8CB7C00F6EB4A /* en_yakitori_button6_off.png in Resources */,
+				7BFFD9C418F8CB7C00F6EB4A /* en_yakitori_button3_off.png in Resources */,
 				7B3C679118E67C96008F3129 /* README.txt in Resources */,
-				7B98E55E18EFCB5E0040EF13 /* zh_yakitori_button1.png in Resources */,
 				7B3C674318DEB46C008F3129 /* Localizable.strings in Resources */,
-				7B98E54B18EFCB5E0040EF13 /* en_yakitori_button4_off.png in Resources */,
 				7B98E5CF18F0D7410040EF13 /* appc_web_close@2x.png in Resources */,
+				7BFFDA0618F8CB8600F6EB4A /* zh_yakitori_button1.png in Resources */,
 				7B98E5ED18F6ABDB0040EF13 /* know_your_yakiyori.png in Resources */,
 				7B5BF64F18D5975A00051414 /* game_main.png in Resources */,
-				7B98E55918EFCB5E0040EF13 /* ja_yakitori_button5.png in Resources */,
+				7BFFDA0C18F8CB8600F6EB4A /* zh_yakitori_button4.png in Resources */,
+				7BFFDA0918F8CB8600F6EB4A /* zh_yakitori_button3_off.png in Resources */,
+				7BFFD9F818F8CB8600F6EB4A /* ja_yakitori_button3.png in Resources */,
+				7BFFD9FC18F8CB8600F6EB4A /* ja_yakitori_button5.png in Resources */,
 				7B98E49F18EAEDCA0040EF13 /* icon-small-40@2x.png in Resources */,
 				D4EF94A015BD2D9800D803EB /* Icon-144.png in Resources */,
+				7BFFD9C918F8CB7C00F6EB4A /* en_yakitori_button5.png in Resources */,
 				7B5BF64E18D5975A00051414 /* game_main.plist in Resources */,
 				7B98E5D318F0D7410040EF13 /* appcc_simple_appc_icon@2x.png in Resources */,
 				7B98E5CA18F0D7410040EF13 /* appc_micon_box_shadow@2x.png in Resources */,
 				7B98E5C118F0D7410040EF13 /* appc_manga_footer@2x.png in Resources */,
+				7BFFDA0518F8CB8600F6EB4A /* zh_yakitori_button1_off.png in Resources */,
+				7BFFDA0F18F8CB8600F6EB4A /* zh_yakitori_button6_off.png in Resources */,
+				7BFFD9BF18F8CB7C00F6EB4A /* en_start_title.png in Resources */,
 				7B3C680518E86F20008F3129 /* home_off.png in Resources */,
 				7B98E5D118F0D7410040EF13 /* appcc_cutin2_noapp_icon@2x.png in Resources */,
-				7B98E54E18EFCB5E0040EF13 /* en_yakitori_button6.png in Resources */,
 				7B98E5BA18F0D7410040EF13 /* appc_cutin_close@2x.png in Resources */,
 				7B98E5B118F0D7410040EF13 /* appc_cutin2_base_down@2x.png in Resources */,
-				7B98E5E718F58AB10040EF13 /* en_help.png in Resources */,
 				7B98E5BF18F0D7410040EF13 /* appc_manga_background@2x.png in Resources */,
-				7B98E54318EFCB5E0040EF13 /* en_start_title.png in Resources */,
-				7B98E5E518F58AA90040EF13 /* ja_help.png in Resources */,
 				7B98E5C318F0D7410040EF13 /* appc_manga_gr_white_top@2x.png in Resources */,
 				D41A0AD1160F154A004552AE /* Default-568h@2x.png in Resources */,
 				7B3C677F18E65EDF008F3129 /* twitter_on.png in Resources */,
+				7BFFD9F518F8CB8600F6EB4A /* ja_yakitori_button2_off.png in Resources */,
 				7B3C677918E65233008F3129 /* help_on.png in Resources */,
-				7B98E55118EFCB5E0040EF13 /* ja_yakitori_button1.png in Resources */,
-				7B98E55318EFCB5E0040EF13 /* ja_yakitori_button2.png in Resources */,
 				7B3C677A18E65233008F3129 /* more_on.png in Resources */,
-				7B98E54618EFCB5E0040EF13 /* en_yakitori_button2.png in Resources */,
+				7BFFD9C118F8CB7C00F6EB4A /* en_yakitori_button1.png in Resources */,
 				7B3C67C318E7048E008F3129 /* ranking_off.png in Resources */,
+				7BFFDA0218F8CB8600F6EB4A /* YakitoriFont.png in Resources */,
 				7B3C680618E86F20008F3129 /* home_on.png in Resources */,
 				7B3C676F18E64BC7008F3129 /* game_background2.png in Resources */,
 				7B98E57A18EFE8B10040EF13 /* speaker_icon_off.png in Resources */,
 				7B98E5BE18F0D7410040EF13 /* appc_game_logo@2x.png in Resources */,
 				7B98E5D018F0D7410040EF13 /* appcc_banner_default.png in Resources */,
 				D446FD6E16102124000ADA7B /* Default@2x.png in Resources */,
-				7B98E56618EFCB5E0040EF13 /* zh_yakitori_button5.png in Resources */,
-				7B98E55818EFCB5E0040EF13 /* ja_yakitori_button4_off.png in Resources */,
-				7B98E55618EFCB5E0040EF13 /* ja_yakitori_button3_off.png in Resources */,
 				7B98E5B618F0D7410040EF13 /* appc_cutin_btn_inst@2x.png in Resources */,
-				7B98E55418EFCB5E0040EF13 /* ja_yakitori_button2_off.png in Resources */,
-				7B98E54418EFCB5E0040EF13 /* en_yakitori_button1.png in Resources */,
-				7B98E54D18EFCB5E0040EF13 /* en_yakitori_button5_off.png in Resources */,
 				7B98E4A318EAEDCA0040EF13 /* icon@2x.png in Resources */,
 				7B98E5C518F0D7410040EF13 /* appc_manga_vectol@2x.png in Resources */,
 				7B98E5C918F0D7410040EF13 /* appc_micon_bg_pattern@2x.png in Resources */,
 				7B3C67F718E805B4008F3129 /* back_on.png in Resources */,
-				7B98E56318EFCB5E0040EF13 /* zh_yakitori_button3_off.png in Resources */,
 				7B98E5BD18F0D7410040EF13 /* appc_cutin_upper@2x.png in Resources */,
 				7B98E5CD18F0D7410040EF13 /* appc_simple_left_vector@2x.png in Resources */,
-				7B98E55718EFCB5E0040EF13 /* ja_yakitori_button4.png in Resources */,
-				7B98E56918EFCB5E0040EF13 /* zh_yakitori_button6_off.png in Resources */,
+				7BFFDA0318F8CB8600F6EB4A /* zh_help.png in Resources */,
 				7B5BF64518D5879E00051414 /* start_on.png in Resources */,
-				7B98E54918EFCB5E0040EF13 /* en_yakitori_button3_off.png in Resources */,
 				7B98E4AA18EE161E0040EF13 /* review_off.png in Resources */,
 				7B3C677E18E65EDF008F3129 /* facebook_on.png in Resources */,
 				7B98E4A118EAEDCA0040EF13 /* icon-small@2x.png in Resources */,
-				7B98E54718EFCB5E0040EF13 /* en_yakitori_button2_off.png in Resources */,
 				7B3C676E18E64BC7008F3129 /* close_background.jpg in Resources */,
 				7B3C67F618E805B4008F3129 /* back_off.png in Resources */,
-				7B98E56118EFCB5E0040EF13 /* zh_yakitori_button2_off.png in Resources */,
-				7B98E54C18EFCB5E0040EF13 /* en_yakitori_button5.png in Resources */,
+				7BFFD9EF18F8CB8600F6EB4A /* game_music.mp3 in Resources */,
+				7BFFDA1018F8CB8600F6EB4A /* zh_yakitori_button6.png in Resources */,
+				7BFFD9C618F8CB7C00F6EB4A /* en_yakitori_button4_off.png in Resources */,
 				7B98E5EA18F5A42B0040EF13 /* i_icon_off.png in Resources */,
+				7BFFDA0118F8CB8600F6EB4A /* YakitoriFont.fnt in Resources */,
 				7B98E5C218F0D7410040EF13 /* appc_manga_gr_white_bottom@2x.png in Resources */,
 				7B98E5B218F0D7410040EF13 /* appc_cutin2_base_up@2x.png in Resources */,
 				7B3C680218E8111A008F3129 /* review_on.png in Resources */,
-				7B98E56518EFCB5E0040EF13 /* zh_yakitori_button4_off.png in Resources */,
-				7B98E55018EFCB5E0040EF13 /* ja_start_title.png in Resources */,
-				7B98E5E318F58AA00040EF13 /* zh_help.png in Resources */,
 				7B3C67C518E7048E008F3129 /* title_background.jpg in Resources */,
 				7B98E4AC18EF81770040EF13 /* gauge_life.png in Resources */,
-				7B98E57418EFE6250040EF13 /* game_over.mp3 in Resources */,
 				7B3C67C118E7048E008F3129 /* help_off.png in Resources */,
-				7B98E55C18EFCB5E0040EF13 /* ja_yakitori_button6_off.png in Resources */,
-				7B98E54F18EFCB5E0040EF13 /* en_yakitori_button6_off.png in Resources */,
-				7B98E54518EFCB5E0040EF13 /* en_yakitori_button1_off.png in Resources */,
 				7B98E5C418F0D7410040EF13 /* appc_manga_logo@2x.png in Resources */,
+				7BFFDA0A18F8CB8600F6EB4A /* zh_yakitori_button3.png in Resources */,
 				15A3D9961682F7F9002FB0C5 /* CMakeLists.txt in Resources */,
-				7B98E56218EFCB5E0040EF13 /* zh_yakitori_button3.png in Resources */,
 				7B98E57B18EFE8B10040EF13 /* speaker_icon.png in Resources */,
-				7B98E57318EFE6250040EF13 /* game_music.mp3 in Resources */,
-				7B98E54A18EFCB5E0040EF13 /* en_yakitori_button4.png in Resources */,
-				7B3C674018DEB1CD008F3129 /* YakitoriFont.png in Resources */,
 				7B98E5CE18F0D7410040EF13 /* appc_simple_right_vector@2x.png in Resources */,
+				7BFFDA0D18F8CB8600F6EB4A /* zh_yakitori_button5_off.png in Resources */,
+				7BFFDA0418F8CB8600F6EB4A /* zh_start_title.png in Resources */,
+				7BFFD9F218F8CB8600F6EB4A /* ja_start_title.png in Resources */,
 				7B98E5D218F0D7410040EF13 /* appcc_micon_webview_icon@2x.png in Resources */,
-				7B98E56418EFCB5E0040EF13 /* zh_yakitori_button4.png in Resources */,
 				7B98E5B418F0D7410040EF13 /* appc_cutin2_close@2x.png in Resources */,
 				7B3C675E18E314CA008F3129 /* game_background.jpg in Resources */,
-				7B98E55218EFCB5E0040EF13 /* ja_yakitori_button1_off.png in Resources */,
+				7BFFDA0B18F8CB8600F6EB4A /* zh_yakitori_button4_off.png in Resources */,
 				7B98E5EB18F5A42B0040EF13 /* i_icon.png in Resources */,
-				7B98E54818EFCB5E0040EF13 /* en_yakitori_button3.png in Resources */,
 				7B3C675718DEF0C0008F3129 /* for_title_off.png in Resources */,
+				7BFFD9FA18F8CB8600F6EB4A /* ja_yakitori_button4.png in Resources */,
+				7BFFD9C318F8CB7C00F6EB4A /* en_yakitori_button2.png in Resources */,
+				7BFFD9FB18F8CB8600F6EB4A /* ja_yakitori_button5_off.png in Resources */,
 				7B98E4A218EAEDCA0040EF13 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

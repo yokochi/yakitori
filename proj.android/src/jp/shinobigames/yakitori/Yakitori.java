@@ -27,11 +27,16 @@ import org.cocos2dx.lib.Cocos2dxActivity;
 import org.cocos2dx.lib.Cocos2dxGLSurfaceView;
 
 import android.os.Bundle;
+import android.util.Log;
 
 public class Yakitori extends Cocos2dxActivity{
 	
+	private static final String TAG = "Yakitori";
+	private static Yakitori mMyActivity;
+	
     protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);	
+		mMyActivity = this;
 	}
 
     public Cocos2dxGLSurfaceView onCreateView() {
@@ -44,5 +49,42 @@ public class Yakitori extends Cocos2dxActivity{
 
     static {
         System.loadLibrary("cocos2dcpp");
-    }     
+    }
+    
+	public static String getLocalizeString(String key) {
+		if ("app_name".equals(key)) {
+			return mMyActivity.getString(R.string.app_name);
+		} else if ("Sale".equals(key)) {
+			return mMyActivity.getString(R.string.Sale);
+		} else if ("SaleFormat".equals(key)) {
+			return mMyActivity.getString(R.string.SaleFormat);
+		} else if ("SaleSuffix".equals(key)) {
+			return mMyActivity.getString(R.string.SaleSuffix);
+		} else if ("BestSale".equals(key)) {
+			return mMyActivity.getString(R.string.BestSale);
+		} else if ("AccumulationSales".equals(key)) {
+			return mMyActivity.getString(R.string.AccumulationSales);
+		} else if ("Tweet".equals(key)) {
+			return mMyActivity.getString(R.string.Tweet);
+		} else if ("FaceBookSend".equals(key)) {
+			return mMyActivity.getString(R.string.FaceBookSend);
+		} else if ("AppUrl".equals(key)) {
+			return mMyActivity.getString(R.string.AppUrl);
+		} else if ("AppStoreListUrl".equals(key)) {
+			return mMyActivity.getString(R.string.AppStoreListUrl);
+		} else if ("OverAlert".equals(key)) {
+			return mMyActivity.getString(R.string.OverAlert);
+		} else if ("RareAlert".equals(key)) {
+			return mMyActivity.getString(R.string.RareAlert);
+		} else if ("ThanksMessage".equals(key)) {
+			return mMyActivity.getString(R.string.ThanksMessage);
+		} else if ("ScorchedMessage".equals(key)) {
+			return mMyActivity.getString(R.string.ScorchedMessage);
+		}
+		return "";
+	}
+	
+	public static String getLanguage() {
+        return mMyActivity.getResources().getConfiguration().locale.getLanguage();
+    }
 }

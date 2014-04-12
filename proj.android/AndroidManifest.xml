@@ -2,9 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="jp.shinobigames.yakitori"
       android:versionCode="1"
-      android:versionName="1.0">
+      android:versionName="1.0.0">
 
-    <uses-sdk android:minSdkVersion="8"/>
+    <uses-sdk android:minSdkVersion="14"
+              android:targetSdkVersion="19"/>
+    
     <uses-feature android:glEsVersion="0x00020000" />
 
     <application android:label="@string/app_name"
@@ -12,13 +14,18 @@
 
         <activity android:name=".Yakitori"
                   android:label="@string/app_name"
-                  android:screenOrientation="landscape"
+                  android:screenOrientation="portrait"
                   android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
                   android:configChanges="orientation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name="CCXWebview"
+                  android:screenOrientation="portrait"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                  android:configChanges="orientation">
         </activity>
     </application>
     <supports-screens android:largeScreens="true"
