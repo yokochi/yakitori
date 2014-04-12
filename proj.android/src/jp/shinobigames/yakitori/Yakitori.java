@@ -23,6 +23,8 @@ THE SOFTWARE.
 ****************************************************************************/
 package jp.shinobigames.yakitori;
 
+import java.util.Locale;
+
 import org.cocos2dx.lib.Cocos2dxActivity;
 import org.cocos2dx.lib.Cocos2dxGLSurfaceView;
 
@@ -85,6 +87,10 @@ public class Yakitori extends Cocos2dxActivity{
 	}
 	
 	public static String getLanguage() {
-        return mMyActivity.getResources().getConfiguration().locale.getLanguage();
+		Locale local = mMyActivity.getResources().getConfiguration().locale;
+        if (Locale.JAPAN.equals(local) || Locale.CHINA.equals(local)) {
+        	return local.getLanguage();
+        }
+        return "en";
     }
 }
