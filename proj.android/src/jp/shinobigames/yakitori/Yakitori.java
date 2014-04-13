@@ -25,6 +25,8 @@ package jp.shinobigames.yakitori;
 
 import java.util.Locale;
 
+import jp.maru.scorecenter.ScoreCenter;
+
 import org.cocos2dx.lib.Cocos2dxActivity;
 import org.cocos2dx.lib.Cocos2dxGLSurfaceView;
 
@@ -79,6 +81,9 @@ public class Yakitori extends Cocos2dxActivity{
 
         // 広告リクエストを行って adView を読み込む
         adView.loadAd(adRequest);
+        // Score center
+        ScoreCenter scoreCenter = ScoreCenter.getInstance();
+		scoreCenter.initialize(getApplicationContext());
 	}
 
     public Cocos2dxGLSurfaceView onCreateView() {
@@ -158,6 +163,21 @@ public class Yakitori extends Cocos2dxActivity{
 		Uri uri = Uri.parse("https://play.google.com/store/apps/developer?id=yokochi");
 		Intent intent = new Intent(Intent.ACTION_VIEW, uri);
 		mMyActivity.startActivity(intent);
+	}
+	
+	public static void sendRecordSales(int yen) {
+		ScoreCenter scoreCenter = ScoreCenter.getInstance();
+		scoreCenter.postScore("jp.shinobigames.yakitori_scoreboard1", java.lang.String.valueOf(yen));
+	}
+	
+	public static void sendGrossSales(int yen) {
+		ScoreCenter scoreCenter = ScoreCenter.getInstance();
+		scoreCenter.postScore("jp.shinobigames.yakitori_scoreboard2", java.lang.String.valueOf(yen));
+	}
+	
+	public static void showScoreBoard() {
+		ScoreCenter scoreCenter = ScoreCenter.getInstance();
+		scoreCenter.show();
 	}
 	
 	////////////////////////

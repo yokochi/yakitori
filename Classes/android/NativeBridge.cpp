@@ -103,6 +103,11 @@ void NativeBridge::removeAppCMarqueeView()
  */
 void NativeBridge::sendRecordSales(int yen)
 {
+    JniMethodInfo methodInfo;
+    if(JniHelper::getStaticMethodInfo(methodInfo , CLASS_NAME , "sendRecordSales" , "(I)V")){
+        methodInfo.env->CallStaticVoidMethod(methodInfo.classID , methodInfo.methodID , yen);
+        methodInfo.env->DeleteLocalRef(methodInfo.classID);
+    }
 }
 
 /**
@@ -110,6 +115,11 @@ void NativeBridge::sendRecordSales(int yen)
  */
 void NativeBridge::sendGrossSales(int yen)
 {
+    JniMethodInfo methodInfo;
+    if(JniHelper::getStaticMethodInfo(methodInfo , CLASS_NAME , "sendGrossSales" , "(I)V")){
+        methodInfo.env->CallStaticVoidMethod(methodInfo.classID , methodInfo.methodID , yen);
+        methodInfo.env->DeleteLocalRef(methodInfo.classID);
+    }
 }
 
 /**
@@ -117,4 +127,12 @@ void NativeBridge::sendGrossSales(int yen)
  */
 void NativeBridge::showBord()
 {
+    JniMethodInfo t;
+    // クラス名とメソッド名を指定します。
+    if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "showScoreBoard", "()V")) {
+        // voidなので、CallStaticVoidMethodで呼ぶ
+        t.env->CallStaticVoidMethod(t.classID, t.methodID);
+        // 解放
+        t.env->DeleteLocalRef(t.classID);
+    }
 }
