@@ -20,6 +20,7 @@
     </uses-permission>
     <uses-permission android:name="jp.shinobigames.yakitori.permission.C2D_MESSAGE" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <permission
         android:name="jp.shinobigames.yakitori.permission.C2D_MESSAGE"
@@ -28,6 +29,10 @@
     
     <application android:label="@string/app_name"
         android:icon="@drawable/icon">
+        
+        <!-- AdMob -->
+        <meta-data android:name="com.google.android.gms.version"
+               android:value="@integer/google_play_services_version"/>
 
         <activity android:name=".Yakitori"
                   android:label="@string/app_name"
@@ -108,6 +113,9 @@
         </receiver> 
         <service android:name="net.app_c.cloud.sdk.AppCPushService" /> 
         <!-- AppC Push Setting End --> 
+        <!-- AdMob -->
+        <activity android:name="com.google.android.gms.ads.AdActivity"
+             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
     </application>
     <supports-screens android:largeScreens="true"
                       android:smallScreens="true"

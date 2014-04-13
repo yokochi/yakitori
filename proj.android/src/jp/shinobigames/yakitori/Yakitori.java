@@ -32,12 +32,16 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import net.app_c.cloud.sdk.AppCCloud;
+
+import com.google.android.gms.ads.*;
 
 public class Yakitori extends Cocos2dxActivity{
 	
@@ -47,6 +51,7 @@ public class Yakitori extends Cocos2dxActivity{
 	private LinearLayout m_webLayout;
 	
 	private AppCCloud appCCloud;
+	private AdView adView;
 	
     protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);	
@@ -57,6 +62,23 @@ public class Yakitori extends Cocos2dxActivity{
 				new LayoutParams(LayoutParams.FILL_PARENT,LayoutParams.FILL_PARENT));
 		// appC cloud push on
         appCCloud = new AppCCloud(this).on(AppCCloud.API.PUSH).start();
+        
+        // AdMob
+        // adView を作成する
+        adView = new AdView(this);
+        adView.setAdUnitId("ca-app-pub-6202650789898961/5851718842");
+        adView.setAdSize(AdSize.BANNER);
+        
+        FrameLayout.LayoutParams adParams = new FrameLayout.LayoutParams(
+        		LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        adParams.gravity = (Gravity.BOTTOM|Gravity.CENTER); 
+        addContentView(adView, adParams);
+
+        // 一般的なリクエストを行う
+        AdRequest adRequest = new AdRequest.Builder().build();
+
+        // 広告リクエストを行って adView を読み込む
+        adView.loadAd(adRequest);
 	}
 
     public Cocos2dxGLSurfaceView onCreateView() {
