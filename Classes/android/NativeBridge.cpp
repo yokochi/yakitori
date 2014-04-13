@@ -30,18 +30,44 @@ const char* NativeBridge::getLocalizeString(const char *key)
 
 void NativeBridge::openTweetDialog(int score)
 {
+    JniMethodInfo methodInfo;
+    if(JniHelper::getStaticMethodInfo(methodInfo , CLASS_NAME , "tweet" , "(I)V")){
+        methodInfo.env->CallStaticVoidMethod(methodInfo.classID , methodInfo.methodID , score);
+        methodInfo.env->DeleteLocalRef(methodInfo.classID);
+    }
 }
 
 void NativeBridge::openFacebookDialog(int score)
 {
+    JniMethodInfo methodInfo;
+    if(JniHelper::getStaticMethodInfo(methodInfo , CLASS_NAME , "sendFacebook" , "(I)V")){
+        methodInfo.env->CallStaticVoidMethod(methodInfo.classID , methodInfo.methodID , score);
+        methodInfo.env->DeleteLocalRef(methodInfo.classID);
+    }
 }
 
 void NativeBridge::openAppStore()
 {
+    JniMethodInfo t;
+    // クラス名とメソッド名を指定します。
+    if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "showAppPage", "()V")) {
+        // voidなので、CallStaticVoidMethodで呼ぶ
+        t.env->CallStaticVoidMethod(t.classID, t.methodID);
+        // 解放
+        t.env->DeleteLocalRef(t.classID);
+    }
 }
 
 void NativeBridge::openAppStoreList()
 {
+    JniMethodInfo t;
+    // クラス名とメソッド名を指定します。
+    if (JniHelper::getStaticMethodInfo(t, CLASS_NAME, "showAppList", "()V")) {
+        // voidなので、CallStaticVoidMethodで呼ぶ
+        t.env->CallStaticVoidMethod(t.classID, t.methodID);
+        // 解放
+        t.env->DeleteLocalRef(t.classID);
+    }
 }
 
 const char* NativeBridge::getCurrentLanguage()

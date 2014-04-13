@@ -17,7 +17,7 @@
  */
 
 #warning If you want to use this CCXWebview in your project, please modify this packageName as your Android project.
-const char* kJNIPakageName = "jp/shinobigames/yakitori/CCXWebview";
+const char* kJNIPakageName = "jp/shinobigames/yakitori/Yakitori";
 
 ZYWebView::ZYWebView()
 {
@@ -36,107 +36,70 @@ bool ZYWebView::init()
 
 void ZYWebView::showWebView(const char* url, float x, float y, float width, float height)
 {
-//    //1. 获取activity静态对象
-//    JniMethodInfo minfo;
-//    //getStaticMethodInfo 次函数返回一个bool值表示是否找到此函数
-//    bool isHave = JniHelper::getStaticMethodInfo(minfo,
-//                                                 kJNIPakageName,
-//                                                 "getJavaActivity",
-//                                                 "()Ljava/lang/Object;");
-//    jobject activityObj;
-//    if (isHave)
-//    {
-//        activityObj = minfo.env->CallStaticObjectMethod(minfo.classID, minfo.methodID);
-//    }
-//    
-//    //2. 查找displayWebView接口，并用jobj调用
-//    isHave = JniHelper::getMethodInfo(minfo,kJNIPakageName,"displayWebView", "(IIII)V");
-//    
-//    if (!isHave)
-//    {
-//        CCLog("jni:displayWebView 函数不存在");
-//    }
-//    else
-//    {
-//        //调用此函数
-//        jint jX = (int)x;
-//        jint jY = (int)y;
-//        jint jWidth = (int)width;
-//        jint jHeight = (int)height;
-//        minfo.env->CallVoidMethod(activityObj, minfo.methodID, jX, jY, jWidth, jHeight);
-//    }
-//    
-//    //3. 查找updateURL接口，并用jobj调用
-//    isHave = JniHelper::getMethodInfo(minfo,kJNIPakageName,"updateURL", "(Ljava/lang/String;)V");
-//    
-//    if (!isHave)
-//    {
-//        CCLog("jni:updateURL 函数不存在");
-//    }
-//    else
-//    {
-//        //调用此函数
-//        jstring jmsg = minfo.env->NewStringUTF(url);
-//        minfo.env->CallVoidMethod(activityObj, minfo.methodID, jmsg);
-//    }
+    JniMethodInfo minfo;
+    bool isHave = JniHelper::getStaticMethodInfo(minfo,
+                                                 kJNIPakageName,
+                                                 "getJavaActivity",
+                                                 "()Ljava/lang/Object;");
+    jobject activityObj;
+    if (isHave) {
+        activityObj = minfo.env->CallStaticObjectMethod(minfo.classID, minfo.methodID);
+    }
+    
+    isHave = JniHelper::getMethodInfo(minfo,kJNIPakageName,"displayWebView", "(IIII)V");
+    
+    if (isHave) {
+        jint jX = (int)x;
+        jint jY = (int)y;
+        jint jWidth = (int)width;
+        jint jHeight = (int)height;
+        minfo.env->CallVoidMethod(activityObj, minfo.methodID, jX, jY, jWidth, jHeight);
+    }
+    
+    isHave = JniHelper::getMethodInfo(minfo,kJNIPakageName,"updateURL", "(Ljava/lang/String;)V");
+    
+    if (isHave) {
+        jstring jmsg = minfo.env->NewStringUTF(url);
+        minfo.env->CallVoidMethod(activityObj, minfo.methodID, jmsg);
+    }
 }
 
 void ZYWebView::updateURL(const char* url)
 {
-//    //1. 获取activity静态对象
-//    JniMethodInfo minfo;
-//    //getStaticMethodInfo 次函数返回一个bool值表示是否找到此函数
-//    bool isHave = JniHelper::getStaticMethodInfo(minfo,
-//                                                 kJNIPakageName,
-//                                                 "getJavaActivity",
-//                                                 "()Ljava/lang/Object;");
-//    jobject activityObj;
-//    if (isHave)
-//    {
-//        activityObj = minfo.env->CallStaticObjectMethod(minfo.classID, minfo.methodID);
-//    }
-//    
-//    //2. 查找updateURL接口，并用jobj调用
-//    isHave = JniHelper::getMethodInfo(minfo,kJNIPakageName,"updateURL", "(Ljava/lang/String;)V");
-//    
-//    if (!isHave)
-//    {
-//        CCLog("jni:updateURL 函数不存在");
-//    }
-//    else
-//    {
-//        //调用此函数
-//        jstring jmsg = minfo.env->NewStringUTF(url);
-//        minfo.env->CallVoidMethod(activityObj, minfo.methodID, jmsg);
-//    }
+    JniMethodInfo minfo;
+    bool isHave = JniHelper::getStaticMethodInfo(minfo,
+                                                 kJNIPakageName,
+                                                 "getJavaActivity",
+                                                 "()Ljava/lang/Object;");
+    jobject activityObj;
+    if (isHave) {
+        activityObj = minfo.env->CallStaticObjectMethod(minfo.classID, minfo.methodID);
+    }
+    
+    isHave = JniHelper::getMethodInfo(minfo,kJNIPakageName,"updateURL", "(Ljava/lang/String;)V");
+    
+    if (isHave) {
+        jstring jmsg = minfo.env->NewStringUTF(url);
+        minfo.env->CallVoidMethod(activityObj, minfo.methodID, jmsg);
+    }
 }
 
 void ZYWebView::removeWebView()
 {
-//    //1. 获取activity静态对象
-//    JniMethodInfo minfo;
-//    //getStaticMethodInfo 次函数返回一个bool值表示是否找到此函数
-//    bool isHave = JniHelper::getStaticMethodInfo(minfo,
-//                                                 kJNIPakageName,
-//                                                 "getJavaActivity",
-//                                                 "()Ljava/lang/Object;");
-//    jobject activityObj;
-//    if (isHave)
-//    {
-//        activityObj = minfo.env->CallStaticObjectMethod(minfo.classID, minfo.methodID);
-//    }
-//    
-//    //2. 查找updateURL接口，并用jobj调用
-//    isHave = JniHelper::getMethodInfo(minfo,kJNIPakageName,"removeWebView", "()V"); 
-//    
-//    if (!isHave)
-//    {
-//        CCLog("jni:updateURL 函数不存在");
-//    }
-//    else
-//    {
-//        //调用此函数
-//        minfo.env->CallVoidMethod(activityObj, minfo.methodID);
-//    }
+    JniMethodInfo minfo;
+    bool isHave = JniHelper::getStaticMethodInfo(minfo,
+                                                 kJNIPakageName,
+                                                 "getJavaActivity",
+                                                 "()Ljava/lang/Object;");
+    jobject activityObj;
+    if (isHave) {
+        activityObj = minfo.env->CallStaticObjectMethod(minfo.classID, minfo.methodID);
+    }
+    
+    isHave = JniHelper::getMethodInfo(minfo,kJNIPakageName,"removeWebView", "()V");
+    
+    if (isHave) {
+        minfo.env->CallVoidMethod(activityObj, minfo.methodID);
+    }
 }
 

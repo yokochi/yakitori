@@ -173,7 +173,14 @@ void GameOverScene::initCompornent()
     // webview
     m_webView = new ZYWebView();
     m_webView->init();
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+    //デバイスがiOSの時
     m_webView->showWebView("http://www.shinobigames.jp/ad.html", 0, 0, size.width, AD_WEBVIEW_HEIGHT);
+#else
+    //デバイスがAndroidの時
+    CCSize screenSize = CCEGLView::sharedOpenGLView()->getFrameSize();
+    m_webView->showWebView("http://www.shinobigames.jp/ad_android.html", 0, 0, screenSize.width, screenSize.height * 0.2);
+#endif
 }
 
 void GameOverScene::showViewAfter()

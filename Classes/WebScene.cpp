@@ -39,7 +39,14 @@ void WebScene::onEnter()
     CCLayer::onEnter();
     
     CCSize winSize = CCDirector::sharedDirector()->getWinSize();
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+    //デバイスがiOSの時
     m_webView->showWebView("http://www.shinobigames.jp/", 0, 50, winSize.width * 0.5, winSize.height * 0.5 - 100);
+#else
+    //デバイスがAndroidの時
+    CCSize screenSize = CCEGLView::sharedOpenGLView()->getFrameSize();
+    m_webView->showWebView("http://www.shinobigames.jp/index_android.html", 0, screenSize.height * 0.1, screenSize.width, screenSize.height - (screenSize.height * 0.2));
+#endif
 }
 
 void WebScene::initCompornent()

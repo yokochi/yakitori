@@ -28,17 +28,30 @@ import java.util.Locale;
 import org.cocos2dx.lib.Cocos2dxActivity;
 import org.cocos2dx.lib.Cocos2dxGLSurfaceView;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.LinearLayout;
+import android.widget.LinearLayout.LayoutParams;
 
 public class Yakitori extends Cocos2dxActivity{
 	
 	private static final String TAG = "Yakitori";
 	private static Yakitori mMyActivity;
+	private WebView m_webView;
+	private LinearLayout m_webLayout;
 	
     protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);	
 		mMyActivity = this;
+		//web layout 
+		m_webLayout = new LinearLayout(this);
+		mMyActivity.addContentView(m_webLayout, 
+				new LayoutParams(LayoutParams.FILL_PARENT,LayoutParams.FILL_PARENT));
 	}
 
     public Cocos2dxGLSurfaceView onCreateView() {
@@ -70,10 +83,6 @@ public class Yakitori extends Cocos2dxActivity{
 			return mMyActivity.getString(R.string.Tweet);
 		} else if ("FaceBookSend".equals(key)) {
 			return mMyActivity.getString(R.string.FaceBookSend);
-		} else if ("AppUrl".equals(key)) {
-			return mMyActivity.getString(R.string.AppUrl);
-		} else if ("AppStoreListUrl".equals(key)) {
-			return mMyActivity.getString(R.string.AppStoreListUrl);
 		} else if ("OverAlert".equals(key)) {
 			return mMyActivity.getString(R.string.OverAlert);
 		} else if ("RareAlert".equals(key)) {
@@ -92,5 +101,101 @@ public class Yakitori extends Cocos2dxActivity{
         	return local.getLanguage();
         }
         return "en";
+    }
+	
+	public static void tweet(int score){
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        String msg = String.format(mMyActivity.getString(R.string.Tweet), score);
+        intent.putExtra(Intent.EXTRA_TEXT, msg);
+        mMyActivity.startActivity(intent);
+    }
+	
+	public static void sendFacebook(int score){
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        String msg = String.format(mMyActivity.getString(R.string.FaceBookSend), score);
+        intent.putExtra(Intent.EXTRA_TEXT, msg);
+        mMyActivity.startActivity(intent);
+    }
+	
+	public static void showAppPage() {
+		Uri uri = Uri.parse("market://details?id=com.iankohbo.gnavi");
+		Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+		mMyActivity.startActivity(intent);
+	}
+	
+	public static void showAppList() {
+		Uri uri = Uri.parse("https://play.google.com/store/apps/developer?id=yokochi");
+		Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+		mMyActivity.startActivity(intent);
+	}
+	
+	////////////////////////
+	/// webview
+	////////////////////////
+    public static Object getJavaActivity() {
+        return mMyActivity;
+    }
+    
+    //WebView
+    public void displayWebView(final int x, final int y, final int width, final int height) {
+    	Log.i(TAG, "displayWebView");
+    	this.runOnUiThread(new Runnable() {
+            public void run() {
+//            	LinearLayout layout = new LinearLayout(actInstance);
+//            	actInstance.addContentView(layout, new LayoutParams(LayoutParams.FILL_PARENT,LayoutParams.FILL_PARENT));
+            	m_webView = new WebView(mMyActivity);
+            	m_webLayout.addView(m_webView);
+            	
+            	LinearLayout.LayoutParams linearParams = (LinearLayout.LayoutParams) m_webView.getLayoutParams();
+            	linearParams.leftMargin = x;
+            	linearParams.topMargin = y;
+            	linearParams.width = width;
+            	linearParams.height = height;
+            	m_webView.setLayoutParams(linearParams);
+
+            	m_webView.setBackgroundColor(0);
+            	m_webView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
+            	m_webView.getSettings().setAppCacheEnabled(false);
+            	//m_webView.setBackgroundResource(R.drawable.yourImage);
+            	
+            	m_webView.setWebViewClient(new WebViewClient(){
+                    @Override
+                    public boolean shouldOverrideUrlLoading(WebView view, String url){
+                    	if (url.startsWith("market:")) {
+                    		Uri uri = Uri.parse(url);
+                    		Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    		mMyActivity.startActivity(intent);
+                    		return true;
+                    	}
+                    	return false;
+                    }
+                });
+            	
+            }
+        });
+    }
+    
+    public void updateURL(final String url) {
+    	this.runOnUiThread(new Runnable() {
+            public void run() {
+            	m_webView.loadUrl(url);
+            }
+        });
+    }
+    
+    public void removeWebView() {
+    	Log.i(TAG, "removeWebView");
+    	this.runOnUiThread(new Runnable() {
+            public void run() {
+            	if (m_webView != null) {
+            		m_webLayout.removeView(m_webView);
+            		m_webView.destroy();
+            	}
+            }
+        });
     }
 }
