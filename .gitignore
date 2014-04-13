@@ -25,7 +25,6 @@ Pods/*
 .idea/*
 
 #cocos2d-x
-libs/
 bin/
 obj/
 assets/
@@ -34,6 +33,7 @@ out/
 .classpath
 .project
 .cproject
+*.so
 
 #JAVA
 *.class

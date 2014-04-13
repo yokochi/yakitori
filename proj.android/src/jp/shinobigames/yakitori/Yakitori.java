@@ -37,6 +37,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
+import net.app_c.cloud.sdk.AppCCloud;
 
 public class Yakitori extends Cocos2dxActivity{
 	
@@ -45,6 +46,8 @@ public class Yakitori extends Cocos2dxActivity{
 	private WebView m_webView;
 	private LinearLayout m_webLayout;
 	
+	private AppCCloud appCCloud;
+	
     protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);	
 		mMyActivity = this;
@@ -52,6 +55,8 @@ public class Yakitori extends Cocos2dxActivity{
 		m_webLayout = new LinearLayout(this);
 		mMyActivity.addContentView(m_webLayout, 
 				new LayoutParams(LayoutParams.FILL_PARENT,LayoutParams.FILL_PARENT));
+		// appC cloud push on
+        appCCloud = new AppCCloud(this).on(AppCCloud.API.PUSH).start();
 	}
 
     public Cocos2dxGLSurfaceView onCreateView() {
