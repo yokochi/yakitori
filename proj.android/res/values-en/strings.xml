@@ -6,8 +6,8 @@
     <string name="SaleSuffix">%5d</string>
     <string name="BestSale">Record Sales</string>
     <string name="AccumulationSales">Gross Sales</string>
-    <string name="Tweet">I just earned %d yen in Yakitori Dojo! #yakitoridojo</string>
-    <string name="FaceBookSend">I just earned %d yen in Yakitori Dojo! #yakitoridojo</string>
+    <string name="Tweet">I just earned %d yen in Yakitori Dojo! https://play.google.com/store/apps/details?id=jp.shinobigames.yakitori #yakitoridojo</string>
+    <string name="FaceBookSend">I just earned %d yen in Yakitori Dojo! https://play.google.com/store/apps/details?id=jp.shinobigames.yakitori #yakitoridojo</string>
     <string name="OverAlert">The grill is full!</string>
     <string name="RareAlert">It"'s still raw!</string>
     <string name="ThanksMessage">Order"'s up!</string>

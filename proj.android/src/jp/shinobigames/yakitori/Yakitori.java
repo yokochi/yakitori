@@ -25,7 +25,8 @@ package jp.shinobigames.yakitori;
 
 import java.util.Locale;
 
-import jp.maru.scorecenter.ScoreCenter;
+import jp.shinobigames.yakitori.GameHelper.GameHelperListener;
+import net.app_c.cloud.sdk.AppCCloud;
 
 import org.cocos2dx.lib.Cocos2dxActivity;
 import org.cocos2dx.lib.Cocos2dxGLSurfaceView;
@@ -41,11 +42,13 @@ import android.webkit.WebViewClient;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
-import net.app_c.cloud.sdk.AppCCloud;
 
-import com.google.android.gms.ads.*;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.games.Games;
 
-public class Yakitori extends Cocos2dxActivity{
+public class Yakitori extends Cocos2dxActivity {
 	
 	private static final String TAG = "Yakitori";
 	private static Yakitori mMyActivity;
@@ -54,6 +57,7 @@ public class Yakitori extends Cocos2dxActivity{
 	
 	private AppCCloud appCCloud;
 	private AdView adView;
+	public GameHelper mHelper;
 	
     protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);	
@@ -81,11 +85,42 @@ public class Yakitori extends Cocos2dxActivity{
 
         // 広告リクエストを行って adView を読み込む
         adView.loadAd(adRequest);
-        // Score center
-        ScoreCenter scoreCenter = ScoreCenter.getInstance();
-		scoreCenter.initialize(getApplicationContext());
-	}
+		
+        // create game helper with all APIs (Games, Plus, AppState):
+        mHelper = new GameHelper(this, GameHelper.CLIENT_ALL);
+        GameHelperListener listener = new GameHelper.GameHelperListener() {
+            @Override
+            public void onSignInSucceeded() {
+                // handle sign-in succeess
+            }
+            @Override
+            public void onSignInFailed() {
+                // handle sign-in failure (e.g. show Sign In button)
+            }
 
+        };
+        mHelper.setup(listener);
+	    
+	}
+    
+    @Override
+    protected void onStart() {
+    	super.onStart();
+    	mHelper.onStart(this);
+    }
+    
+    @Override
+    protected void onStop() {
+        super.onStop();
+        mHelper.onStop();
+    }
+    
+    @Override
+    protected void onActivityResult(int request, int response, Intent data) {
+        super.onActivityResult(request, response, data);
+        mHelper.onActivityResult(request, response, data);
+    }
+    
     public Cocos2dxGLSurfaceView onCreateView() {
     	Cocos2dxGLSurfaceView glSurfaceView = new Cocos2dxGLSurfaceView(this);
     	// Yakitori should create stencil buffer
@@ -154,30 +189,38 @@ public class Yakitori extends Cocos2dxActivity{
     }
 	
 	public static void showAppPage() {
-		Uri uri = Uri.parse("market://details?id=com.iankohbo.gnavi");
+		Uri uri = Uri.parse("market://details?id=jp.shinobigames.yakitori");
 		Intent intent = new Intent(Intent.ACTION_VIEW, uri);
 		mMyActivity.startActivity(intent);
 	}
 	
 	public static void showAppList() {
-		Uri uri = Uri.parse("https://play.google.com/store/apps/developer?id=yokochi");
+		Uri uri = Uri.parse("https://play.google.com/store/apps/developer?id=shinobigames");
 		Intent intent = new Intent(Intent.ACTION_VIEW, uri);
 		mMyActivity.startActivity(intent);
 	}
 	
 	public static void sendRecordSales(int yen) {
-		ScoreCenter scoreCenter = ScoreCenter.getInstance();
-		scoreCenter.postScore("jp.shinobigames.yakitori_scoreboard1", java.lang.String.valueOf(yen));
+		if (mMyActivity.mHelper.isSignedIn()) {
+			Games.Leaderboards.submitScore(mMyActivity.mHelper.getApiClient(),
+				mMyActivity.getString(R.string.leaderboard_record_sales), yen);
+		}
 	}
 	
 	public static void sendGrossSales(int yen) {
-		ScoreCenter scoreCenter = ScoreCenter.getInstance();
-		scoreCenter.postScore("jp.shinobigames.yakitori_scoreboard2", java.lang.String.valueOf(yen));
+		if (mMyActivity.mHelper.isSignedIn()) {
+			Games.Leaderboards.submitScore(mMyActivity.mHelper.getApiClient(), 
+					mMyActivity.getString(R.string.leaderboard_gross_sales), yen);
+		}
 	}
 	
 	public static void showScoreBoard() {
-		ScoreCenter scoreCenter = ScoreCenter.getInstance();
-		scoreCenter.show();
+		if (mMyActivity.mHelper.isSignedIn()) {
+			mMyActivity.startActivityForResult(
+					Games.Leaderboards.getAllLeaderboardsIntent(mMyActivity.mHelper.getApiClient()), 1000);
+		} else {
+			mMyActivity.mHelper.beginUserInitiatedSignIn();
+		}
 	}
 	
 	////////////////////////

@@ -6,8 +6,8 @@
     <string name="SaleSuffix">%5d</string>
     <string name="BestSale">最高売上</string>
     <string name="AccumulationSales">累積売上</string>
-    <string name="Tweet">やきとり道場、今回の売上は%d円です。#yakitoridojo</string>
-    <string name="FaceBookSend">やきとり道場、今回の売上は%d円です。#yakitoridojo</string>
+    <string name="Tweet">やきとり道場、今回の売上は%d円です。https://play.google.com/store/apps/details?id=jp.shinobigames.yakitori #yakitoridojo</string>
+    <string name="FaceBookSend">やきとり道場、今回の売上は%d円です。https://play.google.com/store/apps/details?id=jp.shinobigames.yakitori #yakitoridojo</string>
     <string name="OverAlert">一杯だよ！</string>
     <string name="RareAlert">焼けてない！</string>
     <string name="ThanksMessage">おまち</string>
